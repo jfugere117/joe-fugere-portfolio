@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+
+.section-hero {
+  position: relative;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+
+  padding: 8rem 4rem 0;
+  overflow: hidden;
+  background-color: $color-accent-soft;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+  }
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  padding-left: 4rem;
+
+  grid-column: 1;
+  align-self: center;
+  max-width: 580px;
+}
+
+.hero-text-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: $color-accent;
+}
+
+.hero-text-heading {
+  font-family: "Playfair Display";
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.hero-text-subheading {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+  color: #fff;
+}
+
+.hero-image-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 32%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.section-hero-image {
+  width: min(100%, 875px);
+  max-height: 100%;
+  height: auto;
+  display: block;
+
+  object-fit: contain;
+}

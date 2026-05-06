@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  width: 100%;
+  padding: 4rem 6rem 0;
+}
+
+.header-logo {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.desktop-nav-list {
+  display: flex;
+  gap: 3.2rem;
+  padding-right: 2rem;
+}
+
+.desktop-nav-link:link,
+.desktop-nav-link:visited {
+  display: inline-block; // good practice for nav links
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    color: $color-accent;
+  }
+}

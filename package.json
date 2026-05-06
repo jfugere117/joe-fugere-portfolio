@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Joe Fugere",
+  "license": "ISC",
+  "author": "Joe Fugere",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch sass/main.scss css/main.css",
+    "build": "sass sass/main.scss css/main.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

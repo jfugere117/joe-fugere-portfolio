@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+
+.hero-btn {
+  display: flex;
+  gap: 3rem;
+}
+
+.btn-primary {
+  background-color: $color-accent-dark;
+  border: 1.5px solid $color-accent-dark;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  color: #fff;
+
+  &:hover {
+    background-color: $color-accent-dark;
+    border: 1.5px solid $color-accent-dark;
+    transform: translate(-2px, -2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.22);
+  }
+}
+
+.btn-secondary {
+  border: 1.5px solid $color-accent;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  color: $color-accent;
+
+  &:hover {
+    border: 1.5px solid $color-accent-dark;
+    color: $color-accent-dark;
+    transform: translate(-2px, -2px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.22);
+  }
+}
