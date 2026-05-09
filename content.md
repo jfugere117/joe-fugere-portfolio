@@ -124,7 +124,7 @@ These featured case studies highlight my approach to web design, front-end struc
 
 J | F Candle Co.
 
-#### Category
+#### Category / Eyebrow
 
 E-Commerce / Branding / Shopify Design
 
@@ -152,7 +152,7 @@ View Case Study
 
 Ritual Supply Co.
 
-#### Category
+#### Category / Eyebrow
 
 Web Design / Front-End Development
 
@@ -255,6 +255,18 @@ View Resume
 ---
 
 ## 7. Footer
+
+### Eyebrow
+
+Let’s Connect
+
+### Heading
+
+Interested in working together or connecting?
+
+### Body Copy
+
+I’m currently open to entry-level web design and front-end development opportunities. I’d be happy to connect about potential roles, portfolio feedback, collaborations, or professional opportunities.
 
 ### Footer Description
 

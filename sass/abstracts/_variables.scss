@@ -1,12 +1,105 @@
-$color-background: #f5f6f8;
+/* ------------------------------
+   Storm Pearl Portfolio Theme
+   with 3 Accent Colors
+------------------------------ */
+
+/* Main Backgrounds */
+$color-background: #f4f6f7;
+$color-background-soft: #e6ecef;
+$color-section-alt-1: #dce5e9;
+$color-section-alt-2: #fafafa;
+
+/* Dark Theme Colors */
+$color-ink: #06090b;
+$color-ink-soft: #0d1216;
+$color-storm: #11171d;
+$color-storm-soft: #1d2b34;
+$color-storm-light: #30434f;
+
+/* Surface / Cards */
 $color-surface: #ffffff;
-$color-surface-soft: #e9ecef;
+$color-surface-soft: #f0f3f5;
+$color-surface-dark: #11171d;
 
-$color-text: #101418;
-$color-text-muted: #4f5965;
+/* Text */
+$color-text: #12171c;
+$color-text-soft: #2d363d;
+$color-text-muted: #69757f;
+$color-text-light: #a0a9af;
+$color-text-inverse: #fafafa;
 
-$color-accent: #227283;
-$color-accent-dark: #185663;
-$color-accent-soft: #c6e2e6;
+/* Primary Accent / Storm Blue */
+$color-accent: #3f667f;
+$color-accent-dark: #315167;
+$color-accent-deep: #223946;
+$color-accent-soft: #9fb7c4;
+$color-accent-light: #e8f0f4;
 
-$color-border: rgba(16, 20, 24, 0.12);
+/* Secondary Accent / Pearl Gray */
+$color-accent-2: #c8d1d7;
+$color-accent-2-dark: #9caab3;
+$color-accent-2-deep: #65737c;
+$color-accent-2-soft: #e1e7eb;
+$color-accent-2-light: #f6f8f9;
+
+/* Tertiary Accent / Cayan */
+$color-accent-3: #2f9aa8;
+$color-accent-3-dark: #247782;
+$color-accent-3-deep: #18525a;
+$color-accent-3-soft: #8fcbd2;
+$color-accent-3-light: #e3f5f7;
+
+/* Champagne Variants */
+$color-champagne: #d2bd8f;
+$color-champagne-dark: #b89d63;
+$color-champagne-deep: #80683c;
+$color-champagne-soft: #e7d8b5;
+$color-champagne-light: #f8f1df;
+$color-champagne-pale: #fcf8ef;
+
+$color-misty-green: #b9d3c5;
+
+/* Borders */
+$color-border: rgba(18, 23, 28, 0.12);
+$color-border-dark: rgba(250, 250, 250, 0.15);
+
+/* Shadows */
+$shadow-soft: 0 1.6rem 3.2rem rgba(6, 9, 11, 0.08);
+$shadow-card: 0 2rem 4rem rgba(6, 9, 11, 0.12);
+$shadow-dark: 0 2.4rem 5rem rgba(0, 0, 0, 0.3);
+
+/* Gradients */
+$gradient-footer: linear-gradient(
+  135deg,
+  #06090b 0%,
+  #0d1216 45%,
+  #11171d 100%
+);
+
+$gradient-card-dark: linear-gradient(
+  145deg,
+  #11171d 0%,
+  #1d2b34 55%,
+  #30434f 100%
+);
+
+$gradient-accent: linear-gradient(
+  135deg,
+  #3f667f 0%,
+  #c8d1d7 55%,
+  #b76e79 100%
+);
+
+$gradient-accent-cool: linear-gradient(
+  135deg,
+  #223946 0%,
+  #3f667f 50%,
+  #9fb7c4 100%
+);
+
+$gradient-accent-luxury: linear-gradient(
+  135deg,
+  #11171d 0%,
+  #3f667f 55%,
+  #b76e79 100%
+);

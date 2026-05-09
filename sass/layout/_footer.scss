@@ -1,0 +1,137 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  min-height: 42rem;
+  padding: 6.4rem 4rem 2rem;
+  background: $gradient-footer;
+  color: $color-text-inverse;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+.footer-intro-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer-intro {
+  max-width: 48rem;
+
+  &__logo {
+    display: block;
+    width: 20rem;
+    height: auto;
+    margin-bottom: 1.6rem;
+  }
+
+  &__description {
+    max-width: 42rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-text-inverse;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 2.4rem 0 3rem;
+
+  &__link {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $color-accent-3;
+    background-color: rgba($color-text-inverse, 0.08);
+    border: 1.5px solid rgba($color-accent-3, 0.75);
+
+    font-size: 1.7rem;
+    text-decoration: none;
+
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover {
+      color: $color-champagne-soft;
+      background-color: rgba($color-accent-3, 0.22);
+      border-color: $color-accent-3;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.footer-nav,
+.footer-projects {
+  color: $color-accent-2-soft;
+  height: 17rem;
+  padding-left: 8rem;
+  border-left: 1px solid $color-border-dark;
+
+  &__title {
+    font-size: 1.8rem;
+    color: $color-champagne;
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    display: grid;
+    gap: 1rem;
+
+    font-size: 1.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      color: $color-accent-2-soft;
+      text-decoration: none;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover {
+        color: $color-accent-3;
+      }
+    }
+  }
+}
+
+/* Pushes separator + copyright to the bottom */
+.footer-separator {
+  align-self: end;
+  height: 1px;
+  width: 100%;
+  background-color: $color-border-dark;
+  margin-bottom: 2rem;
+}
+
+.footer-copyright {
+  align-self: end;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: $color-text-light;
+
+  span {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+    color: $color-accent-3;
+  }
+}

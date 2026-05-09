@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 /* ------------------------------
    Modern Reset
 ------------------------------ */
@@ -24,8 +26,8 @@ body {
   min-height: 100vh;
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: $color-text;
+  background-color: $color-background;
 }
 
 img,

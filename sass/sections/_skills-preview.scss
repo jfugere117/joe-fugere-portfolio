@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as *;
+
+.skills-preview {
+  background-color: $color-background;
+  padding: 9.6rem 0;
+
+  &__header {
+    max-width: 98rem;
+    margin: 0 auto 9.4rem;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: $color-text-soft;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-text-muted;
+  }
+}
+
+.skill-card {
+  position: relative;
+  background-color: $color-surface;
+  border: 1px solid rgba($color-accent, 0.14);
+  border-radius: 1.25rem;
+  padding: 4rem;
+  box-shadow: $shadow-soft;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      $shadow-card,
+      0 0 3rem rgba($color-accent-3, 0.14);
+    border-color: rgba($color-accent-3, 0.38);
+    background-color: $color-section-alt-2;
+  }
+
+  &__icon {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 999px;
+    display: flex;
+    background-color: $color-accent-light;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    box-shadow:
+      0.7rem 0.8rem 1.9rem rgba($color-ink, 0.12),
+      inset 0 0 0 1px rgba($color-accent, 0.16);
+  }
+
+  &__icon-img {
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__heading {
+    font-family: "Inter", Georgia, serif;
+    font-size: 1.45rem;
+    color: $color-accent-3-deep;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+  }
+
+  &__label {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    background-color: rgba($color-champagne, 0.22);
+    color: $color-champagne-deep;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}

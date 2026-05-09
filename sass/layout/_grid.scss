@@ -1,0 +1,67 @@
+/* ------------------------------
+   Reusable Layout / Grid
+------------------------------ */
+
+// Container
+.container {
+  max-width: 120rem; // 1200px
+  padding: 0 1.2rem;
+  margin: 0 auto;
+}
+
+.container--narrow {
+  max-width: 96rem;
+}
+
+.container--wide {
+  max-width: 132rem;
+}
+
+.container--xl {
+  max-width: 144rem;
+}
+
+// Base Grid
+.grid {
+  display: grid;
+  gap: 3.6rem;
+}
+
+// Column Helpers
+.grid--2-cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+// Gap Helpers
+.grid--gap-sm {
+  gap: 2.4rem;
+}
+
+.grid--gap-md {
+  gap: 3.6rem;
+}
+
+.grid--gap-lg {
+  gap: 6.4rem;
+}
+
+.grid--gap-xl {
+  gap: 9.6rem;
+}
+
+// Optional: separate row / column gaps
+.grid--col-gap-lg {
+  column-gap: 6.4rem;
+}
+
+.grid--row-gap-lg {
+  row-gap: 6.4rem;
+}

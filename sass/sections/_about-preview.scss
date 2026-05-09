@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+.about-preview {
+  background-color: #dce4eb;
+  padding: 9.6rem 0;
+  text-align: center;
+
+  &__header {
+    max-width: 98rem;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    color: $color-text-soft;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-text-muted;
+    margin-bottom: 3rem;
+  }
+}
+
+/*.about-preview__cta-box {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.about-preview__cta {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+*/

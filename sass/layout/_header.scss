@@ -11,10 +11,9 @@
 }
 
 .header-logo {
-  font-family: "Playfair Display", sans-serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #fff;
+  display: block;
+  width: 20rem;
+  height: auto;
 }
 
 .desktop-nav-list {
@@ -27,13 +26,16 @@
 .desktop-nav-link:visited {
   display: inline-block; // good practice for nav links
   text-decoration: none;
-  color: #fff;
+  color: $color-text-inverse;
   font-weight: 500;
   font-size: 1.8rem;
-  transition: all 0.3s;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 
   &:hover,
   &:active {
-    color: $color-accent;
+    color: $color-accent-3;
+    transform: translateY(-1px);
   }
 }

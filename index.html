@@ -28,43 +28,47 @@
   <body>
     <header class="header">
       <div class="header-logo">
-        <div class="logo">Joe Fugere</div>
+        <img
+          src="images/joe-fugere-cursive-logo-transparent.png"
+          alt="Hero logo for Joe Fugere Portfolio"
+        />
       </div>
-
-      <nav class="desktop-nav" arial-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="desktop-nav-list">
           <li class="desktop-nav-item">
             <a href="#" class="desktop-nav-link">Home</a>
           </li>
 
           <li class="desktop-nav-item">
-            <a href="#" class="desktop-nav-link">Case Studies</a>
+            <a href="#case" class="desktop-nav-link">Case Studies</a>
           </li>
 
           <li class="desktop-nav-item">
-            <a href="#" class="desktop-nav-link">About</a>
+            <a href="#about" class="desktop-nav-link">About</a>
           </li>
 
           <li class="desktop-nav-item">
-            <a href="#" class="desktop-nav-link">Resume</a>
+            <a href="resume.html" class="desktop-nav-link">Resume</a>
           </li>
 
           <li class="desktop-nav-item">
-            <a href="#" class="desktop-nav-link">Contact</a>
+            <a href="#contact" class="desktop-nav-link">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
+    <!--------------- Hero Section ----------------->
+
     <main>
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text">
-            <p class="hero-text-eyebrow">Web Designer & Front-End Developer</p>
-            <h1 class="hero-text-heading">
+            <p class="hero-text__eyebrow">Web Designer & Front-End Developer</p>
+            <h1 class="hero-text__heading">
               Thoughtful design. Intentional development.
             </h1>
-            <p class="hero-text-subheading">
+            <p class="hero-text__subheading">
               I design and build clean, modern websites focused on clarity,
               usability, and real-world performance.
             </p>
@@ -74,18 +78,350 @@
               <a href="#" class="btn-secondary">About Me</a>
             </div>
           </div>
+        </div>
 
-          <div class="hero-image-box">
-            <img
-              class="section-hero-image"
-              src="images/joe-fugere-web-designer-portrait.png"
-              alt="Joe Fugere, web designer and front-end developer"
-            />
+        <div class="hero-image-box">
+          <img
+            class="section-hero-image"
+            src="images/joe-fugere-web-designer-portrait.png"
+            alt="Joe Fugere, web designer and front-end developer"
+          />
+        </div>
+      </section>
+
+      <!--------------- Case Section ----------------->
+
+      <section class="case-preview" id="case">
+        <div class="case-preview__header">
+          <div class="case-preview__eyebrow">Featured Case Studies</div>
+          <div class="case-preview__heading">
+            A closer look at selected projects.
+          </div>
+          <div class="case-preview__description">
+            These featured case studies highlight my approach to web design,
+            front-end structure, responsive layout, and brand-focused digital
+            experiences.
           </div>
         </div>
+
+        <div class="container grid grid--3-cols">
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/jf-candle-co-case-study.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                E-Commerce / Branding / Shopify Design
+              </p>
+              <h3 class="case-preview-card__heading">J | F Candle Co.</h3>
+              <p class="case-preview-card__description">
+                A luxury candle brand website focused on refined product
+                storytelling, clean-burning candle education, and an elevated
+                Shopify shopping experience.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>Shopify Design</li>
+                <li>HTML</li>
+                <li>Brand Storytelling</li>
+                <li>Responsive Layout</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/ritual-supply-case-study.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                Web Design / Front-End Development
+              </p>
+              <h3 class="case-preview-card__heading">Ritual Supply Co.</h3>
+              <p class="case-preview-card__description">
+                A fictional coffee brand landing page designed and built to
+                practice modern front-end layout, Sass structure, responsive
+                design, and visual brand storytelling.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass / SCSS</li>
+                <li>Git & GitHub</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/joe-fugere-portfolio-case-study-preview.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                Design System / Visual Foundation
+              </p>
+              <h3 class="case-preview-card__heading">
+                Portfolio Design System
+              </h3>
+              <p class="case-preview-card__description">
+                A personal design system documenting the typography, spacing,
+                color, layout, and reusable visual rules used across my
+                portfolio projects.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>Figma</li>
+                <li>CSS</li>
+                <li>Sass</li>
+                <li>Design Tokens</li>
+                <li>Typography Systems</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="case-preview__cta-box">
+          <a href="#" class="case-preview__cta btn-outline"
+            >View All Projects &rarr;</a
+          >
+        </div>
+      </section>
+
+      <section class="about-preview" id="about">
+        <div class="about-preview__header">
+          <p class="about-preview__eyebrow">About Me</p>
+          <h3 class="about-preview__heading">
+            Designing clean, thoughtful websites with purpose.
+          </h3>
+          <p class="about-preview__description">
+            I create clean, responsive web experiences rooted in strong layout,
+            intentional spacing, and brand-focused design — combining visual
+            polish with organized, maintainable code.
+          </p>
+        </div>
+        <div class="about-preview__cta-box">
+          <a href="#" class="about-preview__cta btn-primary">Learn More</a>
+        </div>
+      </section>
+
+      <!--------------- Skills Section ----------------->
+
+      <section class="skills-preview">
+        <div class="skills-preview__header">
+          <p class="skills-preview__eyebrow">Technical Skills</p>
+          <h3 class="skills-preview__heading">
+            The Tools Behind Thoughtful Web Design
+          </h3>
+          <p class="skills-preview__description">
+            A growing front-end skill set focused on clean structure, responsive
+            layouts, polished visual design, and user-friendly web experiences.
+            My work combines HTML, CSS, Sass, and design fundamentals with an
+            expanding knowledge of JavaScript and modern web workflows.
+          </p>
+        </div>
+
+        <div class="skills__grid container grid grid--3-cols grid--gap-sm">
+          <article class="skill-card">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/html5-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <h3 class="skill-card__heading">HTML5</h3>
+
+            <p class="skill-card__text">
+              Building clean, semantic page structure for accessible and
+              organized websites.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/css3-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <h3 class="skill-card__heading">CSS3</h3>
+
+            <p class="skill-card__text">
+              Creating polished layouts, typography, spacing, and responsive
+              visual styles.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/sass-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <h3 class="skill-card__heading">Sass</h3>
+
+            <p class="skill-card__text">
+              Writing more organized and scalable styles with variables,
+              nesting, and reusable structure.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/figma-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <h3 class="skill-card__heading">Figma</h3>
+
+            <p class="skill-card__text">
+              Designing layouts, wireframes, visual systems, and polished
+              interface concepts.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/responsive-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <h3 class="skill-card__heading">Responsive Design</h3>
+
+            <p class="skill-card__text">
+              Creating websites that adapt smoothly across desktop, tablet, and
+              mobile screens.
+            </p>
+          </article>
+
+          <article class="skill-card skill-card--learning">
+            <div class="skill-card__icon">
+              <img
+                src="images/icons/javascript-icon.svg"
+                alt=""
+                class="skill-card__icon-img"
+              />
+            </div>
+
+            <div class="skill-card__label">Learning</div>
+
+            <h3 class="skill-card__heading">JavaScript</h3>
+
+            <p class="skill-card__text">
+              Expanding my front-end development skills through JavaScript to
+              build more interactive and dynamic websites.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!--------------- Contact Section ----------------->
+
+      <section class="contact-preview-cta" id="contact">
+        <p class="contact-preview-cta__eyebrow">Let’s Connect</p>
+
+        <h2 class="contact-preview-cta__heading">
+          Interested in working together?
+        </h2>
+
+        <p class="contact-preview-cta__description">
+          Reach out for web design, front-end development opportunities, or
+          project inquiries.
+        </p>
+
+        <a href="contact.html" class="contact-preview-cta__btn btn-primary"
+          >Contact Me</a
+        >
       </section>
     </main>
 
-    <footer class="footer"></footer>
+    <!--------------- Footer Section ----------------->
+
+    <footer class="footer">
+      <div class="footer-intro-container">
+        <div class="footer-intro">
+          <img
+            src="images/joe-fugere-cursive-logo-transparent.png"
+            class="footer-intro__logo"
+            alt="Footer logo for Joe Fugere Portfolio"
+          />
+
+          <p class="footer-intro__description">
+            Web Designer & Front-End Developer focused on clean layouts,
+            responsive websites, and thoughtful digital experiences.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h3 class="footer-nav__title">Navigation</h3>
+
+          <ul class="footer-nav__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="case.html">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-projects">
+          <h3 class="footer-projects__title">Projects</h3>
+
+          <ul class="footer-projects__list">
+            <li><a href="jfcandleco.html">J | F Candle Co.</a></li>
+            <li><a href="ritualsupplyco.html">Ritual Supply Co.</a></li>
+            <li><a href="portfolio.html">Portfolio Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-separator"></div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Joe Fugere. All rights reserved.
+        <span>Designed &amp; Developed by Joe Fugere.</span>
+      </p>
+    </footer>
   </body>
 </html>

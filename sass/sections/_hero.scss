@@ -10,7 +10,7 @@
 
   padding: 8rem 4rem 0;
   overflow: hidden;
-  background-color: $color-accent-soft;
+  background-color: rgba($color-ink, 0.35);
 
   &::before {
     content: "";
@@ -18,7 +18,7 @@
     inset: 0;
     z-index: 2;
 
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba($color-ink, 0.45);
     pointer-events: none;
   }
 }
@@ -31,29 +31,31 @@
   grid-column: 1;
   align-self: center;
   max-width: 580px;
-}
 
-.hero-text-eyebrow {
-  font-family: "Inter", sans-serif;
-  font-size: 1.9rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-  color: $color-accent;
-}
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: $color-champagne;
+    text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.35);
+  }
 
-.hero-text-heading {
-  font-family: "Playfair Display";
-  font-size: 4.2rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
+  &__heading {
+    font-family: "Playfair Display";
+    font-size: 4.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: $color-text;
+  }
 
-.hero-text-subheading {
-  font-family: "Inter", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 3.2rem;
-  color: #fff;
+  &__subheading {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+    color: $color-text-inverse;
+  }
 }
 
 .hero-image-box {

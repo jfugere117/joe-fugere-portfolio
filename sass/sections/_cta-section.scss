@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+
+/* ------------------------------
+   Contact CTA
+------------------------------ */
+
+.contact-preview-cta {
+  padding: 7rem 2rem;
+  background-color: #dce4eb;
+  text-align: center;
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-text-muted;
+    margin-bottom: 8rem;
+  }
+}

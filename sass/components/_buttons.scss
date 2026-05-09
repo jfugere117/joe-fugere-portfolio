@@ -5,33 +5,59 @@
   gap: 3rem;
 }
 
-.btn-primary {
-  background-color: $color-accent-dark;
-  border: 1.5px solid $color-accent-dark;
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  display: inline-block;
   padding: 2rem 3rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 8px;
-  color: #fff;
+  color: $color-text-inverse;
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background-color: $color-accent-3-dark;
+  border: 1.5px solid $color-accent-3-dark;
 
   &:hover {
-    background-color: $color-accent-dark;
-    border: 1.5px solid $color-accent-dark;
+    background-color: $color-accent-3-deep;
+    border-color: $color-accent-3-deep;
     transform: translate(-2px, -2px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1rem 2rem rgba($color-ink, 0.22);
   }
 }
 
 .btn-secondary {
-  border: 1.5px solid $color-accent;
-  padding: 2rem 3rem;
-  font-size: 2rem;
-  border-radius: 8px;
-  color: $color-accent;
+  background-color: transparent;
+  border: 1.5px solid $color-text-inverse;
 
   &:hover {
-    border: 1.5px solid $color-accent-dark;
-    color: $color-accent-dark;
+    background-color: rgba($color-champagne, 0.14);
+    border-color: $color-champagne;
+    color: $color-champagne-soft;
     transform: translate(-2px, -2px);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1.5px solid $color-accent-3-deep;
+  color: $color-accent-3-deep;
+
+  &:hover {
+    background-color: rgba($color-accent-3-soft, 0.14);
+    border-color: $color-accent-2-dark;
+    color: $color-accent-3-dark;
+    transform: translate(-2px, -2px);
+    box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
   }
 }

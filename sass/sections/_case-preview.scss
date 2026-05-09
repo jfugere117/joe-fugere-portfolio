@@ -1,0 +1,124 @@
+@use "../abstracts/variables" as *;
+
+.case-preview {
+  padding: 9.6rem 0;
+
+  &__header {
+    max-width: 74rem;
+    margin: 0 auto 9.4rem;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    color: $color-text-soft;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $color-text-muted;
+  }
+
+  &__cta-box {
+    margin-top: 5.6rem;
+    text-align: center;
+  }
+}
+
+.case-preview-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4.5 / 3;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    box-shadow: 0.6rem 1.4rem 3.2rem rgba(16, 20, 24, 0.16);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2.4rem;
+    margin-top: 2rem;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    min-height: 12rem;
+    margin-bottom: 2rem;
+    color: $color-text-muted;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.4rem;
+  }
+
+  &__skills li {
+    width: fit-content;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(16, 20, 24, 0.12);
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+    color: $color-accent-3-dark;
+
+    &:hover {
+      transform: translate(-2px, -2px);
+    }
+  }
+}
