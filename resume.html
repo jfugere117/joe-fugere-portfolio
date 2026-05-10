@@ -3,7 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
-  <body></body>
+  <body>
+    <header class="resume-header-nav">
+      <div class="header-logo">
+        <img
+          src="images/joe-fugere-cursive-logo-transparent.png"
+          alt="Hero logo for Joe Fugere Portfolio"
+        />
+      </div>
+      <nav class="resume-nav" aria-label="Main navigation">
+        <ul class="resume-nav-list">
+          <li class="resume-nav-item">
+            <a href="index.html" class="resume-nav-link">Home</a>
+          </li>
+
+          <li class="resume-nav-item">
+            <a href="#case" class="resume-nav-link">Case Studies</a>
+          </li>
+
+          <li class="resume-nav-item">
+            <a href="#about" class="resume-nav-link">About</a>
+          </li>
+
+          <li class="resume-nav-item">
+            <a href="resume.html" class="resume-nav-link">Resume</a>
+          </li>
+
+          <li class="resume-nav-item">
+            <a href="#contact" class="resume-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="resume-main-header-container">
+        <div class="resume-main-header">
+          <h2 class="resume-main-header__logo">Joe Fugere</h2>
+          <p class="resume-main-header__eyebrow">Web Designer & Developer</p>
+        </div>
+
+        <div class="resume-main-header-contact">
+          <ul class="resume-main-header-contact__list">
+            <li class="resume-main-header-contact__item">
+              <p class="resume-main-header-contact__text">
+                <span>New Hampshire</span>
+                <i
+                  class="fa-solid fa-location-dot resume-main-header-contact__icon"
+                  aria-hidden="true"
+                ></i>
+              </p>
+            </li>
+
+            <li class="resume-main-header-contact__item">
+              <a
+                href="mailto:jfugere1983@gmail.com"
+                class="resume-main-header-contact__link"
+              >
+                <span>jfugere1983@gmail.com</span>
+                <i
+                  class="fa-solid fa-envelope resume-main-header-contact__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+
+            <li class="resume-main-header-contact__item">
+              <a
+                href="https://joefugere.com"
+                class="resume-main-header-contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>joefugere.com</span>
+                <i
+                  class="fa-solid fa-globe resume-main-header-contact__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+
+            <li class="resume-main-header-contact__item">
+              <a
+                href="https://github.com/YOUR-USERNAME"
+                class="resume-main-header-contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>GitHub</span>
+                <i
+                  class="fa-brands fa-github resume-main-header-contact__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+
+            <li class="resume-main-header-contact__item">
+              <a
+                href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+                class="resume-main-header-contact__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>LinkedIn</span>
+                <i
+                  class="fa-brands fa-linkedin-in resume-main-header-contact__icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-main-header__separator"></div>
+
+      <div class="resume-container grid grid--2-cols">
+        <div class="left-side">Left Side</div>
+        <div class="right-side">Right Side</div>
+      </div>
+    </main>
+
+    <!--------------- Footer Section ----------------->
+
+    <footer class="footer">
+      <div class="footer-intro-container">
+        <div class="footer-intro">
+          <img
+            src="images/joe-fugere-cursive-logo-transparent.png"
+            class="footer-intro__logo"
+            alt="Footer logo for Joe Fugere Portfolio"
+          />
+
+          <p class="footer-intro__description">
+            Web Designer & Front-End Developer focused on clean layouts,
+            responsive websites, and thoughtful digital experiences.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h3 class="footer-nav__title">Navigation</h3>
+
+          <ul class="footer-nav__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="case.html">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-projects">
+          <h3 class="footer-projects__title">Projects</h3>
+
+          <ul class="footer-projects__list">
+            <li><a href="jfcandleco.html">J | F Candle Co.</a></li>
+            <li><a href="ritualsupplyco.html">Ritual Supply Co.</a></li>
+            <li><a href="portfolio.html">Portfolio Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-separator"></div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Joe Fugere. All rights reserved.
+        <span>Designed &amp; Developed by Joe Fugere.</span>
+      </p>
+    </footer>
+  </body>
 </html>

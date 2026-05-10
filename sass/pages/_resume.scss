@@ -1,0 +1,104 @@
+@use "../abstracts/variables" as *;
+
+.resume-header-nav,
+.resume-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-header-nav {
+  padding: 1rem 4rem;
+}
+
+.resume-nav-list {
+  gap: 2rem;
+}
+
+.resume-main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 4rem 2rem;
+}
+
+.resume-main-header {
+  &__logo {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-accent;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", Georgia, "Times New Roman", Times, serif;
+    font-size: 1.7rem;
+  }
+}
+
+.resume-main-header-contact {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 5rem;
+    row-gap: 1.6rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__text,
+  &__link {
+    display: inline-flex;
+
+    gap: 2.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: $color-text-muted;
+  }
+
+  &__link:hover {
+    color: $color-accent-dark;
+  }
+
+  &__icon {
+    font-size: 2.4rem;
+    color: $color-accent;
+  }
+
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+.resume-main-header-contact ul {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 1rem;
+}
+
+.resume-container {
+  height: 100vh;
+  gap: 0;
+}
+
+.resume-main-header__separator {
+  flex-basis: 100%;
+  width: 95%;
+  height: 2px;
+  background-color: rgba($color-accent, 0.78);
+  margin: 0 auto 1rem;
+}
+
+.left-side {
+  background-color: cadetblue;
+  height: 100vh;
+}
+
+.right-side {
+  background-color: tan;
+  height: 100vh;
+}

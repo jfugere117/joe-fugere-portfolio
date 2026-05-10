@@ -1,0 +1,218 @@
+@use "../abstracts/variables" as *;
+
+/* ------------------------------
+   Homepage Media Queries
+------------------------------ */
+
+@media (max-width: 900px) {
+  .section-hero,
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 12rem 2.4rem 6rem;
+    overflow: hidden;
+  }
+
+  .homepage-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 68rem;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+  }
+
+  .hero-btn a {
+    width: min(100%, 28rem);
+    text-align: center;
+  }
+
+  .homepage-hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .homepage-hero-image-container__img {
+    position: absolute;
+    right: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    width: min(80vw, 42rem);
+    max-height: 68vh;
+    height: auto;
+    opacity: 0.35;
+  }
+
+  .footer-intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .footer-nav,
+  .footer-projects {
+    border: none;
+    padding-left: 0;
+  }
+
+  .header-logo {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    padding: 10rem 2rem 6rem;
+  }
+
+  .homepage-hero-content {
+    max-width: 36rem;
+  }
+
+  .homepage-hero-content__heading {
+    font-size: 3.8rem;
+  }
+
+  .homepage-hero-content__subheading {
+    font-size: 1.6rem;
+  }
+
+  .homepage-hero-image-container__img {
+    width: min(95vw, 42rem);
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 430px) {
+  .section-hero {
+    min-height: 100vh;
+    padding: 10rem 2rem 6rem;
+  }
+
+  .homepage-hero-content__heading {
+    font-size: 3.4rem;
+  }
+
+  .hero-btn a {
+    width: min(100%, 26rem);
+  }
+
+  .homepage-hero-image-container__img {
+    width: min(105vw, 38rem);
+    max-height: 64vh;
+  }
+}
+
+/* ------------------------------
+   About Page Media Queries
+------------------------------ */
+
+@media (max-width: 900px) {
+  .about-page-hero,
+  .grid {
+    display: block;
+    min-height: auto;
+    padding: 12rem 2.4rem 8rem;
+    grid-template-columns: 1fr;
+  }
+
+  .about-page-hero-image-container {
+    position: absolute;
+    opacity: 0.28;
+
+    &__img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(90%, 38rem);
+      max-height: 80%;
+    }
+  }
+
+  .about-page-hero-content {
+    /*grid-column: 1;*/
+    //grid-template-columns: 1fr;
+    position: relative;
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 3rem 3rem 0;
+    text-align: center;
+  }
+
+  .about-skills__grid,
+  .about-approach__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro,
+  .about-skills,
+  .about-approach,
+  .about-journey,
+  .about-cta {
+    padding: 7.2rem 2.4rem;
+  }
+
+  .about-journey__content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page-hero {
+    padding: 10rem 2rem 7rem;
+  }
+
+  .about-page-hero-content {
+    &__heading {
+      font-size: 3.8rem;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+    }
+  }
+
+  .about-intro,
+  .about-skills,
+  .about-approach,
+  .about-journey,
+  .about-cta {
+    padding: 6.4rem 2rem;
+  }
+
+  .about-skills-card,
+  .about-approach-card {
+    padding: 2.4rem;
+  }
+
+  .about-cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

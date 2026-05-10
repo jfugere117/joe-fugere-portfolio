@@ -495,17 +495,17 @@ View System
 
 ### Eyebrow
 
-About Me
+My Story
 
 ### Heading
 
-I’m Joe Fugere, a web designer building clean, responsive digital experiences.
+Building my path through design and code.
 
 ### Body Copy
 
-I’m a web designer and front-end developer with a strong foundation in HTML, CSS, Sass, and responsive design. I enjoy creating websites that feel clean, organized, and visually intentional.
-
-My current focus is building a strong portfolio, improving my front-end workflow, and expanding into JavaScript so I can continue growing toward an entry-level web design or front-end development role.
+I’m a developing web designer with growing front-end development skills,
+focused on clean, responsive websites, thoughtful layouts, and user-friendly
+digital experiences.
 
 ---
 

@@ -3,247 +3,318 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Joe Fugere</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="css/main.css" />
+
+    <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
-  <body class="about-me-page">
+  <body>
     <header class="header">
       <div class="header-logo">
-        <a href="index.html" class="about-logo">Joe Fugere</a>
+        <img
+          src="images/joe-fugere-cursive-logo-transparent.png"
+          alt="Hero logo for Joe Fugere Portfolio"
+        />
       </div>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="desktop-nav-list">
+          <li class="desktop-nav-item">
+            <a href="index.html" class="desktop-nav-link">Home</a>
+          </li>
 
-      <nav class="about-nav" aria-label="about-navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="casestudies.html">Case Studies</a></li>
-          <li><a href="aboutme.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="desktop-nav-item">
+            <a href="#case" class="desktop-nav-link">Case Studies</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="#about" class="desktop-nav-link">About</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="resume.html" class="desktop-nav-link">Resume</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="#contact" class="desktop-nav-link">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <!--------------- Start of Main Section ----------------->
+
     <main>
-      <section class="section-about-hero">
-        <div class="section-about-hero-image"></div>
+      <!--------------- About Hero ----------------->
 
-        <div class="section-about-hero-overlay-container">
-          <div class="section-about-hero-overlay">
-            <p class="section-about-hero-overlay-eyebrow">About</p>
+      <section class="about-page-hero grid grid--2-cols">
+        <div class="about-page-hero-image-container">
+          <img
+            src="images/joe-fugere-black-cat-transparent-portfolio-portrait.png"
+            alt="Joe Fugere, web designer and front-end developer"
+            class="about-page-hero-image-container__img"
+          />
+        </div>
 
-            <h1 class="section-about-hero-overlay-heading">I’m Joe Fugere.</h1>
+        <div class="about-page-hero-content">
+          <p class="about-page-hero-content__eyebrow">My Story</p>
 
-            <p class="section-about-hero-overlay-subheading">
-              A web designer and front-end developer focused on building clean,
-              intentional digital experiences.
+          <h1 class="about-page-hero-content__heading">
+            Learning, designing, building.
+          </h1>
+
+          <p class="about-page-hero-content__description">
+            I’m a developing web designer with growing front-end development
+            skills, focused on clean, responsive websites, thoughtful layouts,
+            and user-friendly digital experiences.
+          </p>
+        </div>
+      </section>
+
+      <!--------------- About Intro ----------------->
+      <section class="about-intro">
+        <div class="container">
+          <div class="about-intro__header">
+            <div class="about-intro__content">
+              <p class="about-intro__eyebrow">About Me</p>
+
+              <h2 class="about-intro__heading">
+                Learning by designing, building, and improving.
+              </h2>
+
+              <p class="about-intro__description">
+                I’m Joe Fugere, a developing web designer focused on building
+                polished, responsive websites through hands-on practice. I’m
+                currently strengthening my skills in HTML, CSS, Sass, Figma, and
+                JavaScript while creating portfolio projects that help me
+                improve my approach to layout, typography, spacing, and
+                user-focused design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="about-skills">
+        <div class="container">
+          <div class="about-skills__header">
+            <p class="about-skills__eyebrow">Skills & Tools</p>
+
+            <h2 class="about-skills__heading">
+              The tools and skills I’m building with.
+            </h2>
+
+            <p class="about-skills__description">
+              My current focus is building a strong foundation across visual
+              design, responsive front-end development, and practical workflow
+              tools.
+            </p>
+          </div>
+
+          <div class="about-skills grid grid--3-cols">
+            <article class="about-skills-card">
+              <h3 class="about-skills-card__title">Design</h3>
+
+              <ul class="about-skills-card__list">
+                <li>Figma</li>
+                <li>Layout</li>
+                <li>Typography</li>
+                <li>Color systems</li>
+                <li>Responsive design</li>
+              </ul>
+            </article>
+
+            <article class="about-skills-card">
+              <h3 class="about-skills-card__title">Front-End</h3>
+
+              <ul class="about-skills-card__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass / SCSS</li>
+                <li>JavaScript fundamentals</li>
+                <li>Responsive layouts</li>
+              </ul>
+            </article>
+
+            <article class="about-skills-card">
+              <h3 class="about-skills-card__title">Workflow</h3>
+
+              <ul class="about-skills-card__list">
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>npm scripts</li>
+                <li>AI-assisted learning</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Approach -->
+      <section class="about-approach">
+        <div class="container">
+          <div class="about-approach__content">
+            <div class="about-approach__header">
+              <p class="about-approach__eyebrow">How I Work</p>
+
+              <h2 class="about-approach__heading">
+                Focused on clarity, structure, and thoughtful details.
+              </h2>
+
+              <p class="about-approach__description">
+                I approach each project by focusing on the fundamentals first:
+                clear structure, strong spacing, readable typography, responsive
+                layouts, and visual consistency.
+              </p>
+            </div>
+
+            <div class="about-approach__grid">
+              <article class="about-approach-card">
+                <span class="about-approach-card__number">01</span>
+
+                <h3 class="about-approach-card__title">Structure</h3>
+
+                <p class="about-approach-card__text">
+                  Clean HTML, organized SCSS, and reusable layout patterns that
+                  make a website easier to understand and maintain.
+                </p>
+              </article>
+
+              <article class="about-approach-card">
+                <span class="about-approach-card__number">02</span>
+
+                <h3 class="about-approach-card__title">Visual Design</h3>
+
+                <p class="about-approach-card__text">
+                  Thoughtful typography, spacing, color, and hierarchy to create
+                  pages that feel polished and intentional.
+                </p>
+              </article>
+
+              <article class="about-approach-card">
+                <span class="about-approach-card__number">03</span>
+
+                <h3 class="about-approach-card__title">Responsiveness</h3>
+
+                <p class="about-approach-card__text">
+                  Layouts that adapt cleanly across screen sizes so each
+                  experience feels usable on desktop, tablet, and mobile.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Journey -->
+      <section class="about-journey">
+        <div class="container about-journey__container">
+          <div class="about-journey__content">
+            <p class="about-journey__eyebrow">My Journey</p>
+
+            <h2 class="about-journey__heading">
+              Building skills through consistent practice.
+            </h2>
+
+            <p class="about-journey__description">
+              I’m currently growing my front-end development skills while
+              continuing to improve my design process. Each project gives me a
+              chance to practice layout, responsive behavior, Sass organization,
+              visual hierarchy, and problem solving.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="section-introduction">
-        <p class="section-introduction-eyebrow">Introduction</p>
+      <!-- CTA -->
+      <section class="about-cta">
+        <div class="container about-cta__container">
+          <p class="about-cta__eyebrow">Explore My Work</p>
 
-        <h2 class="section-introduction-title">
-          Design, built with clarity and intention.
-        </h2>
+          <h2 class="about-cta__heading">Want to see what I’m building?</h2>
 
-        <p class="section-introduction-description">
-          I design and build websites with a focus on clarity, structure, and
-          usability. Every decision—from layout and typography to spacing and
-          interaction—is made with intention.
-        </p>
+          <p class="about-cta__description">
+            View my portfolio projects to see how I’m applying design, code, and
+            responsive layout skills across different web experiences.
+          </p>
 
-        <p class="section-introduction-description">
-          My goal is simple: create digital experiences that feel clean, modern,
-          and effortless to use.
-        </p>
-      </section>
-
-      <section class="section-background">
-        <p class="section-background-eyebrow">Background</p>
-
-        <h2 class="section-background-title">
-          Built through real projects and hands-on work.
-        </h2>
-
-        <p class="section-background-description">
-          My path into web design has been shaped through hands-on experience,
-          building projects that combine design, front-end development,
-          branding, and real-world problem solving.
-        </p>
-
-        <p class="section-background-description">
-          Through building J | F Candle Co., I’ve gained practical experience
-          refining a live e-commerce brand, improving website sections, creating
-          product content, developing brand visuals, and thinking through the
-          full customer experience.
-        </p>
-
-        <p class="section-background-description">
-          I’m also developing concept projects like Ritual Supply Co. to
-          strengthen my portfolio, practice modern layouts, and show how I
-          approach design, structure, and front-end development.
-        </p>
-      </section>
-
-      <section class="section-building">
-        <p class="section-building-eyebrow">Currently</p>
-
-        <h2 class="section-building-title">Continuing to refine and expand.</h2>
-
-        <p class="section-building-description">
-          I’m currently focused on strengthening my front-end development
-          skills, expanding into JavaScript to build more dynamic experiences,
-          and continuing to develop thoughtful, well-structured case studies.
-        </p>
-      </section>
-
-      <section class="section-skills-about">
-        <p class="section-skills-about-eyebrow">Skills</p>
-
-        <h2 class="section-skills-about-title">Tools I work with.</h2>
-
-        <div class="section-skills-about-card">
-          <div class="section-skills-about-card-1">
-            <h3 class="card-title">Design</h3>
-            <div class="card-title-separator"></div>
-
-            <ul class="skills-list">
-              <li class="skills-list-pill">Figma</li>
-              <li class="skills-list-pill">UI Design</li>
-              <li class="skills-list-pill">Visual Design</li>
-              <li class="skills-list-pill">Responsive Layouts</li>
-            </ul>
+          <div class="about-cta__buttons">
+            <a href="case-studies.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-outline">Contact Me</a>
           </div>
-
-          <div class="section-skills-about-card-2">
-            <h3 class="card-title">Development</h3>
-            <div class="card-title-separator"></div>
-
-            <ul class="skills-list">
-              <li class="skills-list-pill">HTML5</li>
-              <li class="skills-list-pill">CSS3</li>
-              <li class="skills-list-pill">Sass / SCSS</li>
-              <li class="skills-list-pill">CSS Grid</li>
-              <li class="skills-list-pill">Flexbox</li>
-              <li class="skills-list-pill">JavaScript — Expanding</li>
-            </ul>
-          </div>
-
-          <div class="section-skills-about-card-3">
-            <h3 class="card-title">Tools</h3>
-            <div class="card-title-separator"></div>
-
-            <ul class="skills-list">
-              <li class="skills-list-pill">VS Code</li>
-              <li class="skills-list-pill">GitHub</li>
-              <li class="skills-list-pill">Chrome DevTools</li>
-              <li class="skills-list-pill">Shopify</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-about-cta">
-        <p class="section-about-cta-eyebrow">Next Step</p>
-
-        <h2 class="section-about-cta-title">
-          Let’s build something thoughtful.
-        </h2>
-
-        <p class="section-about-cta-description">
-          Explore my selected work or get in touch if you’d like to connect.
-        </p>
-
-        <div class="section-about-cta-buttons">
-          <a
-            href="casestudies.html"
-            class="section-about-cta-button section-about-cta-button-dark"
-          >
-            View My Work
-          </a>
-
-          <a
-            href="contact.html"
-            class="section-about-cta-button section-about-cta-button-light"
-          >
-            Contact Me
-          </a>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-intro">
-          <h2 class="footer-intro-logo">Joe Fugere</h2>
 
-          <p class="footer-intro-description">
+    <!--------------- Footer Section ----------------->
+
+    <footer class="footer">
+      <div class="footer-intro-container">
+        <div class="footer-intro">
+          <img
+            src="images/joe-fugere-cursive-logo-transparent.png"
+            class="footer-intro__logo"
+            alt="Footer logo for Joe Fugere Portfolio"
+          />
+
+          <p class="footer-intro__description">
             Web Designer & Front-End Developer focused on clean layouts,
             responsive websites, and thoughtful digital experiences.
           </p>
+
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
 
         <div class="footer-nav">
-          <h3 class="footer-nav-title">Navigation</h3>
+          <h3 class="footer-nav__title">Navigation</h3>
 
-          <ul class="footer-nav-list">
+          <ul class="footer-nav__list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="casestudies.html">Case Studies</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a href="case.html">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-projects">
-          <h3 class="footer-projects-title">Projects</h3>
+          <h3 class="footer-projects__title">Projects</h3>
 
-          <ul class="footer-projects-list">
-            <li><a href="casestudies.html">J | F Candle Co.</a></li>
-            <li><a href="casestudies.html">Ritual Supply Co.</a></li>
-            <li><a href="casestudies.html">Portfolio Website</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-connect">
-          <h3 class="footer-connect-title">Connect</h3>
-
-          <ul class="footer-connect-list">
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="images/icons/linkedin.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>LinkedIn</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="images/icons/github.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>GitHub</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:your@email.com">
-                <img
-                  src="images/icons/email.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>Email</span>
-              </a>
-            </li>
+          <ul class="footer-projects__list">
+            <li><a href="jfcandleco.html">J | F Candle Co.</a></li>
+            <li><a href="ritualsupplyco.html">Ritual Supply Co.</a></li>
+            <li><a href="portfolio.html">Portfolio Website</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-separator"></div>
 
       <p class="footer-copyright">

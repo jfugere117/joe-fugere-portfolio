@@ -62,6 +62,7 @@ html {
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5% */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,6 +71,7 @@ body {
   line-height: 1.5;
   color: #12171c;
   background-color: #f4f6f7;
+  overflow-x: hidden;
 }
 
 img,
@@ -275,7 +277,7 @@ ol {
 ------------------------------ */
 .container {
   max-width: 120rem;
-  padding: 0 1.2rem;
+  padding: 5rem 1.2rem;
   margin: 0 auto;
 }
 
@@ -298,6 +300,7 @@ ol {
 
 .grid--2-cols {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
 }
 
 .grid--3-cols {
@@ -373,9 +376,9 @@ ol {
 .section-hero {
   position: relative;
   min-height: 100vh;
-  display: grid;
+  /*display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
+  align-items: center;*/
   padding: 8rem 4rem 0;
   overflow: hidden;
   background-color: rgba(6, 9, 11, 0.35);
@@ -389,15 +392,15 @@ ol {
   pointer-events: none;
 }
 
-.hero-text {
+.homepage-hero-content {
   position: relative;
   z-index: 3;
-  padding-left: 4rem;
+  padding-left: 3rem;
   grid-column: 1;
   align-self: center;
   max-width: 580px;
 }
-.hero-text__eyebrow {
+.homepage-hero-content__eyebrow {
   font-family: "Inter", sans-serif;
   font-size: 1.9rem;
   font-weight: 700;
@@ -405,14 +408,14 @@ ol {
   color: #d2bd8f;
   text-shadow: 0 0.2rem 1rem rgba(6, 9, 11, 0.35);
 }
-.hero-text__heading {
-  font-family: "Playfair Display";
+.homepage-hero-content__heading {
+  font-family: "Playfair Display" Georgia, "Times New Roman", Times, serif;
   font-size: 4.2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 2rem;
   color: #12171c;
 }
-.hero-text__subheading {
+.homepage-hero-content__subheading {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -420,30 +423,26 @@ ol {
   color: #fafafa;
 }
 
-.hero-image-box {
+.homepage-hero-image-container {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 32%;
+  inset: 0;
   z-index: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   overflow: hidden;
   pointer-events: none;
 }
-
-.section-hero-image {
-  width: min(100%, 875px);
-  max-height: 100%;
+.homepage-hero-image-container__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(82vw, 92rem);
+  max-height: 88vh;
   height: auto;
   display: block;
   object-fit: contain;
 }
 
 .case-preview {
-  padding: 9.6rem 0;
+  padding: 9.6rem 3rem;
 }
 .case-preview__header {
   max-width: 74rem;
@@ -598,7 +597,7 @@ ol {
 */
 .skills-preview {
   background-color: #f4f6f7;
-  padding: 9.6rem 0;
+  padding: 9.6rem 3rem;
 }
 .skills-preview__header {
   max-width: 98rem;
@@ -719,6 +718,611 @@ ol {
   font-weight: 400;
   color: #69757f;
   margin-bottom: 8rem;
+}
+
+.about-page-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 8rem 4rem 0;
+  /* display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;*/
+  background-color: rgba(6, 9, 11, 0.35);
+}
+.about-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(6, 9, 11, 0.35);
+  pointer-events: none;
+}
+
+.about-page-hero-image-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow: hidden;
+  pointer-events: none;
+}
+.about-page-hero-image-container__img {
+  position: absolute;
+  left: 6%;
+  bottom: 0;
+  width: min(65%, 45rem);
+  max-height: 90%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.about-page-hero-content {
+  position: relative;
+  z-index: 3;
+  grid-column: 2;
+  max-width: 64rem;
+  padding-right: 5rem;
+}
+.about-page-hero-content__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  color: #d2bd8f;
+}
+.about-page-hero-content__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 4vw, 6.4rem);
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  color: #12171c;
+}
+.about-page-hero-content__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  max-width: 64rem;
+  color: rgba(250, 250, 250, 0.86);
+}
+
+/* ------------------------------
+   Reusable About Section Spacing
+------------------------------ */
+.about-intro,
+.about-skills,
+.about-approach,
+.about-journey,
+.about-cta {
+  padding: 4.4rem 4rem;
+}
+
+.about-intro,
+.about-journey {
+  background-color: #f4f6f7;
+}
+
+.about-skills,
+.about-cta {
+  background-color: #e3f5f7;
+}
+
+.about-approach {
+  background-color: #ffffff;
+}
+
+/* ------------------------------
+   About Intro
+------------------------------ */
+.about-intro__header {
+  max-width: 86rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-intro__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-intro__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #12171c;
+}
+.about-intro__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.75;
+  color: #69757f;
+}
+
+/* ------------------------------
+   Skills Section
+------------------------------ */
+.about-skills {
+  gap: 5rem;
+}
+.about-skills__header {
+  max-width: 76rem;
+  margin: 0 auto 5.6rem;
+  text-align: center;
+}
+.about-skills__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-skills__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+  color: #12171c;
+}
+.about-skills__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #69757f;
+}
+
+.about-skills-card {
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(18, 23, 28, 0.12);
+  box-shadow: 0 1.6rem 3.2rem rgba(6, 9, 11, 0.08);
+}
+.about-skills-card__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #247782;
+}
+.about-skills-card__list {
+  list-style: none;
+  display: grid;
+  gap: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+.about-skills-card__list li {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: #69757f;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(6, 9, 11, 0.08);
+}
+.about-skills-card__list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ------------------------------
+   Approach Section
+------------------------------ */
+.about-approach__header {
+  max-width: 76rem;
+  margin: 0 auto 5.6rem;
+  text-align: center;
+}
+.about-approach__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-approach__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+  color: #12171c;
+}
+.about-approach__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #69757f;
+}
+.about-approach__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.about-approach-card {
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: #e6ecef;
+  border: 1px solid rgba(18, 23, 28, 0.12);
+}
+.about-approach-card__number {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.4rem;
+  color: #3f667f;
+}
+.about-approach-card__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+  color: #247782;
+}
+.about-approach-card__text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #69757f;
+}
+
+/* ------------------------------
+   Journey Section
+------------------------------ */
+.about-journey {
+  text-align: center;
+}
+.about-journey__container {
+  max-width: 92rem;
+}
+.about-journey__content {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+.about-journey__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-journey__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  color: #12171c;
+}
+.about-journey__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.75;
+  color: #69757f;
+}
+
+/* ------------------------------
+   CTA Section
+------------------------------ */
+.about-cta {
+  text-align: center;
+}
+.about-cta__container {
+  max-width: 76rem;
+}
+.about-cta__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-cta__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  margin-bottom: 1.8rem;
+  color: #12171c;
+}
+.about-cta__description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  margin-bottom: 3.2rem;
+  color: #69757f;
+}
+.about-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+.resume-header-nav,
+.resume-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume-header-nav {
+  padding: 1rem 4rem;
+}
+
+.resume-nav-list {
+  gap: 2rem;
+}
+
+.resume-main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 4rem 2rem;
+}
+
+.resume-main-header__logo {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3f667f;
+}
+.resume-main-header__eyebrow {
+  font-family: "Inter", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.7rem;
+}
+
+.resume-main-header-contact__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.resume-main-header-contact__text, .resume-main-header-contact__link {
+  display: inline-flex;
+  gap: 2.5rem;
+  margin: 0;
+  text-decoration: none;
+  color: #69757f;
+}
+.resume-main-header-contact__link:hover {
+  color: #315167;
+}
+.resume-main-header-contact__icon {
+  font-size: 2.4rem;
+  color: #3f667f;
+}
+.resume-main-header-contact span {
+  font-size: 1.6rem;
+}
+
+.resume-main-header-contact ul {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 1rem;
+}
+
+.resume-container {
+  height: 100vh;
+  gap: 0;
+}
+
+.resume-main-header__separator {
+  flex-basis: 100%;
+  width: 95%;
+  height: 2px;
+  background-color: rgba(63, 102, 127, 0.78);
+  margin: 0 auto 1rem;
+}
+
+.left-side {
+  background-color: cadetblue;
+  height: 100vh;
+}
+
+.right-side {
+  background-color: tan;
+  height: 100vh;
+}
+
+/* ------------------------------
+   Homepage Media Queries
+------------------------------ */
+@media (max-width: 900px) {
+  .section-hero,
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .section-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 12rem 2.4rem 6rem;
+    overflow: hidden;
+  }
+  .homepage-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 68rem;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+  }
+  .hero-btn a {
+    width: min(100%, 28rem);
+    text-align: center;
+  }
+  .homepage-hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .homepage-hero-image-container__img {
+    position: absolute;
+    right: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(80vw, 42rem);
+    max-height: 68vh;
+    height: auto;
+    opacity: 0.35;
+  }
+  .footer-intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-nav,
+  .footer-projects {
+    border: none;
+    padding-left: 0;
+  }
+  .header-logo {
+    width: 15rem;
+  }
+}
+@media (max-width: 600px) {
+  .section-hero {
+    padding: 10rem 2rem 6rem;
+  }
+  .homepage-hero-content {
+    max-width: 36rem;
+  }
+  .homepage-hero-content__heading {
+    font-size: 3.8rem;
+  }
+  .homepage-hero-content__subheading {
+    font-size: 1.6rem;
+  }
+  .homepage-hero-image-container__img {
+    width: min(95vw, 42rem);
+    max-height: 70vh;
+  }
+}
+@media (max-width: 430px) {
+  .section-hero {
+    min-height: 100vh;
+    padding: 10rem 2rem 6rem;
+  }
+  .homepage-hero-content__heading {
+    font-size: 3.4rem;
+  }
+  .hero-btn a {
+    width: min(100%, 26rem);
+  }
+  .homepage-hero-image-container__img {
+    width: min(105vw, 38rem);
+    max-height: 64vh;
+  }
+}
+/* ------------------------------
+   About Page Media Queries
+------------------------------ */
+@media (max-width: 900px) {
+  .about-page-hero,
+  .grid {
+    display: block;
+    min-height: auto;
+    padding: 12rem 2.4rem 8rem;
+    grid-template-columns: 1fr;
+  }
+  .about-page-hero-image-container {
+    position: absolute;
+    opacity: 0.28;
+  }
+  .about-page-hero-image-container__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(90%, 38rem);
+    max-height: 80%;
+  }
+  .about-page-hero-content {
+    /*grid-column: 1;*/
+    position: relative;
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 3rem 3rem 0;
+    text-align: center;
+  }
+  .about-skills__grid,
+  .about-approach__grid {
+    grid-template-columns: 1fr;
+  }
+  .about-intro,
+  .about-skills,
+  .about-approach,
+  .about-journey,
+  .about-cta {
+    padding: 7.2rem 2.4rem;
+  }
+  .about-journey__content {
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .about-page-hero {
+    padding: 10rem 2rem 7rem;
+  }
+  .about-page-hero-content__heading {
+    font-size: 3.8rem;
+  }
+  .about-page-hero-content__description {
+    font-size: 1.6rem;
+  }
+  .about-intro,
+  .about-skills,
+  .about-approach,
+  .about-journey,
+  .about-cta {
+    padding: 6.4rem 2rem;
+  }
+  .about-skills-card,
+  .about-approach-card {
+    padding: 2.4rem;
+  }
+  .about-cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

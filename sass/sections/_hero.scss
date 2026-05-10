@@ -4,9 +4,9 @@
   position: relative;
   min-height: 100vh;
 
-  display: grid;
+  /*display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
+  align-items: center;*/
 
   padding: 8rem 4rem 0;
   overflow: hidden;
@@ -23,10 +23,10 @@
   }
 }
 
-.hero-text {
+.homepage-hero-content {
   position: relative;
   z-index: 3;
-  padding-left: 4rem;
+  padding-left: 3rem;
 
   grid-column: 1;
   align-self: center;
@@ -42,9 +42,13 @@
   }
 
   &__heading {
-    font-family: "Playfair Display";
+    font-family:
+      "Playfair Display" Georgia,
+      "Times New Roman",
+      Times,
+      serif;
     font-size: 4.2rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 2rem;
     color: $color-text;
   }
@@ -58,27 +62,22 @@
   }
 }
 
-.hero-image-box {
+.homepage-hero-image-container {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 32%;
+  inset: 0;
   z-index: 1;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-
   overflow: hidden;
   pointer-events: none;
-}
 
-.section-hero-image {
-  width: min(100%, 875px);
-  max-height: 100%;
-  height: auto;
-  display: block;
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 
-  object-fit: contain;
+    width: min(82vw, 92rem);
+    max-height: 88vh;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 }

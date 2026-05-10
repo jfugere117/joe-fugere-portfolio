@@ -1,0 +1,386 @@
+@use "../abstracts/variables" as *;
+
+.about-page-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 8rem 4rem 0;
+
+  /* display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;*/
+
+  background-color: rgba($color-ink, 0.35);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-color: rgba($color-ink, 0.35);
+    pointer-events: none;
+  }
+}
+
+.about-page-hero-image-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  &__img {
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+
+    width: min(65%, 45rem);
+    max-height: 90%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.about-page-hero-content {
+  position: relative;
+  z-index: 3;
+  grid-column: 2;
+
+  max-width: 64rem;
+  padding-right: 5rem;
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+    color: $color-champagne;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3rem, 4vw, 6.4rem);
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.7;
+    max-width: 64rem;
+    color: rgba($color-text-inverse, 0.86);
+  }
+}
+
+/* ------------------------------
+   Reusable About Section Spacing
+------------------------------ */
+
+.about-intro,
+.about-skills,
+.about-approach,
+.about-journey,
+.about-cta {
+  padding: 4.4rem 4rem;
+}
+
+.about-intro,
+.about-journey {
+  background-color: $color-background;
+}
+
+.about-skills,
+.about-cta {
+  background-color: $color-accent-3-light;
+}
+
+.about-approach {
+  background-color: $color-surface;
+}
+
+/* ------------------------------
+   About Intro
+------------------------------ */
+
+.about-intro {
+  &__header {
+    max-width: 86rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.75;
+    color: $color-text-muted;
+  }
+}
+
+/* ------------------------------
+   Skills Section
+------------------------------ */
+
+.about-skills {
+  gap: 5rem;
+
+  &__header {
+    max-width: 76rem;
+    margin: 0 auto 5.6rem;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 1.8rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+  }
+}
+
+.about-skills-card {
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  box-shadow: 0 1.6rem 3.2rem rgba($color-ink, 0.08);
+
+  &__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-family: "Inter", sans-serif;
+      font-size: 1.6rem;
+      color: $color-text-muted;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba($color-ink, 0.08);
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+/* ------------------------------
+   Approach Section
+------------------------------ */
+
+.about-approach {
+  &__header {
+    max-width: 76rem;
+    margin: 0 auto 5.6rem;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 1.8rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+  }
+}
+
+.about-approach-card {
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: $color-background-soft;
+  border: 1px solid $color-border;
+
+  &__number {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 2.4rem;
+    color: $color-accent;
+  }
+
+  &__title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__text {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+  }
+}
+
+/* ------------------------------
+   Journey Section
+------------------------------ */
+
+.about-journey {
+  text-align: center;
+  &__container {
+    max-width: 92rem;
+  }
+
+  &__content {
+    max-width: 76rem;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.75;
+    color: $color-text-muted;
+  }
+}
+
+/* ------------------------------
+   CTA Section
+------------------------------ */
+
+.about-cta {
+  text-align: center;
+
+  &__container {
+    max-width: 76rem;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 1.8rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-bottom: 3.2rem;
+    color: $color-text-muted;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
