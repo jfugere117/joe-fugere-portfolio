@@ -335,6 +335,14 @@ ol {
   row-gap: 6.4rem;
 }
 
+.resume-grid {
+  display: grid;
+}
+
+.resume-grid--2-cols {
+  grid-template-columns: 1.2fr 1fr;
+}
+
 .header {
   position: absolute;
   display: flex;
@@ -347,7 +355,7 @@ ol {
 
 .header-logo {
   display: block;
-  width: 20rem;
+  width: 18rem;
   height: auto;
 }
 
@@ -1056,79 +1064,63 @@ ol {
 /* ------------------------------
    Responsive
 ------------------------------ */
-.resume-header-nav,
-.resume-nav-list {
+/* Resume Header */
+.resume-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 4rem 6rem 0;
 }
-
-.resume-header-nav {
-  padding: 1rem 4rem;
-}
-
-.resume-nav-list {
-  gap: 2rem;
-}
-
-.resume-main-header-container {
+.resume-header__logo {
   display: flex;
-  justify-content: space-between;
+  place-content: center;
+}
+.resume-header__logo-img {
+  width: 18rem;
+  height: auto;
+  display: block;
+}
+.resume-header__nav {
+  margin-left: auto;
+}
+.resume-header__nav-list {
+  display: flex;
   align-items: center;
-  padding: 5rem 4rem 2rem;
-}
-
-.resume-main-header__logo {
-  font-family: "Playfair Display", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #3f667f;
-}
-.resume-main-header__eyebrow {
-  font-family: "Inter", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.7rem;
-}
-
-.resume-main-header-contact__list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 5rem;
-  row-gap: 1.6rem;
+  gap: 3.2rem;
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0;
 }
-.resume-main-header-contact__text, .resume-main-header-contact__link {
-  display: inline-flex;
-  gap: 2.5rem;
-  margin: 0;
+.resume-header__nav-link:link, .resume-header__nav-link:visited {
+  display: inline-block;
   text-decoration: none;
-  color: #69757f;
+  color: #12171c;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-.resume-main-header-contact__link:hover {
-  color: #315167;
-}
-.resume-main-header-contact__icon {
-  font-size: 2.4rem;
-  color: #3f667f;
-}
-.resume-main-header-contact span {
-  font-size: 1.6rem;
+.resume-header__nav-link:link:hover, .resume-header__nav-link:link:active, .resume-header__nav-link:visited:hover, .resume-header__nav-link:visited:active {
+  color: #2f9aa8;
+  transform: translateY(-1px);
 }
 
-.resume-main-header-contact ul {
+.resume-intro {
   display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 8rem 4rem 1rem;
 }
-
-.resume-container {
-  height: 100vh;
-  gap: 0;
+.resume-intro__name {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  font-size: 3.9rem;
+  color: #3f667f;
+  margin-bottom: 0.4rem;
 }
-
-.resume-main-header__separator {
+.resume-intro__title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+}
+.resume-intro__separator {
   flex-basis: 100%;
   width: 95%;
   height: 2px;
@@ -1136,14 +1128,130 @@ ol {
   margin: 0 auto 1rem;
 }
 
-.left-side {
-  background-color: cadetblue;
-  height: 100vh;
+.resume-contact__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.resume-contact__text, .resume-contact__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: 0;
+  font-size: 1.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+.resume-contact__label {
+  line-height: 1;
+  text-align: right;
+}
+.resume-contact__icon {
+  font-size: 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.6rem;
+  color: #3f667f;
+}
+.resume-contact__link {
+  transition: color 0.2s ease;
+}
+.resume-contact__link:hover, .resume-contact__link:focus-visible {
+  color: #3f667f;
 }
 
-.right-side {
-  background-color: tan;
-  height: 100vh;
+.resume-container {
+  padding: 3rem 12rem 10rem;
+}
+
+.resume-section {
+  padding: 2rem 4rem;
+}
+.resume-section__title {
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+.resume-section__title-separator {
+  flex-basis: 100%;
+  width: 12%;
+  height: 2px;
+  background-color: rgba(63, 102, 127, 0.78);
+  margin-bottom: 1.5rem;
+}
+.resume-section__description {
+  margin: 0;
+  line-height: 1.7;
+  max-width: 44rem;
+  font-size: 1.6rem;
+}
+
+.resume-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.resume-project__title {
+  margin: 0 0 0.5rem;
+}
+.resume-project__name {
+  font-size: 1.8rem;
+}
+.resume-project__type {
+  font-size: 1.4rem;
+  color: #69757f;
+  margin-bottom: 0.5rem;
+}
+.resume-project__role {
+  font-size: 1.6rem;
+  margin: 0 0 0.8rem;
+}
+.resume-project__list {
+  list-style: disc;
+  font-size: 1.4rem;
+  margin: 0;
+  padding-left: 2rem;
+  font-size: 1.6rem;
+}
+
+.resume-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem 3.2rem;
+}
+
+.resume-skill-group__full {
+  grid-column: 1/-1;
+}
+.resume-skill-group__title {
+  margin: 0 0 0.8rem;
+  font-size: 1.6rem;
+}
+.resume-skill-group__list {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: 0;
+}
+.resume-skill-group__list li {
+  font-size: 1.6rem;
+}
+
+.resume-certifications {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.resume-sidebar__link {
+  font-size: 1.6rem;
+}
+.resume-sidebar__link:hover {
+  color: #3f667f;
 }
 
 /* ------------------------------
@@ -1170,15 +1278,8 @@ ol {
     padding-left: 0;
   }
   .hero-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.4rem;
-  }
-  .hero-btn a {
-    width: min(100%, 28rem);
-    text-align: center;
+    place-content: center;
+    /* same as align-items: center; justify-content: center; */
   }
   .homepage-hero-image-container {
     position: absolute;
@@ -1236,6 +1337,17 @@ ol {
     width: min(95vw, 42rem);
     max-height: 70vh;
   }
+  .hero-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+  }
+  .hero-btn a {
+    width: min(100%, 28rem);
+    text-align: center;
+  }
 }
 @media (max-width: 430px) {
   .section-hero {
@@ -1257,8 +1369,7 @@ ol {
    About Page Media Queries
 ------------------------------ */
 @media (max-width: 900px) {
-  .about-page-hero,
-  .grid {
+  .about-page-hero {
     display: block;
     min-height: auto;
     padding: 12rem 2.4rem 8rem;

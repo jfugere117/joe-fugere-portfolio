@@ -26,122 +26,272 @@
     <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
   <body>
-    <header class="resume-header-nav">
-      <div class="header-logo">
+    <header class="resume-header">
+      <!--<div class="resume-header__logo">
         <img
           src="images/joe-fugere-cursive-logo-transparent.png"
+          class="resume-header__logo-img"
           alt="Hero logo for Joe Fugere Portfolio"
         />
-      </div>
-      <nav class="resume-nav" aria-label="Main navigation">
-        <ul class="resume-nav-list">
-          <li class="resume-nav-item">
-            <a href="index.html" class="resume-nav-link">Home</a>
+      </div>-->
+      <nav class="resume-header__nav" aria-label="Main navigation">
+        <ul class="resume-header__nav-list">
+          <li class="resume-header__nav-item">
+            <a href="index.html" class="resume-header__nav-link">Home</a>
           </li>
 
-          <li class="resume-nav-item">
-            <a href="#case" class="resume-nav-link">Case Studies</a>
+          <li class="resume-header__nav-item">
+            <a href="#case" class="resume-header__nav-link">Case Studies</a>
           </li>
 
-          <li class="resume-nav-item">
-            <a href="#about" class="resume-nav-link">About</a>
+          <li class="resume-header__nav-item">
+            <a href="#about" class="resume-header__nav-link">About</a>
           </li>
 
-          <li class="resume-nav-item">
-            <a href="resume.html" class="resume-nav-link">Resume</a>
+          <li class="resume-header__nav-item">
+            <a href="resume.html" class="resume-header__nav-link">Resume</a>
           </li>
 
-          <li class="resume-nav-item">
-            <a href="#contact" class="resume-nav-link">Contact</a>
+          <li class="resume-header__nav-item">
+            <a href="#contact" class="resume-header__nav-link">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div class="resume-main-header-container">
-        <div class="resume-main-header">
-          <h2 class="resume-main-header__logo">Joe Fugere</h2>
-          <p class="resume-main-header__eyebrow">Web Designer & Developer</p>
+      <section class="resume-intro">
+        <div class="resume-intro__identity">
+          <h1 class="resume-intro__name">Joe Fugere</h1>
+          <p class="resume-intro__title">Web Designer & Developer</p>
         </div>
-
-        <div class="resume-main-header-contact">
-          <ul class="resume-main-header-contact__list">
-            <li class="resume-main-header-contact__item">
-              <p class="resume-main-header-contact__text">
-                <span>New Hampshire</span>
+        <div class="resume-contact">
+          <ul class="resume-contact__list">
+            <li class="resume-contact__item">
+              <p class="resume-contact__text">
+                <span class="resume-contact__label">New Hampshire</span>
                 <i
-                  class="fa-solid fa-location-dot resume-main-header-contact__icon"
+                  class="fa-solid fa-location-dot resume-contact__icon"
                   aria-hidden="true"
                 ></i>
               </p>
             </li>
 
-            <li class="resume-main-header-contact__item">
+            <li class="resume-contact__item">
               <a
                 href="mailto:jfugere1983@gmail.com"
-                class="resume-main-header-contact__link"
+                class="resume-contact__link"
               >
-                <span>jfugere1983@gmail.com</span>
+                <span class="resume-contact__label">jfugere1983@gmail.com</span>
                 <i
-                  class="fa-solid fa-envelope resume-main-header-contact__icon"
+                  class="fa-solid fa-envelope resume-contact__icon"
                   aria-hidden="true"
                 ></i>
               </a>
             </li>
 
-            <li class="resume-main-header-contact__item">
+            <li class="resume-contact__item">
               <a
                 href="https://joefugere.com"
-                class="resume-main-header-contact__link"
+                class="resume-contact__link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>joefugere.com</span>
+                <span class="resume-contact__label">joefugere.com</span>
                 <i
-                  class="fa-solid fa-globe resume-main-header-contact__icon"
+                  class="fa-solid fa-globe resume-contact__icon"
                   aria-hidden="true"
                 ></i>
               </a>
             </li>
 
-            <li class="resume-main-header-contact__item">
+            <li class="resume-contact__item">
               <a
                 href="https://github.com/YOUR-USERNAME"
-                class="resume-main-header-contact__link"
+                class="resume-contact__link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>GitHub</span>
+                <span class="resume-contact__label">GitHub</span>
                 <i
-                  class="fa-brands fa-github resume-main-header-contact__icon"
+                  class="fa-brands fa-github resume-contact__icon"
                   aria-hidden="true"
                 ></i>
               </a>
             </li>
 
-            <li class="resume-main-header-contact__item">
+            <li class="resume-contact__item">
               <a
                 href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-                class="resume-main-header-contact__link"
+                class="resume-contact__link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>LinkedIn</span>
+                <span class="resume-contact__label">LinkedIn</span>
                 <i
-                  class="fa-brands fa-linkedin-in resume-main-header-contact__icon"
+                  class="fa-brands fa-linkedin-in resume-contact__icon"
                   aria-hidden="true"
                 ></i>
               </a>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="resume-main-header__separator"></div>
+      </section>
 
-      <div class="resume-container grid grid--2-cols">
-        <div class="left-side">Left Side</div>
-        <div class="right-side">Right Side</div>
+      <div class="resume-intro__separator"></div>
+
+      <div class="resume-container resume-grid resume-grid--2-cols">
+        <main class="resume-content">
+          <section class="resume-section">
+            <h2 class="resume-section__title">Professional Summary</h2>
+
+            <div class="resume-section__title-separator"></div>
+            <p class="resume-section__description">
+              Web Designer with a strong foundation in Figma, HTML5, CSS3, and
+              Sass, focused on creating clean, responsive user interfaces and
+              modern website layouts. Continuously improving design and
+              front-end workflow skills through hands-on projects and portfolio
+              development.
+            </p>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section__title">Projects</h2>
+
+            <div class="resume-section__title-separator"></div>
+
+            <div class="resume-projects">
+              <article class="resume-project">
+                <h3 class="resume-project__title">
+                  <span class="resume-project__name">J | F Candle Co.</span>
+                  <span class="resume-project__type">- E-commerce Website</span>
+                </h3>
+
+                <p class="resume-project__role">
+                  Founder &amp; Web Designer | 2025 - Present
+                </p>
+
+                <ul class="resume-project__list">
+                  <li>
+                    Designed visual identity and layout for luxury candle brand
+                  </li>
+                  <li>Customized a Shopify theme to match brand typography</li>
+                  <li>Designed product pages to improve user experience</li>
+                </ul>
+              </article>
+
+              <article class="resume-project">
+                <h3 class="resume-project__title">
+                  <span class="resume-project__name">Ritual Supply Co.</span>
+                  <span class="resume-project__type">- Web Design Concept</span>
+                </h3>
+
+                <p class="resume-project__role">Portfolio Project | 2026</p>
+
+                <ul class="resume-project__list">
+                  <li>Designed a modern coffee brand website</li>
+                  <li>Built responsive layouts using HTML, CSS, and Sass</li>
+                  <li>Created a typography and color system</li>
+                </ul>
+              </article>
+
+              <article class="resume-project">
+                <h3 class="resume-project__title">
+                  <span class="resume-project__name">Figma Design System</span>
+                  <span class="resume-project__type">- UI Components</span>
+                </h3>
+
+                <p class="resume-project__role">Portfolio Project | 2026</p>
+
+                <ul class="resume-project__list">
+                  <li>
+                    Designed a scalable UI design system in Figma for consistent
+                    web interfaces
+                  </li>
+                  <li>
+                    Created reusable components including buttons, cards,
+                    navigation, and form elements
+                  </li>
+                  <li>
+                    Defined typography styles, color tokens, spacing scale, and
+                    layout grids
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </main>
+
+        <aside class="resume-sidebar" aria-label="Resume supporting details">
+          <section class="resume-section">
+            <h2 class="resume-section__title">Core Skills</h2>
+
+            <div class="resume-section__title-separator"></div>
+
+            <div class="resume-skills">
+              <div class="resume-skill-group">
+                <h3 class="resume-skill-group__title">Design</h3>
+                <ul class="resume-skill-group__list">
+                  <li>UI Design</li>
+                  <li>Responsive Web Design</li>
+                  <li>Design System</li>
+                  <li>Wireframing &amp; Prototyping</li>
+                  <li>Visual Hierarchy</li>
+                  <li>Typography &amp; Color</li>
+                </ul>
+              </div>
+
+              <div class="resume-skill-group">
+                <h3 class="resume-skill-group__title">Front End</h3>
+                <ul class="resume-skill-group__list">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Sass / SCSS</li>
+                  <li>CSS Grid &amp; Flexbox</li>
+                  <li>Responsive Web Design</li>
+                </ul>
+              </div>
+
+              <div class="resume-skill-group resume-skill-group__full">
+                <h3 class="resume-skill-group__title">Tools</h3>
+                <ul class="resume-skill-group__list">
+                  <li>Figma</li>
+                  <li>Shopify</li>
+                  <li>VS Code</li>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section__title">Certifications</h2>
+
+            <div class="resume-section__title-separator"></div>
+
+            <ul class="resume-certifications">
+              <li>Build Responsive Real-World Websites with HTML and CSS</li>
+              <li>Advanced CSS and Sass</li>
+              <li>Complete Web &amp; Mobile Designer: UI/UX, Figma</li>
+            </ul>
+          </section>
+
+          <section class="resume-section">
+            <h2 class="resume-section__title">Portfolio</h2>
+
+            <div class="resume-section__title-separator"></div>
+
+            <a
+              href="https://joefugere.com"
+              class="resume-sidebar__link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              joefugere.com
+            </a>
+          </section>
+        </aside>
       </div>
     </main>
 

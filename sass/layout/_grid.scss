@@ -66,3 +66,14 @@
 .grid--row-gap-lg {
   row-gap: 6.4rem;
 }
+
+// Resume Grid
+
+.resume-grid {
+  display: grid;
+}
+
+.resume-grid--2-cols {
+  grid-template-columns: 1.2fr 1fr;
+  //gap: 4rem;
+}

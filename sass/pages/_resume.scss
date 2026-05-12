@@ -1,104 +1,238 @@
 @use "../abstracts/variables" as *;
 
-.resume-header-nav,
-.resume-nav-list {
+/* Resume Header */
+
+.resume-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
+  padding: 4rem 6rem 0;
 
-.resume-header-nav {
-  padding: 1rem 4rem;
-}
-
-.resume-nav-list {
-  gap: 2rem;
-}
-
-.resume-main-header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5rem 4rem 2rem;
-}
-
-.resume-main-header {
   &__logo {
-    font-family: "Playfair Display", sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: $color-accent;
-  }
-
-  &__eyebrow {
-    font-family: "Inter", Georgia, "Times New Roman", Times, serif;
-    font-size: 1.7rem;
-  }
-}
-
-.resume-main-header-contact {
-  &__list {
     display: flex;
-    flex-wrap: wrap;
+    place-content: center;
+  }
 
-    column-gap: 5rem;
-    row-gap: 1.6rem;
+  &__logo-img {
+    width: 18rem;
+    height: auto;
+    display: block;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
 
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+  }
+
+  &__nav-link:link,
+  &__nav-link:visited {
+    display: inline-block; // good practice for nav links
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: $color-accent-3;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.resume-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 8rem 4rem 1rem;
+
+  &__identity {
+  }
+
+  &__name {
+    font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+    font-size: 3.9rem;
+    color: $color-accent;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  &__separator {
+    flex-basis: 100%;
+    width: 95%;
+    height: 2px;
+    background-color: rgba($color-accent, 0.78);
+    margin: 0 auto 1rem;
+  }
+}
+
+.resume-contact {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__text,
   &__link {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
 
-    gap: 2.5rem;
     margin: 0;
+    font-size: 1.6rem;
+    color: inherit;
     text-decoration: none;
-    color: $color-text-muted;
   }
 
-  &__link:hover {
-    color: $color-accent-dark;
+  &__label {
+    line-height: 1;
+    text-align: right;
   }
 
   &__icon {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 1.6rem;
     color: $color-accent;
   }
 
-  span {
+  &__link {
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-accent;
+    }
+  }
+}
+
+.resume-container {
+  padding: 3rem 12rem 10rem;
+}
+
+.resume-section {
+  // background-color: cadetblue;
+  padding: 2rem 4rem;
+
+  &__title {
+    margin-bottom: 0.6rem;
+    font-size: 1.8rem;
+  }
+
+  &__title-separator {
+    flex-basis: 100%;
+    width: 12%;
+    height: 2px;
+    background-color: rgba($color-accent, 0.78);
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    margin: 0;
+    line-height: 1.7;
+    max-width: 44rem;
     font-size: 1.6rem;
   }
 }
 
-.resume-main-header-contact ul {
+.resume-projects {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  gap: 1rem;
+  gap: 2.4rem;
 }
 
-.resume-container {
-  height: 100vh;
-  gap: 0;
+.resume-project {
+  &__title {
+    margin: 0 0 0.5rem;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+  }
+
+  &__type {
+    font-size: 1.4rem;
+    color: $color-text-muted;
+    margin-bottom: 0.5rem;
+  }
+
+  &__role {
+    font-size: 1.6rem;
+    margin: 0 0 0.8rem;
+  }
+
+  &__list {
+    list-style: disc;
+    font-size: 1.4rem;
+    margin: 0;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+  }
 }
 
-.resume-main-header__separator {
-  flex-basis: 100%;
-  width: 95%;
-  height: 2px;
-  background-color: rgba($color-accent, 0.78);
-  margin: 0 auto 1rem;
+.resume-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem 3.2rem;
 }
 
-.left-side {
-  background-color: cadetblue;
-  height: 100vh;
+.resume-skill-group {
+  &__full {
+    grid-column: 1 / -1;
+  }
+
+  &__title {
+    margin: 0 0 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0;
+
+    li {
+      font-size: 1.6rem;
+    }
+  }
 }
 
-.right-side {
-  background-color: tan;
-  height: 100vh;
+.resume-certifications {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.resume-sidebar__link {
+  font-size: 1.6rem;
+
+  &:hover {
+    color: $color-accent;
+  }
 }
