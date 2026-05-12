@@ -103,3 +103,19 @@ $gradient-accent-luxury: linear-gradient(
   #3f667f 55%,
   #b76e79 100%
 );
+
+// Resume Background
+
+$resume-page-bg: #f4f5f7;
+
+/* ------------------------------
+   Letter Spacing Scale
+------------------------------ */
+
+$tracking-tight: -0.02em;
+$tracking-normal: 0;
+$tracking-slight: 0.02em;
+$tracking-wide: 0.04em;
+$tracking-wider: 0.08em;
+$tracking-uppercase: 0.12em;
+$tracking-loose: 0.16em;

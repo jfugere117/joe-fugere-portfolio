@@ -2,10 +2,25 @@
 
 /* Resume Header */
 
+.resume-body {
+  background-color: $resume-page-bg;
+  min-height: 100vh;
+}
+
+.resume {
+  position: relative;
+  max-width: 110rem;
+  margin: 0 auto 12rem;
+  background-color: #fff;
+  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.08);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
 .resume-header {
   display: flex;
   align-items: center;
-  padding: 4rem 6rem 0;
+  padding: 4rem 10rem 6rem;
 
   &__logo {
     display: flex;
@@ -56,26 +71,34 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 4rem;
-  padding: 8rem 4rem 1rem;
+  padding: 8rem 8rem 3rem;
 
   &__identity {
   }
 
   &__name {
     font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-    font-size: 3.9rem;
+    font-size: 4.4rem;
     color: $color-accent;
     margin-bottom: 0.4rem;
+    letter-spacing: $tracking-wider;
+    text-transform: uppercase;
   }
 
   &__title {
     font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: $tracking-wide;
+  }
+
+  &__name,
+  &__title {
+    transform: translateY(-2.6rem);
   }
 
   &__separator {
     flex-basis: 100%;
-    width: 95%;
+    width: 86%;
     height: 2px;
     background-color: rgba($color-accent, 0.78);
     margin: 0 auto 1rem;
@@ -235,4 +258,11 @@
   &:hover {
     color: $color-accent;
   }
+}
+
+.resume-actions {
+  position: absolute;
+  right: 6rem;
+  bottom: 6rem;
+  z-index: 10;
 }

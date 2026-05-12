@@ -44,6 +44,9 @@ Default: 8px
 /* Shadows */
 /* Gradients */
 /* ------------------------------
+   Letter Spacing Scale
+------------------------------ */
+/* ------------------------------
    Modern Reset
 ------------------------------ */
 *,
@@ -109,8 +112,8 @@ ol {
 .btn-secondary,
 .btn-outline {
   display: inline-block;
-  padding: 2rem 3rem;
-  font-size: 1.8rem;
+  padding: 1.6rem 2.8rem;
+  font-size: 1.6rem;
   border-radius: 8px;
   color: #fafafa;
   text-decoration: none;
@@ -1065,10 +1068,25 @@ ol {
    Responsive
 ------------------------------ */
 /* Resume Header */
+.resume-body {
+  background-color: #f4f5f7;
+  min-height: 100vh;
+}
+
+.resume {
+  position: relative;
+  max-width: 110rem;
+  margin: 0 auto 12rem;
+  background-color: #fff;
+  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.08);
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
 .resume-header {
   display: flex;
   align-items: center;
-  padding: 4rem 6rem 0;
+  padding: 4rem 10rem 6rem;
 }
 .resume-header__logo {
   display: flex;
@@ -1108,21 +1126,27 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
   gap: 4rem;
-  padding: 8rem 4rem 1rem;
+  padding: 8rem 8rem 3rem;
 }
 .resume-intro__name {
   font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-  font-size: 3.9rem;
+  font-size: 4.4rem;
   color: #3f667f;
   margin-bottom: 0.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .resume-intro__title {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+}
+.resume-intro__name, .resume-intro__title {
+  transform: translateY(-2.6rem);
 }
 .resume-intro__separator {
   flex-basis: 100%;
-  width: 95%;
+  width: 86%;
   height: 2px;
   background-color: rgba(63, 102, 127, 0.78);
   margin: 0 auto 1rem;
@@ -1252,6 +1276,13 @@ ol {
 }
 .resume-sidebar__link:hover {
   color: #3f667f;
+}
+
+.resume-actions {
+  position: absolute;
+  right: 6rem;
+  bottom: 6rem;
+  z-index: 10;
 }
 
 /* ------------------------------
