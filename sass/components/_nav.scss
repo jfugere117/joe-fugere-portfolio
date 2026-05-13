@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+
+/********************************/
+/* Navigation */
+/********************************/
+
+.desktop-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-right: 2rem;
+}
+
+.desktop-nav-link:link,
+.desktop-nav-link:visited {
+  display: inline-block; // good practice for nav links
+  text-decoration: none;
+  color: $color-text-inverse;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover,
+  &:active {
+    color: $color-accent-3-dark;
+    transform: translateY(-1px);
+  }
+}
+
+/********************************/
+/* Navigation CTA */
+/********************************/
+
+.desktop-nav-link.nav-cta:link,
+.desktop-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
+  background-color: $color-accent-3-dark;
+  color: $color-text-inverse;
+}
+
+.desktop-nav-link.nav-cta:hover,
+.desktop-nav-link.nav-cta:active {
+  background-color: $color-accent-3-deep;
+  color: $color-text-inverse;
+}
+
+/********************************/
+/* Mobile Nav */
+/********************************/
+
+.mobile-nav {
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+
+  &__icon {
+    position: relative;
+    font-size: 4rem;
+    color: $color-text-inverse;
+  }
+}
+
+.mobile-nav__icon[name="mobile-nav-close-icon"] {
+  display: none;
+}

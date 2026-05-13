@@ -23,10 +23,14 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/main.css" />
 
+    <!-- My Javascript-->
+
+    <script defer src="js/script.js"></script>
+
     <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header nav-open">
       <div class="header-logo">
         <img
           src="images/joe-fugere-cursive-logo-transparent.png"
@@ -52,10 +56,23 @@
           </li>
 
           <li class="desktop-nav-item">
-            <a href="#contact" class="desktop-nav-link">Contact</a>
+            <a href="#contact" class="desktop-nav-link nav-cta">Contact</a>
           </li>
         </ul>
       </nav>
+
+      <!--------------- Mobile Nav ----------------->
+
+      <button class="mobile-nav">
+        <i
+          class="fa-solid fa-bars mobile-nav__icon mobile-nav-menu-icon"
+          name="mobile-nav-menu-icon"
+        ></i>
+        <i
+          class="fa-solid fa-xmark mobile-nav__icon"
+          name="mobile-nav-close-icon"
+        ></i>
+      </button>
     </header>
 
     <!--------------- Hero Section ----------------->
@@ -76,9 +93,9 @@
             usability, and real-world performance.
           </p>
 
-          <div class="hero-btn">
+          <div class="btn hero-btn">
             <a href="#" class="btn-primary">View My Work</a>
-            <a href="#" class="btn-secondary">About Me</a>
+            <a href="aboutme.html" class="btn-secondary">About Me</a>
           </div>
         </div>
 

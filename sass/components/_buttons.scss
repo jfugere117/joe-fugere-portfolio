@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-.hero-btn {
+.btn {
   display: flex;
   gap: 3rem;
 }
@@ -9,9 +9,9 @@
 .btn-secondary,
 .btn-outline {
   display: inline-block;
-  padding: 1.6rem 2.8rem;
-  font-size: 1.6rem;
-  border-radius: 8px;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
   color: $color-text-inverse;
   text-decoration: none;
 

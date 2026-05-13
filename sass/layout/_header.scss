@@ -15,27 +15,3 @@
   width: 18rem;
   height: auto;
 }
-
-.desktop-nav-list {
-  display: flex;
-  gap: 3.2rem;
-  padding-right: 2rem;
-}
-
-.desktop-nav-link:link,
-.desktop-nav-link:visited {
-  display: inline-block; // good practice for nav links
-  text-decoration: none;
-  color: $color-text-inverse;
-  font-weight: 500;
-  font-size: 1.8rem;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-
-  &:hover,
-  &:active {
-    color: $color-accent-3;
-    transform: translateY(-1px);
-  }
-}
