@@ -6,7 +6,7 @@
 
 .contact-preview-cta {
   padding: 7rem 2rem;
-  background-color: #dce4eb;
+  background-color: $color-section-alt-1;
   text-align: center;
 
   &__eyebrow {
@@ -16,7 +16,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
-    color: $color-accent;
+    color: $color-accent-3-dark;
   }
 
   &__heading {

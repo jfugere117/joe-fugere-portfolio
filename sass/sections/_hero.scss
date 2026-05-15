@@ -18,7 +18,7 @@
     inset: 0;
     z-index: 2;
 
-    background-color: rgba($color-ink, 0.45);
+    background-color: rgba($color-ink, 0.55);
     pointer-events: none;
   }
 }
@@ -26,31 +26,34 @@
 .homepage-hero-content {
   position: relative;
   z-index: 3;
-  padding-left: 3rem;
+  padding-left: 5rem;
+  max-width: 680px;
 
   grid-column: 1;
-  align-self: center;
-  max-width: 580px;
+
+  backface-visibility: hidden;
 
   &__eyebrow {
     font-family: "Inter", sans-serif;
     font-size: 1.9rem;
     font-weight: 700;
-    margin-bottom: 1.2rem;
-    color: $color-champagne;
+    margin-bottom: 2rem;
+    color: $color-accent-3-dark;
     text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.35);
   }
 
   &__heading {
-    font-family:
-      "Playfair Display" Georgia,
-      "Times New Roman",
-      Times,
-      serif;
-    font-size: 4.2rem;
-    font-weight: 600;
+    font-family: "Stardos Stencil", Georgia, "Times New Roman", Times, serif;
+    font-size: 3.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
     margin-bottom: 2rem;
-    color: $color-text;
+    /*color: $color-text;
+    letter-spacing: $tracking-wider;*/
+
+    color: transparent;
+    -webkit-text-stroke: 1.5px $color-champagne;
+    text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.55);
   }
 
   &__subheading {
@@ -59,7 +62,23 @@
     font-weight: 400;
     margin-bottom: 3.2rem;
     color: $color-text-inverse;
+    max-width: 480px;
   }
+
+  // Hero Content Animation
+
+  &__eyebrow {
+    animation: slideDown 1.2s ease-in-out;
+  }
+
+  &__heading,
+  &__subheading {
+    animation: moveInLeft 1.2s ease-in-out;
+  }
+
+  /*&__subheading {
+    animation: moveInLeft 1s ease-in-out;
+  }*/
 }
 
 .homepage-hero-image-container {
@@ -79,5 +98,18 @@
     height: auto;
     display: block;
     object-fit: contain;
+    opacity: 1;
+    transition: none;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+
+    animation: moveInRight 1.2s ease-in-out;
   }
+
+  /* Keep the image stable during browser resize/fullscreen changes. */
+}
+
+.hero-btn {
+  animation: slideUp 1.2s ease-in-out;
 }

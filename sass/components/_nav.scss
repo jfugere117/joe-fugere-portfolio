@@ -4,6 +4,13 @@
 /* Navigation */
 /********************************/
 
+.desktop-nav {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  z-index: 9999;
+}
+
 .desktop-nav-list {
   list-style: none;
   display: flex;
@@ -22,28 +29,64 @@
   transition:
     color 0.3s ease,
     transform 0.3s ease;
+}
 
-  &:hover,
-  &:active {
-    color: $color-accent-3-dark;
-    transform: translateY(-1px);
+.desktop-nav-link:hover,
+.desktop-nav-link:active {
+  color: $color-accent-3;
+  transform: translateY(-1px);
+}
+
+.case-studies-page,
+.resume-page,
+.contact-page {
+  .header {
+    display: flex;
+    align-items: flex-start;
+    padding: 4rem 6rem;
+    position: relative;
+    z-index: 10;
   }
+
+  .desktop-nav {
+    position: static;
+    margin-left: auto;
+  }
+
+  .desktop-nav-link:link,
+  .desktop-nav-link:visited {
+    color: $color-text;
+  }
+
+  .desktop-nav-link:hover,
+  .desktop-nav-link:active {
+    color: $color-accent-3;
+  }
+
+  .desktop-nav-link.nav-cta:link,
+  .desktop-nav-link.nav-cta:visited {
+    color: $color-text-inverse;
+  }
+}
+
+.resume-page .header {
+  padding: 6rem 4rem 6rem 0;
 }
 
 /********************************/
 /* Navigation CTA */
 /********************************/
 
-.desktop-nav-link.nav-cta:link,
-.desktop-nav-link.nav-cta:visited {
+.nav-cta:link,
+.nav-cta:visited {
   padding: 1.2rem 2.4rem;
   border-radius: 8px;
   background-color: $color-accent-3-dark;
   color: $color-text-inverse;
 }
 
-.desktop-nav-link.nav-cta:hover,
-.desktop-nav-link.nav-cta:active {
+.nav-cta:hover,
+.nav-cta:active {
   background-color: $color-accent-3-deep;
   color: $color-text-inverse;
 }
@@ -53,7 +96,9 @@
 /********************************/
 
 .mobile-nav {
-  position: relative;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -69,4 +114,10 @@
 
 .mobile-nav__icon[name="mobile-nav-close-icon"] {
   display: none;
+}
+
+.mobile-nav__icon {
+  text-shadow:
+    0 0.1rem 0.2rem rgba(6, 9, 11, 0.65),
+    0 0.4rem 1.2rem rgba(6, 9, 11, 0.45);
 }

@@ -453,11 +453,11 @@ Design System / Visual Foundation
 
 ### Project Title
 
-Portfolio Design System
+Joe Fugere Portfolio
 
 ### Short Description
 
-A personal design system focused on typography, spacing, color, layout, and reusable visual rules for consistent web design.
+A personal portfolio case study showcasing the design direction, development process, and visual details behind a responsive website built to present my work with clarity and personality.
 
 ### Full Description
 

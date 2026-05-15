@@ -1,18 +1,28 @@
 @use "../abstracts/variables" as *;
 
-.case-preview {
-  padding: 9.6rem 3rem;
+.case-preview,
+.case-page {
+  //padding: 9.6rem 3rem;
 
   &__header {
     max-width: 74rem;
-    margin: 0 auto 9.4rem;
+    margin: 8.4rem auto 6.4rem;
     text-align: center;
+    opacity: 0;
+    transform: translateX(-10rem);
+    transition:
+      opacity 1.2s ease-in-out,
+      transform 1.2s ease-in-out;
+  }
+
+  &__header.is-visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   &__eyebrow {
-    font-family: "Inter", sans-serif;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -29,7 +39,6 @@
   }
 
   &__description {
-    font-family: "Inter", sans-serif;
     font-size: 2rem;
     line-height: 1.6;
     font-weight: 400;
@@ -37,8 +46,19 @@
   }
 
   &__cta-box {
-    margin-top: 5.6rem;
+    margin: 2.4rem 0 6rem 0;
     text-align: center;
+  }
+
+  // Hero Content Animation
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-preview__header,
+  .case-page__header {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

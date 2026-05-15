@@ -61,3 +61,48 @@
     box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
   }
 }
+
+.scroll-top {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  z-index: 9998;
+
+  width: 5.8rem;
+  height: 5.8rem;
+  border: 1.5px solid rgba($color-ink, 0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $color-accent-3-dark;
+  color: $color-text-inverse;
+  box-shadow:
+    0 1.2rem 2.8rem rgba($color-ink, 0.24),
+    0 0 0 0.4rem rgba($color-background, 0.84);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(1.2rem);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease;
+
+  &--visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background-color: $color-accent-3-deep;
+    transform: translateY(-2px);
+  }
+
+  i {
+    font-size: 1.8rem;
+  }
+}

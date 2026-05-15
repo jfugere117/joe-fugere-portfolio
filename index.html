@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Stardos+Stencil:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -29,14 +29,20 @@
 
     <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
-  <body>
-    <header class="header nav-open">
-      <div class="header-logo">
+  <body class="home-page">
+    <!------ HEADER ------>
+
+    <header class="header">
+      <div class="header__logo-box">
         <img
           src="images/joe-fugere-cursive-logo-transparent.png"
           alt="Hero logo for Joe Fugere Portfolio"
+          class="header__logo"
         />
       </div>
+
+      <!---------- NAV ----------->
+
       <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="desktop-nav-list">
           <li class="desktop-nav-item">
@@ -77,7 +83,7 @@
 
     <!--------------- Hero Section ----------------->
 
-    <main>
+    <main class="home main-content">
       <section class="section-hero grid grid--2-cols">
         <div class="homepage-hero-content">
           <p class="homepage-hero-content__eyebrow">
@@ -218,7 +224,7 @@
           </article>
         </div>
         <div class="case-preview__cta-box">
-          <a href="#" class="case-preview__cta btn-outline"
+          <a href="casestudies.html" class="case-preview__cta btn-outline"
             >View All Projects &rarr;</a
           >
         </div>
@@ -382,9 +388,7 @@
           project inquiries.
         </p>
 
-        <a href="contact.html" class="contact-preview-cta__btn btn-primary"
-          >Contact Me</a
-        >
+        <a href="#" class="contact-preview-cta__btn btn-primary">Contact Me</a>
       </section>
     </main>
 

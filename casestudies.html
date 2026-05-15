@@ -3,217 +3,323 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joe Fugere Case Studies</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Stardos+Stencil:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- My Javascript-->
+
+    <script defer src="js/script.js"></script>
+
+    <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
   <body class="case-studies-page">
     <header class="header">
-      <div class="header-logo">
-        <a href="#" class="case-study-logo">Joe Fugere</a>
+      <div class="header__logo-box">
+        <img
+          src="images/joe-fugere-cursive-logo-transparent.png"
+          alt="Hero logo for Joe Fugere Portfolio"
+          class="header__logo"
+        />
       </div>
 
-      <div class="case-study-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="casestudies.html">Case Studies</a></li>
-          <li><a href="aboutme.html">About</a></li>
-          <li><a href="#">Contact</a></li>
+      <!---------- NAV ----------->
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="desktop-nav-list">
+          <li class="desktop-nav-item">
+            <a href="index.html" class="desktop-nav-link">Home</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="casestudies.html" class="desktop-nav-link">Case Studies</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="aboutme.html" class="desktop-nav-link">About</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="resume.html" class="desktop-nav-link">Resume</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="#contact" class="desktop-nav-link nav-cta">Contact</a>
+          </li>
         </ul>
-      </div>
+      </nav>
+
+      <!--------------- Mobile Nav ----------------->
+
+      <button class="mobile-nav">
+        <i
+          class="fa-solid fa-bars mobile-nav__icon mobile-nav-menu-icon"
+          name="mobile-nav-menu-icon"
+        ></i>
+        <i
+          class="fa-solid fa-xmark mobile-nav__icon"
+          name="mobile-nav-close-icon"
+        ></i>
+      </button>
     </header>
 
-    <section class="case-page">
-      <div class="case-page-header">
-        <p class="case-page-eyebrow">Selected Work</p>
-
-        <h1 class="case-page-heading">
-          Case studies built with design, structure, and purpose.
-        </h1>
-
-        <p class="case-page-description">
-          A collection of web design, front-end development, branding, and UI
-          projects.
-        </p>
-      </div>
-
-      <div class="case-page-grid grid grid--3-cols">
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-jf"></div>
-
-          <div class="case-page-content">
-            <p class="case-page-category">E-Commerce / Branding</p>
-            <h2 class="case-page-title">J | F Candle Co.</h2>
-            <p class="case-page-text">
-              A refined Shopify storefront designed to improve product clarity,
-              visual hierarchy, and the overall shopping experience.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> VS Code • Shopify • HTML • CSS
-            </p>
-            <a href="jfcandleco.html" class="case-page-link"
-              >View Case Study →</a
-            >
+    <main class="case-studies">
+      <section class="case-page">
+        <div class="case-page__header">
+          <div class="case-page__eyebrow">Case Studies</div>
+          <div class="case-page__heading">
+            Selected projects built with design, structure, and purpose.
           </div>
-        </article>
-
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-ritual"></div>
-
-          <div class="case-page-content">
-            <p class="case-page-category">Web Design / Front-End Development</p>
-            <h2 class="case-page-title">Ritual Supply Co.</h2>
-            <p class="case-page-text">
-              A custom website concept combining editorial design, layered
-              visuals, and responsive layouts for a modern coffee brand.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> VS Code • HTML • CSS • Sass
-            </p>
-            <a href="#" class="case-page-link">View Case Study →</a>
+          <div class="case-page__description">
+            A collection of web design, front-end development, branding, UI, and
+            design system projects that show my process, visual direction, and
+            technical growth.
           </div>
-        </article>
+        </div>
 
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-app"></div>
+        <div class="container grid grid--3-cols">
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/jf-candle-co-case-study.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
 
-          <div class="case-page-content">
-            <p class="case-page-category">UI/UX Design</p>
-            <h2 class="case-page-title">App Design Concept</h2>
-            <p class="case-page-text">
-              A mobile app concept focused on simplicity, usability, and
-              meaningful interactions across key user flows.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> Figma • Wireframing • Prototyping
-            </p>
-            <a href="#" class="case-page-link">View Case Study →</a>
-          </div>
-        </article>
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                E-Commerce / Branding / Shopify Design
+              </p>
+              <h3 class="case-preview-card__heading">J | F Candle Co.</h3>
+              <p class="case-preview-card__description">
+                A luxury soy candle brand website focused on clean-burning
+                ingredients, refined product storytelling, and an elevated
+                e-commerce experience.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>Shopify Design</li>
+                <li>HTML</li>
+                <li>Brand Storytelling</li>
+                <li>Responsive Layout</li>
+              </ul>
 
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-system"></div>
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
 
-          <div class="case-page-content">
-            <p class="case-page-category">Design System / UI Foundations</p>
-            <h2 class="case-page-title">Design System</h2>
-            <p class="case-page-text">
-              A scalable design system built around typography, color, spacing,
-              and reusable UI components for consistent design decisions.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> Figma • UI Components • Color System
-            </p>
-            <a href="#" class="case-page-link">View Case Study →</a>
-          </div>
-        </article>
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/ritual-supply-case-study.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
 
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-portfolio"></div>
-          <div class="case-page-content">
-            <p class="case-page-category">Portfolio / Front-End Development</p>
-            <h2 class="case-page-title">Portfolio Website</h2>
-            <p class="case-page-text">
-              A custom portfolio website designed to present projects clearly,
-              showcase process, and communicate design and development skills.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> VS Code • HTML • CSS • Sass
-            </p>
-            <a href="#" class="case-page-link">View Case Study →</a>
-          </div>
-        </article>
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                Web Design / Front-End Development
+              </p>
+              <h3 class="case-preview-card__heading">Ritual Supply Co.</h3>
+              <p class="case-preview-card__description">
+                A fictional coffee brand landing page designed and built to
+                practice modern front-end layout, Sass structure, responsive
+                design, and brand-focused UI.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass / SCSS</li>
+                <li>Git & GitHub</li>
+              </ul>
 
-        <article class="case-page-card">
-          <div class="case-page-image case-page-image-next"></div>
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
 
-          <div class="case-page-content">
-            <p class="case-page-category">Coming Soon</p>
-            <h2 class="case-page-title">Next Project</h2>
-            <p class="case-page-text">
-              A future case study focused on thoughtful visual design,
-              responsive structure, and a polished user experience.
-            </p>
-            <p class="case-page-built">
-              <strong>Built With:</strong> Figma • VS Code • HTML • CSS
-            </p>
-            <a href="#" class="case-page-link">Coming Soon →</a>
-          </div>
-        </article>
-      </div>
-    </section>
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/joe-fugere-portfolio-case-study-preview.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                Web Design / Front-End Development
+              </p>
+              <h3 class="case-preview-card__heading">Joe Fugere Portfolio</h3>
+              <p class="case-preview-card__description">
+                A personal design system documenting the typography, spacing,
+                color, layout, and reusable visual rules used across my
+                portfolio projects.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass / SCSS</li>
+                <li>Git / GitHub</li>
+                <li>Javascript</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/coming-soon-case-study-card-preview.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">UI Design / App Concept</p>
+              <h3 class="case-preview-card__heading">App Design Concept</h3>
+              <p class="case-preview-card__description">
+                A planned app design project focused on user interface
+                structure, screen layouts, visual consistency, and design system
+                thinking.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>Figma</li>
+                <li>UI Design</li>
+                <li>Mobile Layout</li>
+                <li>Design Systems</li>
+                <li>Typography</li>
+                <li>Spacing</li>
+                <li>Component Planning</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link">Coming Soon</a>
+            </div>
+          </article>
+
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/coming-soon-case-study-card-preview.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">
+                Design System / UI Foundations
+              </p>
+              <h3 class="case-preview-card__heading">Design System</h3>
+              <p class="case-preview-card__description">
+                A scalable design system built around typography, color,
+                spacing, and reusable UI components for consistent design
+                decisions.
+              </p>
+              <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>Figma</li>
+                <li>UI Components</li>
+                <li>Color System</li>
+              </ul>
+
+              <a href="#" class="case-preview-card__link"
+                >View Case Study &rarr;</a
+              >
+            </div>
+          </article>
+
+          <article class="case-preview-card">
+            <img
+              class="case-preview-card__img"
+              src="images/coming-soon-case-study-card-preview.png"
+              alt="JF Candle Co. Case Study Preview"
+            />
+
+            <div class="case-preview-card__content">
+              <p class="case-preview-card__eyebrow">Coming Soon</p>
+              <h3 class="case-preview-card__heading">Next Project</h3>
+              <p class="case-preview-card__description">
+                A future case study focused on thoughtful visual design,
+                responsive structure, and a polished user experience.
+              </p>
+              <!-- <ul class="case-preview-card__skills" aria-label="Skills used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass / SCSS</li>
+                <li>Git & GitHub</li>
+              </ul> -->
+
+              <a href="#" class="case-preview-card__link">Coming Soon</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
-      <div class="footer-container">
+      <div class="footer-intro-container">
         <div class="footer-intro">
-          <h2 class="footer-intro-logo">Joe Fugere</h2>
+          <img
+            src="images/joe-fugere-cursive-logo-transparent.png"
+            class="footer-intro__logo"
+            alt="Footer logo for Joe Fugere Portfolio"
+          />
 
-          <p class="footer-intro-description">
+          <p class="footer-intro__description">
             Web Designer & Front-End Developer focused on clean layouts,
             responsive websites, and thoughtful digital experiences.
           </p>
+
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
 
         <div class="footer-nav">
-          <h3 class="footer-nav-title">Navigation</h3>
+          <h3 class="footer-nav__title">Navigation</h3>
 
-          <ul class="footer-nav-list">
+          <ul class="footer-nav__list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="casestudies.html">Case Studies</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a href="case.html">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-projects">
-          <h3 class="footer-projects-title">Projects</h3>
+          <h3 class="footer-projects__title">Projects</h3>
 
-          <ul class="footer-projects-list">
-            <li><a href="casestudies.html">J | F Candle Co.</a></li>
-            <li><a href="casestudies.html">Ritual Supply Co.</a></li>
-            <li><a href="casestudies.html">Portfolio Website</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-connect">
-          <h3 class="footer-connect-title">Connect</h3>
-
-          <ul class="footer-connect-list">
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="images/icons/linkedin.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>LinkedIn</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="images/icons/github.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>GitHub</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:your@email.com">
-                <img
-                  src="images/icons/email.svg"
-                  alt=""
-                  class="footer-connect-icon"
-                />
-                <span>Email</span>
-              </a>
-            </li>
+          <ul class="footer-projects__list">
+            <li><a href="jfcandleco.html">J | F Candle Co.</a></li>
+            <li><a href="ritualsupplyco.html">Ritual Supply Co.</a></li>
+            <li><a href="portfolio.html">Portfolio Website</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-separator"></div>
 
       <p class="footer-copyright">

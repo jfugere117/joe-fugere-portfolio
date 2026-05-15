@@ -25,11 +25,22 @@ html {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
   color: $color-text;
   background-color: $color-background;
   overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  margin-top: auto;
 }
 
 img,
