@@ -6,8 +6,18 @@
   text-align: center;
 
   &__header {
-    max-width: 98rem;
+    max-width: 80rem;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateX(10rem);
+    transition:
+      opacity 1.2s ease-out,
+      transform 1.2s ease-out;
+  }
+
+  &__header.is-visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   &__eyebrow {
@@ -30,7 +40,6 @@
   }
 
   &__description {
-    font-family: "Inter", sans-serif;
     font-size: 2rem;
     line-height: 1.6;
     font-weight: 400;
@@ -39,7 +48,8 @@
   }
 }
 
-/*.about-preview__cta-box {
+/*
+.about-preview__cta-box {
   margin-top: 6rem;
   text-align: center;
 }

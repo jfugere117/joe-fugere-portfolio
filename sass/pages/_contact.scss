@@ -1,1 +1,197 @@
+@use "../abstracts/variables" as *;
 
+.contact {
+  background: linear-gradient(
+    135deg,
+    rgba($color-accent-light, 0.72) 0%,
+    rgba($color-background, 0.96) 52%,
+    rgba($color-section-alt-1, 0.86) 100%
+  );
+}
+
+.contact-hero {
+  width: min(118rem, calc(100% - 4rem));
+  min-height: calc(100vh - 16rem);
+  margin: 0 auto 10rem;
+  padding: 8rem 0 8rem;
+  display: grid;
+  grid-template-columns: minmax(0, 82rem);
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.contact-hero__content {
+  max-width: 76rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-hero__eyebrow {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  color: $color-accent-3-dark;
+}
+
+.contact-hero__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(4rem, 5vw, 7.2rem);
+  line-height: 1.02;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+  color: $color-text-soft;
+}
+
+.contact-hero__description {
+  font-size: 1.9rem;
+  line-height: 1.7;
+  color: $color-text-muted;
+  margin-bottom: 3.2rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.contact-method {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.8rem;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid rgba($color-accent, 0.22);
+  border-radius: 999px;
+  background-color: rgba($color-surface, 0.72);
+  color: $color-text-soft;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+
+  i {
+    color: $color-accent-3-dark;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    color: $color-accent-3-deep;
+    border-color: rgba($color-accent-3-dark, 0.5);
+    background-color: $color-surface;
+    transform: translateY(-2px);
+  }
+}
+
+.contact-form {
+  padding: 4rem;
+  border: 1px solid rgba($color-accent, 0.16);
+  border-radius: 0.8rem;
+  background-color: rgba($color-surface, 0.86);
+  box-shadow: $shadow-soft;
+  width: min(100%, 80rem);
+  margin: 0 auto;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+
+  label {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-text-soft;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid rgba($color-accent, 0.22);
+    border-radius: 0.8rem;
+    background-color: $color-surface;
+    color: $color-text;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 1.4rem 1.5rem;
+    outline: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 18rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba($color-text-muted, 0.72);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: $color-accent-3-dark;
+    box-shadow: 0 0 0 0.4rem rgba($color-accent-3-soft, 0.22);
+  }
+}
+
+.contact-form__submit {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .contact-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-top: 2rem;
+  }
+
+  .contact-hero__content {
+    max-width: 68rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact-methods {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    width: min(100% - 3rem, 118rem);
+    padding-bottom: 6rem;
+  }
+
+  .contact-form {
+    padding: 2.4rem;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

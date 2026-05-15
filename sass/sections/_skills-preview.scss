@@ -3,11 +3,21 @@
 .skills-preview {
   background-color: $color-background;
   padding: 9.6rem 3rem;
+  text-align: center;
 
   &__header {
-    max-width: 98rem;
-    margin: 0 auto 9.4rem;
-    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(-10rem);
+    transition:
+      opacity 1.2s ease-out,
+      transform 1.2s ease-out;
+  }
+
+  &__header.is-visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   &__eyebrow {

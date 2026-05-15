@@ -9,6 +9,21 @@
   background-color: $color-section-alt-1;
   text-align: center;
 
+  &__header {
+    max-width: 80rem;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateX(10rem);
+    transition:
+      opacity 1.2s ease-out,
+      transform 1.2s ease-out;
+  }
+
+  &__header.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   &__eyebrow {
     font-family: "Inter", sans-serif;
     font-size: 1.3rem;

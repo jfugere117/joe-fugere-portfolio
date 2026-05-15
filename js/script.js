@@ -1,4 +1,6 @@
 // Make mobile navigation work
+document.body.classList.add("js-enabled");
+
 const btnNavEl = document.querySelector(".mobile-nav");
 const headerEl = document.querySelector(".header");
 
@@ -13,7 +15,8 @@ const scrollTopBtn = document.createElement("button");
 scrollTopBtn.className = "scroll-top";
 scrollTopBtn.type = "button";
 scrollTopBtn.setAttribute("aria-label", "Scroll to top");
-scrollTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
+scrollTopBtn.innerHTML =
+  '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
 document.body.appendChild(scrollTopBtn);
 
 function toggleScrollTopButton() {
@@ -30,25 +33,60 @@ scrollTopBtn.addEventListener("click", function () {
   });
 });
 
-// Animate case section headers when they enter the viewport
-const caseHeaderEls = document.querySelectorAll(
-  ".case-preview__header, .case-page__header"
+// Animate section headers when they enter the viewport
+const animatedHeaderEls = document.querySelectorAll(
+  ".case-preview__header, .case-page__header, .about-preview__header, .skills-preview__header, .contact-preview-cta__header",
 );
 
-const caseHeaderObserver = new IntersectionObserver(
-  function (entries, observer) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.25,
+function revealHashTargetHeader() {
+  if (!window.location.hash || window.location.hash === "#") return;
+
+  const targetSection = document.getElementById(
+    decodeURIComponent(window.location.hash.slice(1)),
+  );
+  if (!targetSection) return;
+
+  const targetHeader = targetSection.querySelector(
+    ".case-preview__header, .case-page__header, .about-preview__header",
+  );
+
+  if (targetHeader) {
+    targetHeader.classList.add("is-visible");
   }
-);
+}
 
-caseHeaderEls.forEach(function (caseHeaderEl) {
-  caseHeaderObserver.observe(caseHeaderEl);
+function revealAnimatedHeaders() {
+  animatedHeaderEls.forEach(function (headerEl) {
+    const headerPosition = headerEl.getBoundingClientRect();
+    const revealPoint = window.innerHeight * 0.7;
+
+    if (headerPosition.top <= revealPoint && headerPosition.bottom >= 0) {
+      headerEl.classList.add("is-visible");
+    } else {
+      headerEl.classList.remove("is-visible");
+    }
+  });
+}
+
+function queueRevealHashTargetHeader() {
+  window.requestAnimationFrame(function () {
+    revealAnimatedHeaders();
+    revealHashTargetHeader();
+  });
+
+  window.setTimeout(function () {
+    revealAnimatedHeaders();
+    revealHashTargetHeader();
+  }, 150);
+}
+
+window.addEventListener("scroll", revealAnimatedHeaders);
+window.addEventListener("resize", revealAnimatedHeaders);
+window.addEventListener("load", queueRevealHashTargetHeader);
+window.addEventListener("hashchange", queueRevealHashTargetHeader);
+document.querySelectorAll('a[href^="#"]').forEach(function (anchorEl) {
+  anchorEl.addEventListener("click", function () {
+    window.setTimeout(queueRevealHashTargetHeader, 150);
+  });
 });
+queueRevealHashTargetHeader();

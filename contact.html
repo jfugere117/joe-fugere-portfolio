@@ -79,7 +79,97 @@
       </button>
     </header>
 
-    <main class="contact main-content"></main>
+    <main class="contact main-content" id="contact">
+      <section class="contact-hero">
+        <div class="contact-hero__content">
+          <p class="contact-hero__eyebrow">Contact</p>
+          <h1 class="contact-hero__heading">
+            Let’s build something clean, useful, and memorable.
+          </h1>
+          <p class="contact-hero__description">
+            Have a website idea, portfolio question, or front-end project in
+            mind? Send the details and I’ll get back to you.
+          </p>
+
+          <div class="contact-methods" aria-label="Contact methods">
+            <a class="contact-method" href="mailto:jfugere1983@gmail.com">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span>Email</span>
+            </a>
+
+            <a class="contact-method" href="#" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a class="contact-method" href="#" aria-label="GitHub profile">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
+          action="mailto:jfugere1983@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="contact-form__field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="project-type">Project type</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">Select one</option>
+              <option value="website">Website design</option>
+              <option value="frontend">Front-end development</option>
+              <option value="branding">Brand or visual direction</option>
+              <option value="job-opportunity">Job opportunity</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              placeholder="Tell me what you’re working on..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="contact-form__submit btn-primary" type="submit">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-intro-container">
