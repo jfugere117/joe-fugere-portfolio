@@ -50,6 +50,9 @@
 
 .skill-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: $color-surface;
   border: 1px solid rgba($color-accent, 0.14);
   border-radius: 1.25rem;
@@ -96,6 +99,7 @@
     font-family: "Inter", Georgia, serif;
     font-size: 1.45rem;
     color: $color-accent-3-deep;
+    min-height: 3.6rem;
     margin-bottom: 0.75rem;
   }
 

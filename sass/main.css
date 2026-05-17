@@ -788,7 +788,10 @@ ol {
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  min-height: 4.2rem;
+  margin-bottom: 0.8rem;
   color: #247782;
 }
 .case-preview-card__heading {
@@ -796,6 +799,9 @@ ol {
   font-size: 2.4rem;
   line-height: 1.15;
   font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  min-height: 4rem;
   margin-bottom: 1.2rem;
 }
 .case-preview-card__description {
@@ -930,6 +936,9 @@ ol {
 
 .skill-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: #ffffff;
   border: 1px solid rgba(63, 102, 127, 0.14);
   border-radius: 1.25rem;
@@ -965,6 +974,7 @@ ol {
   font-family: "Inter", Georgia, serif;
   font-size: 1.45rem;
   color: #18525a;
+  min-height: 3.6rem;
   margin-bottom: 0.75rem;
 }
 .skill-card__text {
@@ -1915,6 +1925,9 @@ ol {
   .about-skills-card li:last-child::after {
     display: none;
   }
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
 }
 /* ------------------------------
   Media Queries 900px max-width
@@ -1923,6 +1936,14 @@ ol {
   .section-hero,
   .container {
     grid-template-columns: 1fr;
+  }
+  .case-preview-card__eyebrow,
+  .case-preview-card__heading,
+  .skill-card__heading {
+    min-height: 0;
+  }
+  .case-preview-card__description {
+    min-height: 6rem;
   }
   .section-hero {
     position: relative;
