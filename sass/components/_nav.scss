@@ -105,6 +105,10 @@
 
   display: none;
 
+  &__links {
+    display: none;
+  }
+
   &__icon {
     position: relative;
     font-size: 4rem;

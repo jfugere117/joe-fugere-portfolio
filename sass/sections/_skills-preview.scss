@@ -78,7 +78,7 @@
     background-color: $color-accent-light;
     align-items: center;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
     box-shadow:
       0.7rem 0.8rem 1.9rem rgba($color-ink, 0.12),
       inset 0 0 0 1px rgba($color-accent, 0.16);
@@ -89,6 +89,7 @@
     height: 3.2rem;
     object-fit: contain;
     display: block;
+    align-items: center;
   }
 
   &__heading {
@@ -119,4 +120,8 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+}
+
+.skill-card--learning .skill-card__label {
+  animation: learningPulse 2s ease-in-out infinite;
 }

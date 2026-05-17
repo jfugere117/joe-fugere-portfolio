@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -59,5 +61,22 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+/*********** Skill card learning pill pulse animation ************/
+
+@keyframes learningPulse {
+  0%,
+  100% {
+    background-color: rgba($color-champagne, 0.22);
+    color: $color-champagne-deep;
+    box-shadow: none;
+  }
+
+  50% {
+    background-color: rgba($color-accent-3, 0.18);
+    color: $color-accent-3-dark;
+    box-shadow: 0 0 1.4rem rgba($color-accent-3, 0.35);
   }
 }

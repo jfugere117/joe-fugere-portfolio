@@ -1,6 +1,16 @@
 @use "../abstracts/variables" as *;
 
 /* ------------------------------
+ No Break Point Media
+------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card--learning .skill-card__label {
+    animation: none;
+  }
+}
+
+/* ------------------------------
   Media Queries 1100px max-width
 ------------------------------ */
 
@@ -13,9 +23,17 @@
     display: block;
     z-index: 10000;
 
+    &__links {
+      display: flex;
+    }
+
     &__icon {
       color: $color-text-soft;
     }
+  }
+
+  .desktop-links {
+    display: none;
   }
 
   .desktop-nav {
@@ -125,6 +143,34 @@
     right: 4rem;
     bottom: 3rem;
   }
+
+  .about-skills {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .about-skills-card {
+    max-width: 70rem;
+    text-align: center;
+    width: min(100%, 52rem);
+
+    li {
+      border-bottom: none;
+    }
+
+    li::after {
+      content: "";
+      display: block;
+      width: 70%;
+      height: 1px;
+      background-color: rgba($color-text-soft, 0.2);
+      margin: 1.6rem auto 0;
+    }
+
+    li:last-child::after {
+      display: none;
+    }
+  }
 }
 
 /* ------------------------------
@@ -157,7 +203,7 @@
   }
 
   .homepage-hero-content__subheading {
-    margin: 0 auto;
+    margin: 0 auto 3rem;
   }
 
   .hero-btn {
