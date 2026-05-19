@@ -245,7 +245,7 @@ ol {
   justify-content: center;
   background-color: #247782;
   color: #fafafa;
-  box-shadow: 0 1.2rem 2.8rem rgba(6, 9, 11, 0.24), 0 0 0 0.4rem rgba(244, 246, 247, 0.84);
+  box-shadow: 0 1.2rem 2.8rem rgba(6, 9, 11, 0.24), 0 0 0 0.2rem rgba(244, 246, 247, 0.84);
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -1557,7 +1557,7 @@ ol {
   }
 }
 /* Resume Header */
-.resume-body {
+.resume-page {
   background-color: #f4f5f7;
   min-height: 100vh;
 }
@@ -1567,7 +1567,7 @@ ol {
   max-width: 110rem;
   margin: 0 auto 12rem;
   background-color: #fff;
-  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.08);
+  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.15);
   border-radius: 1.2rem;
   overflow: hidden;
 }
@@ -1576,15 +1576,16 @@ ol {
   display: flex;
   align-items: center;
   padding: 4rem 10rem 6rem;
-}
-.resume-header__logo {
-  display: flex;
-  place-content: center;
-}
-.resume-header__logo-img {
-  width: 18rem;
-  height: auto;
-  display: block;
+  /*&__logo {
+    display: flex;
+    place-content: center;
+  }
+
+  &__logo-img {
+    width: 18rem;
+    height: auto;
+    display: block;
+  }*/
 }
 .resume-header__nav {
   margin-left: auto;
@@ -1896,7 +1897,25 @@ ol {
     padding: 6rem 4rem 6rem 0;
   }
   .resume-page .resume {
-    margin: 0 1rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto 8rem;
+  }
+  .resume-intro {
+    padding: 6rem 5rem 2.4rem;
+  }
+  .resume-container {
+    grid-template-columns: 1fr;
+    padding: 3rem 5rem 8rem;
+  }
+  .resume-section {
+    padding: 2rem 0;
+  }
+  .resume-section__description {
+    max-width: none;
+  }
+  .resume-actions {
+    position: static;
+    margin-top: 3rem;
   }
   .scroll-top {
     right: 4rem;
@@ -1924,9 +1943,6 @@ ol {
   }
   .about-skills-card li:last-child::after {
     display: none;
-  }
-  .resume-container {
-    grid-template-columns: 1fr;
   }
 }
 /* ------------------------------
@@ -2052,6 +2068,49 @@ ol {
   }
 }
 /* ------------------------------
+  Resume Intro 724px max-width
+------------------------------ */
+@media (max-width: 724px) {
+  .resume-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 4.8rem 2.4rem 2.4rem;
+    text-align: center;
+  }
+  .resume-intro__name,
+  .resume-intro__title {
+    transform: none;
+  }
+  .resume-intro__name {
+    font-size: 3.4rem;
+  }
+  .resume-contact__list {
+    align-items: stretch;
+    width: min(100%, 26rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .resume-contact__item {
+    width: 100%;
+  }
+  .resume-contact__text,
+  .resume-contact__link {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.8rem;
+    width: 100%;
+    gap: 1.2rem;
+  }
+  .resume-contact__label {
+    text-align: right;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+  .resume-intro__separator {
+    width: calc(100% - 4.8rem);
+  }
+}
+/* ------------------------------
   Media Queries 600px max-width
 ------------------------------ */
 @media (max-width: 600px) {
@@ -2109,6 +2168,54 @@ ol {
     flex-direction: column;
     align-items: stretch;
   }
+  .resume-page .header {
+    padding: 4rem 2rem;
+  }
+  .resume-page .mobile-nav {
+    top: 3.2rem;
+    right: 2.4rem;
+  }
+  .resume {
+    border-radius: 0.8rem;
+  }
+  .resume-container {
+    padding: 2rem 2.4rem 5.6rem;
+    text-align: center;
+  }
+  .resume-section__title-separator {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .resume-section__description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .resume-project__list,
+  .resume-certifications {
+    display: inline-block;
+    text-align: left;
+  }
+  .resume-skill-group {
+    width: min(100%, 28rem);
+  }
+  .resume-skill-group__list {
+    display: block;
+    text-align: left;
+  }
+  .resume-project__title span {
+    display: block;
+  }
+  .resume-project__type {
+    margin-top: 0.4rem;
+  }
+  .resume-skills {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .resume-actions .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
 }
 /* ------------------------------
   Media Queries 430px max-width
@@ -2127,5 +2234,24 @@ ol {
   .homepage-hero-image-container__img {
     width: min(105vw, 38rem);
     max-height: 64vh;
+  }
+  .resume-intro {
+    padding-inline: 1.8rem;
+  }
+  .resume-intro__name {
+    font-size: 2.9rem;
+  }
+  .resume-intro__title,
+  .resume-contact__text,
+  .resume-contact__link,
+  .resume-section__description,
+  .resume-project__role,
+  .resume-project__list,
+  .resume-skill-group__list li,
+  .resume-certifications {
+    font-size: 1.5rem;
+  }
+  .resume-container {
+    padding-inline: 1.8rem;
   }
 }/*# sourceMappingURL=main.css.map */

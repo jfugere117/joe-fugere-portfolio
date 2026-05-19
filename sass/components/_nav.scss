@@ -39,13 +39,15 @@
 
 .case-studies-page,
 .resume-page,
-.contact-page {
+.contact-page,
+.jfcandleco-page {
   .header {
     display: flex;
     align-items: flex-start;
     padding: 4rem 6rem;
     position: relative;
     z-index: 10;
+    //background-color: $color-accent-3-light;
   }
 
   .desktop-nav {

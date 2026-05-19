@@ -337,6 +337,98 @@
 }
 
 /* ------------------------------
+   Certificates Section
+------------------------------ */
+
+.about-certificate {
+  background-color: $color-background-soft;
+  padding: 8rem;
+
+  &__header {
+    max-width: 76rem;
+    margin: 0 auto 9rem;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: $color-accent-3-dark;
+  }
+
+  &__section-heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(3.2rem, 3vw, 5.2rem);
+    line-height: 1.1;
+    color: $color-text;
+  }
+
+  &__grid {
+    gap: 8rem;
+    align-items: stretch;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__image {
+    width: 92%;
+    display: block;
+    aspect-ratio: 4.5 / 3;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    box-shadow: 0.6rem 1.4rem 3.2rem rgba(16, 20, 24, 0.16);
+    margin: 0 auto 3rem;
+  }
+
+  &__heading {
+    min-height: 6.4rem;
+    width: 92%;
+    margin: 0 auto 1.6rem;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    color: $color-text;
+  }
+
+  &__provider {
+    width: 92%;
+    margin: 0 auto 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-accent-3-dark;
+  }
+
+  &__description {
+    width: 92%;
+    margin: 0 auto 2.4rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+  }
+
+  a {
+    width: 92%;
+    margin: auto auto 0;
+    align-self: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-accent-3-dark;
+    text-decoration: none;
+  }
+}
+
+/* ------------------------------
    CTA Section
 ------------------------------ */
 

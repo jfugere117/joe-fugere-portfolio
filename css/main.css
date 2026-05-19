@@ -245,7 +245,7 @@ ol {
   justify-content: center;
   background-color: #247782;
   color: #fafafa;
-  box-shadow: 0 1.2rem 2.8rem rgba(6, 9, 11, 0.24), 0 0 0 0.4rem rgba(244, 246, 247, 0.84);
+  box-shadow: 0 1.2rem 2.8rem rgba(6, 9, 11, 0.24), 0 0 0 0.2rem rgba(244, 246, 247, 0.84);
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -301,7 +301,8 @@ ol {
 
 .case-studies-page .header,
 .resume-page .header,
-.contact-page .header {
+.contact-page .header,
+.jfcandleco-page .header {
   display: flex;
   align-items: flex-start;
   padding: 4rem 6rem;
@@ -310,7 +311,8 @@ ol {
 }
 .case-studies-page .desktop-nav,
 .resume-page .desktop-nav,
-.contact-page .desktop-nav {
+.contact-page .desktop-nav,
+.jfcandleco-page .desktop-nav {
   position: static;
   margin-left: auto;
 }
@@ -319,7 +321,9 @@ ol {
 .resume-page .desktop-nav-link:link,
 .resume-page .desktop-nav-link:visited,
 .contact-page .desktop-nav-link:link,
-.contact-page .desktop-nav-link:visited {
+.contact-page .desktop-nav-link:visited,
+.jfcandleco-page .desktop-nav-link:link,
+.jfcandleco-page .desktop-nav-link:visited {
   color: #12171c;
 }
 .case-studies-page .desktop-nav-link:hover,
@@ -327,7 +331,9 @@ ol {
 .resume-page .desktop-nav-link:hover,
 .resume-page .desktop-nav-link:active,
 .contact-page .desktop-nav-link:hover,
-.contact-page .desktop-nav-link:active {
+.contact-page .desktop-nav-link:active,
+.jfcandleco-page .desktop-nav-link:hover,
+.jfcandleco-page .desktop-nav-link:active {
   color: #2f9aa8;
 }
 .case-studies-page .desktop-nav-link.nav-cta:link,
@@ -335,7 +341,9 @@ ol {
 .resume-page .desktop-nav-link.nav-cta:link,
 .resume-page .desktop-nav-link.nav-cta:visited,
 .contact-page .desktop-nav-link.nav-cta:link,
-.contact-page .desktop-nav-link.nav-cta:visited {
+.contact-page .desktop-nav-link.nav-cta:visited,
+.jfcandleco-page .desktop-nav-link.nav-cta:link,
+.jfcandleco-page .desktop-nav-link.nav-cta:visited {
   color: #fafafa;
 }
 
@@ -1340,6 +1348,87 @@ ol {
 }
 
 /* ------------------------------
+   Certificates Section
+------------------------------ */
+.about-certificate {
+  background-color: #e6ecef;
+  padding: 8rem;
+}
+.about-certificate__header {
+  max-width: 76rem;
+  margin: 0 auto 9rem;
+  text-align: center;
+}
+.about-certificate__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: #247782;
+}
+.about-certificate__section-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 3vw, 5.2rem);
+  line-height: 1.1;
+  color: #12171c;
+}
+.about-certificate__grid {
+  gap: 8rem;
+  align-items: stretch;
+}
+.about-certificate__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.about-certificate__image {
+  width: 92%;
+  display: block;
+  aspect-ratio: 4.5/3;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  box-shadow: 0.6rem 1.4rem 3.2rem rgba(16, 20, 24, 0.16);
+  margin: 0 auto 3rem;
+}
+.about-certificate__heading {
+  min-height: 6.4rem;
+  width: 92%;
+  margin: 0 auto 1.6rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  color: #12171c;
+}
+.about-certificate__provider {
+  width: 92%;
+  margin: 0 auto 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #247782;
+}
+.about-certificate__description {
+  width: 92%;
+  margin: 0 auto 2.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #69757f;
+}
+.about-certificate a {
+  width: 92%;
+  margin: auto auto 0;
+  align-self: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #247782;
+  text-decoration: none;
+}
+
+/* ------------------------------
    CTA Section
 ------------------------------ */
 .about-cta {
@@ -1556,8 +1645,41 @@ ol {
     gap: 0;
   }
 }
+.jfcandleco-case-study {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  text-align: center;
+}
+.coming-soon__heading, .coming-soon__subheading {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  line-height: 1.15;
+  padding-bottom: 0.6rem;
+  color: #247782;
+  text-shadow: 0.5rem 0.5rem 2.5rem rgba(0, 0, 0, 0.25);
+}
+.coming-soon__heading {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  font-size: 10.4rem;
+}
+.coming-soon__subheading {
+  font-weight: 600;
+  font-size: 8.2rem;
+}
+
 /* Resume Header */
-.resume-body {
+.resume-page {
   background-color: #f4f5f7;
   min-height: 100vh;
 }
@@ -1567,7 +1689,7 @@ ol {
   max-width: 110rem;
   margin: 0 auto 12rem;
   background-color: #fff;
-  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.08);
+  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.15);
   border-radius: 1.2rem;
   overflow: hidden;
 }
@@ -1576,15 +1698,16 @@ ol {
   display: flex;
   align-items: center;
   padding: 4rem 10rem 6rem;
-}
-.resume-header__logo {
-  display: flex;
-  place-content: center;
-}
-.resume-header__logo-img {
-  width: 18rem;
-  height: auto;
-  display: block;
+  /*&__logo {
+    display: flex;
+    place-content: center;
+  }
+
+  &__logo-img {
+    width: 18rem;
+    height: auto;
+    display: block;
+  }*/
 }
 .resume-header__nav {
   margin-left: auto;
