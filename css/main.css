@@ -2146,6 +2146,7 @@ ol {
     z-index: 1;
     overflow: hidden;
     pointer-events: none;
+    opacity: 0.28;
   }
   .homepage-hero-image-container__img {
     position: absolute;
@@ -2156,7 +2157,6 @@ ol {
     width: min(80vw, 48rem);
     max-height: 68vh;
     height: auto;
-    opacity: 1;
     transition: none;
   }
   .footer-intro-container {
