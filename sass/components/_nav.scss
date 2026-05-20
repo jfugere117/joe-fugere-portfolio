@@ -9,32 +9,32 @@
   top: 4rem;
   right: 4rem;
   z-index: 9999;
-}
 
-.desktop-nav-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  padding-right: 2rem;
-}
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 2rem;
+  }
 
-.desktop-nav-link:link,
-.desktop-nav-link:visited {
-  display: inline-block; // good practice for nav links
-  text-decoration: none;
-  color: $color-text-inverse;
-  font-weight: 500;
-  font-size: 1.8rem;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
+  &__link:link,
+  &__link:visited {
+    display: inline-block; // good practice for nav links
+    text-decoration: none;
+    color: $color-text-inverse;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
 
-.desktop-nav-link:hover,
-.desktop-nav-link:active {
-  color: $color-accent-3;
-  transform: translateY(-1px);
+  &__link:hover,
+  &__link:active {
+    color: $color-accent-3;
+    transform: translateY(-1px);
+  }
 }
 
 .case-studies-page,
@@ -55,24 +55,20 @@
     margin-left: auto;
   }
 
-  .desktop-nav-link:link,
-  .desktop-nav-link:visited {
+  .desktop-nav__link:link,
+  .desktop-nav__link:visited {
     color: $color-text;
   }
 
-  .desktop-nav-link:hover,
-  .desktop-nav-link:active {
+  .desktop-nav__link:hover,
+  .desktop-nav__link:active {
     color: $color-accent-3;
   }
 
-  .desktop-nav-link.nav-cta:link,
-  .desktop-nav-link.nav-cta:visited {
+  .desktop-nav__link.nav-cta:link,
+  .desktop-nav__link.nav-cta:visited {
     color: $color-text-inverse;
   }
-}
-
-.resume-page .header {
-  padding: 6rem 4rem 6rem 0;
 }
 
 /********************************/
@@ -122,8 +118,9 @@
   display: none;
 }
 
-.mobile-nav__icon {
+/*.mobile-nav__icon {
   text-shadow:
     0 0.1rem 0.2rem rgba(6, 9, 11, 0.65),
     0 0.4rem 1.2rem rgba(6, 9, 11, 0.45);
 }
+*/

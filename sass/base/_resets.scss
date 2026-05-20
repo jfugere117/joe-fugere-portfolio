@@ -15,34 +15,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  /* font-size: 10px; */
-  /* 10px / 16px = 0.625 = 62.5% */
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.5;
-  color: $color-text;
-  background-color: $color-background;
-  overflow-x: hidden;
-}
-
-.main-content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  margin-top: auto;
-}
-
 img,
 picture,
 video,

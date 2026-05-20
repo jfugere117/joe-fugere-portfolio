@@ -81,6 +81,29 @@
     box-shadow: 0 0 1.4rem rgba(47, 154, 168, 0.35);
   }
 }
+html {
+  scroll-behavior: smooth;
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.5;
+  color: #12171c;
+  background-color: #f4f6f7;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -123,33 +146,6 @@ Default: 8px
 * {
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  /* font-size: 10px; */
-  /* 10px / 16px = 0.625 = 62.5% */
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.5;
-  color: #12171c;
-  background-color: #f4f6f7;
-  overflow-x: hidden;
-}
-
-.main-content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  margin-top: auto;
 }
 
 img,
@@ -274,17 +270,14 @@ ol {
   right: 4rem;
   z-index: 9999;
 }
-
-.desktop-nav-list {
+.desktop-nav__list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4rem;
   padding-right: 2rem;
 }
-
-.desktop-nav-link:link,
-.desktop-nav-link:visited {
+.desktop-nav__link:link, .desktop-nav__link:visited {
   display: inline-block;
   text-decoration: none;
   color: #fafafa;
@@ -292,9 +285,7 @@ ol {
   font-size: 1.8rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.desktop-nav-link:hover,
-.desktop-nav-link:active {
+.desktop-nav__link:hover, .desktop-nav__link:active {
   color: #2f9aa8;
   transform: translateY(-1px);
 }
@@ -316,39 +307,35 @@ ol {
   position: static;
   margin-left: auto;
 }
-.case-studies-page .desktop-nav-link:link,
-.case-studies-page .desktop-nav-link:visited,
-.resume-page .desktop-nav-link:link,
-.resume-page .desktop-nav-link:visited,
-.contact-page .desktop-nav-link:link,
-.contact-page .desktop-nav-link:visited,
-.jfcandleco-page .desktop-nav-link:link,
-.jfcandleco-page .desktop-nav-link:visited {
+.case-studies-page .desktop-nav__link:link,
+.case-studies-page .desktop-nav__link:visited,
+.resume-page .desktop-nav__link:link,
+.resume-page .desktop-nav__link:visited,
+.contact-page .desktop-nav__link:link,
+.contact-page .desktop-nav__link:visited,
+.jfcandleco-page .desktop-nav__link:link,
+.jfcandleco-page .desktop-nav__link:visited {
   color: #12171c;
 }
-.case-studies-page .desktop-nav-link:hover,
-.case-studies-page .desktop-nav-link:active,
-.resume-page .desktop-nav-link:hover,
-.resume-page .desktop-nav-link:active,
-.contact-page .desktop-nav-link:hover,
-.contact-page .desktop-nav-link:active,
-.jfcandleco-page .desktop-nav-link:hover,
-.jfcandleco-page .desktop-nav-link:active {
+.case-studies-page .desktop-nav__link:hover,
+.case-studies-page .desktop-nav__link:active,
+.resume-page .desktop-nav__link:hover,
+.resume-page .desktop-nav__link:active,
+.contact-page .desktop-nav__link:hover,
+.contact-page .desktop-nav__link:active,
+.jfcandleco-page .desktop-nav__link:hover,
+.jfcandleco-page .desktop-nav__link:active {
   color: #2f9aa8;
 }
-.case-studies-page .desktop-nav-link.nav-cta:link,
-.case-studies-page .desktop-nav-link.nav-cta:visited,
-.resume-page .desktop-nav-link.nav-cta:link,
-.resume-page .desktop-nav-link.nav-cta:visited,
-.contact-page .desktop-nav-link.nav-cta:link,
-.contact-page .desktop-nav-link.nav-cta:visited,
-.jfcandleco-page .desktop-nav-link.nav-cta:link,
-.jfcandleco-page .desktop-nav-link.nav-cta:visited {
+.case-studies-page .desktop-nav__link.nav-cta:link,
+.case-studies-page .desktop-nav__link.nav-cta:visited,
+.resume-page .desktop-nav__link.nav-cta:link,
+.resume-page .desktop-nav__link.nav-cta:visited,
+.contact-page .desktop-nav__link.nav-cta:link,
+.contact-page .desktop-nav__link.nav-cta:visited,
+.jfcandleco-page .desktop-nav__link.nav-cta:link,
+.jfcandleco-page .desktop-nav__link.nav-cta:visited {
   color: #fafafa;
-}
-
-.resume-page .header {
-  padding: 6rem 4rem 6rem 0;
 }
 
 /********************************/
@@ -393,13 +380,16 @@ ol {
   display: none;
 }
 
-.mobile-nav__icon {
-  text-shadow: 0 0.1rem 0.2rem rgba(6, 9, 11, 0.65), 0 0.4rem 1.2rem rgba(6, 9, 11, 0.45);
+/*.mobile-nav__icon {
+  text-shadow:
+    0 0.1rem 0.2rem rgba(6, 9, 11, 0.65),
+    0 0.4rem 1.2rem rgba(6, 9, 11, 0.45);
 }
-
+*/
 .footer {
   min-height: 42rem;
   padding: 6.4rem 4rem 2rem;
+  margin-top: auto;
   background: linear-gradient(135deg, #06090b 0%, #0d1216 45%, #11171d 100%);
   color: #fafafa;
   display: grid;
@@ -620,6 +610,10 @@ ol {
   height: 6.4rem;
 }
 
+.resume-page .header {
+  padding: 6rem 4rem 6rem 0;
+}
+
 .section-hero {
   position: relative;
   min-height: 100vh;
@@ -649,28 +643,30 @@ ol {
 }
 .homepage-hero-content__eyebrow {
   font-family: "Inter", sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 2rem;
-  color: #247782;
-  text-shadow: 0 0.2rem 1rem rgba(6, 9, 11, 0.35);
+  color: #fafafa;
+  /*text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.35);*/
 }
 .homepage-hero-content__heading {
-  font-family: "Stardos Stencil", Georgia, "Times New Roman", Times, serif;
-  font-size: 3.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(3rem, 4vw, 4.8rem);
+  line-height: 1.08;
+  font-weight: 700;
   margin-bottom: 2rem;
   /*color: $color-text;
   letter-spacing: $tracking-wider;*/
-  color: transparent;
-  -webkit-text-stroke: 1.5px #d2bd8f;
+  color: #d2bd8f;
   text-shadow: 0 0.2rem 1rem rgba(6, 9, 11, 0.55);
 }
 .homepage-hero-content__subheading {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 400;
+  line-height: 1.65;
   margin-bottom: 3.2rem;
   color: #fafafa;
   max-width: 480px;
@@ -847,6 +843,27 @@ ol {
 }
 .case-preview-card__link:hover {
   transform: translate(-2px, -2px);
+}
+
+.case-card-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: auto;
+}
+
+.case-card-link,
+.live-site-link {
+  text-decoration: none;
+}
+.case-card-link__text,
+.live-site-link__text {
+  text-decoration: underline;
+}
+.case-card-link__arrow,
+.live-site-link__arrow {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .about-preview {
@@ -1981,6 +1998,9 @@ ol {
   .mobile-nav-menu-icon {
     color: #fafafa;
   }
+  .mobile-nav-past-hero .mobile-nav-menu-icon {
+    color: #2d363d;
+  }
   .case-studies-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
   .contact-page .mobile-nav-menu-icon {
@@ -1992,28 +2012,28 @@ ol {
   .nav-open .mobile-nav__icon[name=mobile-nav-menu-icon] {
     display: none;
   }
-  .desktop-nav-list {
+  .desktop-nav__list {
     flex-direction: column;
   }
-  .desktop-nav-link:link,
-  .desktop-nav-link:visited {
+  .desktop-nav__link:link,
+  .desktop-nav__link:visited {
     color: #2d363d;
     font-size: 2.5rem;
   }
-  .desktop-nav-link:link:hover, .desktop-nav-link:link:active,
-  .desktop-nav-link:visited:hover,
-  .desktop-nav-link:visited:active {
+  .desktop-nav__link:link:hover, .desktop-nav__link:link:active,
+  .desktop-nav__link:visited:hover,
+  .desktop-nav__link:visited:active {
     color: #2f9aa8;
     transform: translateY(-1px);
   }
-  .desktop-nav-link.nav-cta:link,
-  .desktop-nav-link.nav-cta:visited {
+  .desktop-nav__link.nav-cta:link,
+  .desktop-nav__link.nav-cta:visited {
     color: #fafafa;
     font-size: 2.5rem;
   }
-  .desktop-nav-link.nav-cta:link:hover, .desktop-nav-link.nav-cta:link:active,
-  .desktop-nav-link.nav-cta:visited:hover,
-  .desktop-nav-link.nav-cta:visited:active {
+  .desktop-nav__link.nav-cta:link:hover, .desktop-nav__link.nav-cta:link:active,
+  .desktop-nav__link.nav-cta:visited:hover,
+  .desktop-nav__link.nav-cta:visited:active {
     color: #fafafa;
     transform: translateY(-1px);
   }

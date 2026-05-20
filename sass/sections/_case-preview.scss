@@ -148,3 +148,24 @@
     }
   }
 }
+
+.case-card-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: auto;
+}
+
+.case-card-link,
+.live-site-link {
+  text-decoration: none;
+
+  &__text {
+    text-decoration: underline;
+  }
+
+  &__arrow {
+    display: inline-block;
+    text-decoration: none;
+  }
+}

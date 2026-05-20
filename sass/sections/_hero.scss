@@ -35,24 +35,25 @@
 
   &__eyebrow {
     font-family: "Inter", sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     margin-bottom: 2rem;
-    color: $color-accent-3-dark;
-    text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.35);
+    color: $color-text-inverse;
+    /*text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.35);*/
   }
 
   &__heading {
-    font-family: "Stardos Stencil", Georgia, "Times New Roman", Times, serif;
-    font-size: 3.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+    font-size: clamp(3rem, 4vw, 4.8rem);
+    line-height: 1.08;
+    font-weight: 700;
     margin-bottom: 2rem;
     /*color: $color-text;
     letter-spacing: $tracking-wider;*/
 
-    color: transparent;
-    -webkit-text-stroke: 1.5px $color-champagne;
+    color: $color-champagne;
     text-shadow: 0 0.2rem 1rem rgba($color-ink, 0.55);
   }
 
@@ -60,6 +61,7 @@
     font-family: "Inter", sans-serif;
     font-size: 2rem;
     font-weight: 400;
+    line-height: 1.65;
     margin-bottom: 3.2rem;
     color: $color-text-inverse;
     max-width: 480px;

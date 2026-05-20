@@ -83,6 +83,10 @@
     color: $color-text-inverse;
   }
 
+  .mobile-nav-past-hero .mobile-nav-menu-icon {
+    color: $color-text-soft;
+  }
+
   .case-studies-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
   .contact-page .mobile-nav-menu-icon {
@@ -97,12 +101,12 @@
     display: none;
   }
 
-  .desktop-nav-list {
+  .desktop-nav__list {
     flex-direction: column;
   }
 
-  .desktop-nav-link:link,
-  .desktop-nav-link:visited {
+  .desktop-nav__link:link,
+  .desktop-nav__link:visited {
     color: $color-text-soft;
     font-size: 2.5rem;
 
@@ -113,8 +117,8 @@
     }
   }
 
-  .desktop-nav-link.nav-cta:link,
-  .desktop-nav-link.nav-cta:visited {
+  .desktop-nav__link.nav-cta:link,
+  .desktop-nav__link.nav-cta:visited {
     color: $color-text-inverse;
     font-size: 2.5rem;
 

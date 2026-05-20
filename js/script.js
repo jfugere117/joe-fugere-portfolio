@@ -2,13 +2,36 @@
 document.body.classList.add("js-enabled");
 
 const btnNavEl = document.querySelector(".mobile-nav");
-const headerEl = document.querySelector(".header");
+const headerEl = btnNavEl
+  ? btnNavEl.closest("header")
+  : document.querySelector(".header, .resume-header");
 
 if (btnNavEl && headerEl) {
   btnNavEl.addEventListener("click", function () {
     headerEl.classList.toggle("nav-open");
   });
 }
+
+// Switch the mobile menu icon once it scrolls past dark hero sections.
+const navColorHeroEl = document.querySelector(".section-hero, .about-page-hero");
+
+function toggleMobileNavColor() {
+  if (!btnNavEl || !navColorHeroEl) return;
+
+  const heroPosition = navColorHeroEl.getBoundingClientRect();
+  const navPosition = btnNavEl.getBoundingClientRect();
+  const navCenterY = navPosition.top + navPosition.height / 2;
+
+  document.body.classList.toggle(
+    "mobile-nav-past-hero",
+    heroPosition.bottom <= navCenterY,
+  );
+}
+
+window.addEventListener("scroll", toggleMobileNavColor);
+window.addEventListener("resize", toggleMobileNavColor);
+window.addEventListener("load", toggleMobileNavColor);
+toggleMobileNavColor();
 
 // Scroll to top button
 const scrollTopBtn = document.createElement("button");
