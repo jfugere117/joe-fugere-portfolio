@@ -13,7 +13,9 @@ if (btnNavEl && headerEl) {
 }
 
 // Switch the mobile menu icon once it scrolls past dark hero sections.
-const navColorHeroEl = document.querySelector(".section-hero, .about-page-hero");
+const navColorHeroEl = document.querySelector(
+  ".section-hero, .about-page-hero",
+);
 
 function toggleMobileNavColor() {
   if (!btnNavEl || !navColorHeroEl) return;
@@ -34,6 +36,7 @@ window.addEventListener("load", toggleMobileNavColor);
 toggleMobileNavColor();
 
 // Scroll to top button
+
 const scrollTopBtn = document.createElement("button");
 scrollTopBtn.className = "scroll-top";
 scrollTopBtn.type = "button";

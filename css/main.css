@@ -1585,13 +1585,11 @@ ol {
   width: min(100%, 80rem);
   margin: 0 auto;
 }
-
 .contact-form__row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.6rem;
 }
-
 .contact-form__field {
   display: flex;
   flex-direction: column;
@@ -1633,11 +1631,30 @@ ol {
   border-color: #247782;
   box-shadow: 0 0 0 0.4rem rgba(143, 203, 210, 0.22);
 }
-
 .contact-form__submit {
   width: 100%;
   border: none;
   cursor: pointer;
+}
+.contact-form__select {
+  position: relative;
+}
+.contact-form__select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 4.8rem;
+}
+.contact-form__select::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #247782;
+  font-size: 1.4rem;
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
@@ -1984,7 +2001,8 @@ ol {
   }
   .case-studies-page .desktop-nav,
   .resume-page .desktop-nav,
-  .contact-page .desktop-nav {
+  .contact-page .desktop-nav,
+  .jfcandleco-page .desktop-nav {
     position: fixed;
     margin-left: 0;
   }
@@ -2003,7 +2021,8 @@ ol {
   }
   .case-studies-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
-  .contact-page .mobile-nav-menu-icon {
+  .contact-page .mobile-nav-menu-icon,
+  .jfcandleco-page .mobile-nav-menu-icon {
     color: #2d363d;
   }
   .nav-open .mobile-nav__icon[name=mobile-nav-close-icon] {
@@ -2039,8 +2058,12 @@ ol {
   }
   .case-studies-page .header,
   .resume-page .header,
-  .contact-page .header {
+  .contact-page .header,
+  .jfcandleco-page .header {
     padding: 6rem 4rem;
+  }
+  .jfcandleco-page .header {
+    padding: 4rem 2.4rem;
   }
   .resume-page .header {
     padding: 6rem 4rem 6rem 0;
@@ -2353,10 +2376,12 @@ ol {
   .about-certificate a {
     width: 100%;
   }
-  .resume-page .header {
+  .resume-page .header,
+  .jfcandleco-page .header {
     padding: 4rem 2rem;
   }
-  .resume-page .mobile-nav {
+  .resume-page .mobile-nav,
+  .jfcandleco-page .mobile-nav {
     top: 3.2rem;
     right: 2.4rem;
   }

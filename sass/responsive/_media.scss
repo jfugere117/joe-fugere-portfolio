@@ -66,7 +66,8 @@
 
   .case-studies-page .desktop-nav,
   .resume-page .desktop-nav,
-  .contact-page .desktop-nav {
+  .contact-page .desktop-nav,
+  .jfcandleco-page .desktop-nav {
     position: fixed;
     margin-left: 0;
   }
@@ -89,7 +90,8 @@
 
   .case-studies-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
-  .contact-page .mobile-nav-menu-icon {
+  .contact-page .mobile-nav-menu-icon,
+  .jfcandleco-page .mobile-nav-menu-icon {
     color: $color-text-soft;
   }
 
@@ -131,8 +133,13 @@
 
   .case-studies-page .header,
   .resume-page .header,
-  .contact-page .header {
+  .contact-page .header,
+  .jfcandleco-page .header {
     padding: 6rem 4rem;
+  }
+
+  .jfcandleco-page .header {
+    padding: 4rem 2.4rem;
   }
 
   .resume-page .header {
@@ -525,11 +532,13 @@
     }
   }
 
-  .resume-page .header {
+  .resume-page .header,
+  .jfcandleco-page .header {
     padding: 4rem 2rem;
   }
 
-  .resume-page .mobile-nav {
+  .resume-page .mobile-nav,
+  .jfcandleco-page .mobile-nav {
     top: 3.2rem;
     right: 2.4rem;
   }
