@@ -617,9 +617,7 @@ ol {
 .section-hero {
   position: relative;
   min-height: 100vh;
-  /*display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;*/
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.85fr);
   padding: 8rem 4rem 0;
   overflow: hidden;
   background-color: rgba(6, 9, 11, 0.35);
@@ -636,7 +634,7 @@ ol {
 .homepage-hero-content {
   position: relative;
   z-index: 3;
-  padding-left: 5rem;
+  padding: 2rem 0 0 7rem;
   max-width: 680px;
   grid-column: 1;
   backface-visibility: hidden;
@@ -653,7 +651,7 @@ ol {
 }
 .homepage-hero-content__heading {
   font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(3rem, 4vw, 4.8rem);
+  font-size: clamp(3rem, 4vw, 5rem);
   line-height: 1.15;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -694,8 +692,9 @@ ol {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 1;
   width: min(82vw, 92rem);
-  max-height: 88vh;
+  max-height: 85vh;
   height: auto;
   display: block;
   object-fit: contain;
@@ -705,6 +704,7 @@ ol {
   transform: translateZ(0);
   will-change: transform;
   animation: moveInRight 1.2s ease-in-out;
+  padding-left: 2rem;
 }
 .homepage-hero-image-container {
   /* Keep the image stable during browser resize/fullscreen changes. */
@@ -978,8 +978,8 @@ ol {
   background-color: #fafafa;
 }
 .skill-card__icon {
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 7.2rem;
+  height: 7.2rem;
   border-radius: 999px;
   display: flex;
   background-color: #e8f0f4;
@@ -989,8 +989,8 @@ ol {
   box-shadow: 0.7rem 0.8rem 1.9rem rgba(6, 9, 11, 0.12), inset 0 0 0 1px rgba(63, 102, 127, 0.16);
 }
 .skill-card__icon-img {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 4.2rem;
+  height: 4.2rem;
   object-fit: contain;
   display: block;
   align-items: center;
@@ -2017,7 +2017,7 @@ ol {
     color: #fafafa;
   }
   .mobile-nav-past-hero .mobile-nav-menu-icon {
-    color: #2d363d;
+    color: #18525a;
   }
   .case-studies-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
@@ -2306,13 +2306,14 @@ ol {
 ------------------------------ */
 @media (max-width: 600px) {
   .section-hero {
-    padding: 10rem 2rem 6rem;
+    padding: 5rem 2rem 6rem;
   }
   .homepage-hero-content {
     max-width: 36rem;
+    padding-top: 10rem;
   }
   .homepage-hero-content__heading {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
   .homepage-hero-content__subheading {
     font-size: 1.6rem;
@@ -2433,16 +2434,22 @@ ol {
 @media (max-width: 430px) {
   .section-hero {
     min-height: 100vh;
-    padding: 10rem 2rem 6rem;
+    padding: 5rem 2rem 6rem;
+  }
+  .homepage-hero-content {
+    margin-top: -10rem;
+  }
+  .homepage-hero-content__eyebrow {
+    font-size: 1.4rem;
   }
   .homepage-hero-content__heading {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
   }
   .hero-btn a {
     width: min(100%, 26rem);
   }
   .homepage-hero-image-container__img {
-    width: min(105vw, 38rem);
+    width: min(105vw, 48rem);
     max-height: 64vh;
   }
   .resume-intro {

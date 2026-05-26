@@ -3,10 +3,7 @@
 .section-hero {
   position: relative;
   min-height: 100vh;
-
-  /*display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;*/
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.85fr);
 
   padding: 8rem 4rem 0;
   overflow: hidden;
@@ -26,7 +23,8 @@
 .homepage-hero-content {
   position: relative;
   z-index: 3;
-  padding-left: 5rem;
+  //padding-left: 7rem;
+  padding: 2rem 0 0 7rem;
   max-width: 680px;
 
   grid-column: 1;
@@ -46,7 +44,7 @@
 
   &__heading {
     font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-    font-size: clamp(3rem, 4vw, 4.8rem);
+    font-size: clamp(3rem, 4vw, 5rem);
     line-height: 1.15;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -94,9 +92,10 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 1;
 
     width: min(82vw, 92rem);
-    max-height: 88vh;
+    max-height: 85vh;
     height: auto;
     display: block;
     object-fit: contain;
@@ -107,6 +106,7 @@
     will-change: transform;
 
     animation: moveInRight 1.2s ease-in-out;
+    padding-left: 2rem;
   }
 
   /* Keep the image stable during browser resize/fullscreen changes. */

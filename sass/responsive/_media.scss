@@ -85,7 +85,7 @@
   }
 
   .mobile-nav-past-hero .mobile-nav-menu-icon {
-    color: $color-text-soft;
+    color: $color-accent-3-deep;
   }
 
   .case-studies-page .mobile-nav-menu-icon,
@@ -437,15 +437,16 @@
 
 @media (max-width: 600px) {
   .section-hero {
-    padding: 10rem 2rem 6rem;
+    padding: 5rem 2rem 6rem;
   }
 
   .homepage-hero-content {
     max-width: 36rem;
+    padding-top: 10rem;
   }
 
   .homepage-hero-content__heading {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
 
   .homepage-hero-content__subheading {
@@ -603,11 +604,18 @@
 @media (max-width: 430px) {
   .section-hero {
     min-height: 100vh;
-    padding: 10rem 2rem 6rem;
+    padding: 5rem 2rem 6rem;
   }
 
-  .homepage-hero-content__heading {
-    font-size: 3.4rem;
+  .homepage-hero-content {
+    margin-top: -10rem;
+    &__eyebrow {
+      font-size: 1.4rem;
+    }
+
+    &__heading {
+      font-size: 2.8rem;
+    }
   }
 
   .hero-btn a {
@@ -615,7 +623,7 @@
   }
 
   .homepage-hero-image-container__img {
-    width: min(105vw, 38rem);
+    width: min(105vw, 48rem);
     max-height: 64vh;
   }
 
