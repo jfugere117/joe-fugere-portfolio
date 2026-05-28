@@ -8,6 +8,7 @@
   padding: 4rem clamp(2rem, 8vw, 13rem);
   color: $color-text;
   background: $gradient-hero-bg;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
 
   &::before {
     content: "";
@@ -16,7 +17,11 @@
     z-index: 0;
     pointer-events: none;
     background-image:
-      radial-gradient(circle at 1px 1px, rgba($color-accent, 0.42) 0 0.12rem, transparent 0.16rem),
+      radial-gradient(
+        circle at 1px 1px,
+        rgba($color-accent, 0.42) 0 0.12rem,
+        transparent 0.16rem
+      ),
       $gradient-grid-overlay;
     background-size:
       42px 42px,
@@ -34,7 +39,7 @@
   &__content {
     position: relative;
     z-index: 3;
-    max-width: 54rem;
+    max-width: 64rem;
     padding-top: clamp(7rem, 13vh, 12rem);
   }
 
@@ -52,14 +57,14 @@
 
   &__heading {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(4rem, 7vw, 8rem);
+    font-size: clamp(3.8rem, 4.3vw, 6.8rem);
     line-height: 0.95;
     margin-bottom: 2rem;
   }
 
   &__subheading {
-    max-width: 42rem;
-    margin-bottom: 2rem;
+    max-width: 43rem;
+    margin-bottom: 2.4rem;
     color: $color-text-light;
     font:
       400 clamp(1.5rem, 1.5vw, 1.8rem)/1.7 "Inter",
@@ -83,7 +88,7 @@
     right: max(2rem, 3vw);
     bottom: 0;
     z-index: 2;
-    width: min(48vw, 72rem);
+    width: clamp(68rem, 52vw, 72rem);
     max-height: 90vh;
     object-fit: contain;
     object-position: bottom right;
