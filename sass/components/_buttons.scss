@@ -12,7 +12,7 @@
   padding: 1.6rem 3.2rem;
   font-size: 1.8rem;
   border-radius: 0.8rem;
-  color: $color-text-inverse;
+  color: $color-text;
   text-decoration: none;
 
   transition:
@@ -24,41 +24,43 @@
 }
 
 .btn-primary {
-  background-color: $color-accent-3-dark;
-  border: 1.5px solid $color-accent-3-dark;
+  background: $gradient-button;
+  border: 1.5px solid transparent;
 
   &:hover {
-    background-color: $color-accent-3-deep;
-    border-color: $color-accent-3-deep;
+    background: $gradient-button-hover;
+    border-color: transparent;
     transform: translate(-2px, -2px);
-    box-shadow: 0 1rem 2rem rgba($color-ink, 0.22);
+    /*box-shadow: 0 1rem 2rem rgba($color-ink, 0.22);*/
+    box-shadow: $shadow-button-hover;
   }
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border: 1.5px solid $color-text-inverse;
+  background-color: $button-ghost-bg;
+  border: 1.5px solid $button-ghost-border;
+  color: $button-ghost-text;
 
   &:hover {
-    background-color: rgba($color-champagne, 0.14);
-    border-color: $color-champagne;
-    color: $color-champagne-soft;
+    background-color: $button-ghost-hover-bg;
+    border-color: $button-ghost-hover-border;
+    color: $button-ghost-hover-text;
     transform: translate(-2px, -2px);
-    box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
+    //box-shadow: $shadow-button-hover;
   }
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 1.5px solid $color-accent-3-deep;
-  color: $color-accent-3-deep;
+  border: 1.5px solid $color-accent;
+  color: $color-accent;
 
   &:hover {
     background-color: rgba($color-accent-3-soft, 0.14);
     border-color: $color-accent-2-dark;
     color: $color-accent-3-dark;
     transform: translate(-2px, -2px);
-    box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
+    box-shadow: $shadow-button-hover;
   }
 }
 
@@ -70,14 +72,14 @@
 
   width: 5.8rem;
   height: 5.8rem;
-  border: 1.5px solid rgba($color-ink, 0.18);
+  border: 1.5px solid $color-accent-3;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: $color-accent-3-dark;
-  color: $color-text-inverse;
+  background-color: rgba($color-surface, 0.88);
+  color: $color-accent-3;
   box-shadow:
     0 1.2rem 2.8rem rgba($color-ink, 0.24),
     0 0 0 0.2rem rgba($color-background, 0.84);
@@ -98,8 +100,11 @@
   }
 
   &:hover {
-    background-color: $color-accent-3-deep;
+    background-color: rgba($color-accent-3, 0.22);
+    color: $color-tech-blue;
+    border: 1.5px solid $color-tech-blue;
     transform: translateY(-2px);
+    box-shadow: $shadow-button-hover;
   }
 
   i {

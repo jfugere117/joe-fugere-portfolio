@@ -20,6 +20,7 @@
 
   &__link:link,
   &__link:visited {
+    position: relative;
     display: inline-block; // good practice for nav links
     text-decoration: none;
     color: $color-text-inverse;
@@ -30,10 +31,31 @@
       transform 0.3s ease;
   }
 
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.9rem;
+    width: 100%;
+    height: 0.2rem;
+    background-color: $color-accent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  &__link.nav-cta::after {
+    display: none;
+  }
+
   &__link:hover,
   &__link:active {
-    color: $color-accent-3;
+    color: $color-text;
     transform: translateY(-1px);
+  }
+
+  &__link:hover::after {
+    transform: scaleX(1);
   }
 }
 
@@ -50,6 +72,16 @@
     //background-color: $color-accent-3-light;
   }
 
+  &.contact-page .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   .desktop-nav {
     position: static;
     margin-left: auto;
@@ -62,12 +94,12 @@
 
   .desktop-nav__link:hover,
   .desktop-nav__link:active {
-    color: $color-accent-3;
+    color: $color-text;
   }
 
   .desktop-nav__link.nav-cta:link,
   .desktop-nav__link.nav-cta:visited {
-    color: $color-text-inverse;
+    color: $button-ghost-text;
   }
 }
 
@@ -78,15 +110,19 @@
 .nav-cta:link,
 .nav-cta:visited {
   padding: 1.2rem 2.4rem;
-  border-radius: 8px;
-  background-color: $color-accent-3-dark;
-  color: $color-text-inverse;
+  border-radius: 0.8rem;
+  background-color: $button-ghost-bg;
+  border: 1.5px solid $button-ghost-border;
+  color: $button-ghost-text;
 }
 
 .nav-cta:hover,
 .nav-cta:active {
-  background-color: $color-accent-3-deep;
-  color: $color-text-inverse;
+  background-color: $button-ghost-hover-bg;
+  border-color: $button-ghost-hover-border;
+  color: $button-ghost-hover-text;
+  transform: translate(-2px, -2px);
+  box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
 }
 
 /********************************/

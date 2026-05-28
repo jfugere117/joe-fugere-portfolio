@@ -69,14 +69,18 @@
 @keyframes learningPulse {
   0%,
   100% {
-    background-color: rgba($color-champagne, 0.22);
-    color: $color-champagne-deep;
-    box-shadow: none;
+    background-color: rgba($color-accent, 0.36);
+    color: $color-text;
+    box-shadow:
+      0 0 1.2rem rgba($color-accent, 0.32),
+      inset 0 0 0 1px rgba($color-accent, 0.55);
   }
 
   50% {
-    background-color: rgba($color-accent-3, 0.18);
-    color: $color-accent-3-dark;
-    box-shadow: 0 0 1.4rem rgba($color-accent-3, 0.35);
+    background-color: rgba($color-tech-blue, 0.4);
+    color: $color-text;
+    box-shadow:
+      0 0 1.8rem rgba($color-tech-blue, 0.48),
+      inset 0 0 0 1px rgba($color-tech-blue, 0.68);
   }
 }

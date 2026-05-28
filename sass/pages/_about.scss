@@ -35,10 +35,23 @@
   overflow: hidden;
   pointer-events: none;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3%;
+    bottom: 4%;
+    width: min(68vw, 68rem);
+    height: 100%;
+    background:
+      radial-gradient(circle at 42% 52%, rgba($color-tech-blue, 0.52), transparent 28rem),
+      radial-gradient(circle at 34% 68%, rgba($color-accent, 0.42), transparent 24rem);
+  }
+
   &__img {
     position: absolute;
     left: 6%;
     bottom: 0;
+    z-index: 1;
 
     width: min(65%, 45rem);
     max-height: 90%;
@@ -63,7 +76,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
-    color: $color-champagne;
+    color: $color-tech-blue;
   }
 
   &__heading {

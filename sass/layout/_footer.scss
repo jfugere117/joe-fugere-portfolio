@@ -65,9 +65,9 @@
       transform 0.25s ease;
 
     &:hover {
-      color: $color-champagne-soft;
+      color: $color-tech-blue;
       background-color: rgba($color-accent-3, 0.22);
-      border-color: $color-accent-3;
+      border-color: $color-tech-blue;
       transform: translateY(-2px);
     }
   }
@@ -82,7 +82,7 @@
 
   &__title {
     font-size: 1.8rem;
-    color: $color-champagne;
+    color: $color-tech-blue;
     margin-bottom: 1.6rem;
   }
 

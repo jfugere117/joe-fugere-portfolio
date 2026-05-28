@@ -1,112 +1,162 @@
-/* ------------------------------
-   Storm Pearl Portfolio Theme
-   with 3 Accent Colors
------------------------------- */
+@use "sass:color";
 
-/* Main Backgrounds */
-$color-background: #f4f6f7;
-$color-background-soft: #e6ecef;
-$color-section-alt-1: #dce5e9;
-$color-section-alt-2: #fafafa;
+// Brand colors
+$color-background: #071018;
+$color-surface: #0e1722;
+$color-text: #f5f7fa;
+$color-text-muted: #9fb0c0;
 
-/* Dark Theme Colors */
+$color-accent: #2ec4b6; // main accent
+$color-accent-dark: #25a99d; // hover / active
+$color-accent-light: #67e8dc; // glow / highlight
+$color-accent-soft: rgba(46, 196, 182, 0.14); // background tint
+
+$color-tech-blue: #588cff; // main blue
+$color-tech-blue-dark: #3f73e6; // hover / active
+$color-tech-blue-light: #8fb0ff; // glow / highlight
+$color-tech-blue-soft: rgba(88, 140, 255, 0.14); // background tint
+
+//////////////////////////////////
+// Legacy palette aliases
+//////////////////////////////////
+
 $color-ink: #06090b;
-$color-ink-soft: #0d1216;
-$color-storm: #11171d;
-$color-storm-soft: #1d2b34;
-$color-storm-light: #30434f;
+$color-background-soft: #0a141e;
+$color-section-alt-1: $color-surface;
+$color-section-alt-2: #111c2a;
 
-/* Surface / Cards */
-$color-surface: #ffffff;
-$color-surface-soft: #f0f3f5;
-$color-surface-dark: #11171d;
+$color-text-inverse: $color-text;
+$color-text-soft: $color-text;
+$color-text-light: #c6d1db;
 
-/* Text */
-$color-text: #12171c;
-$color-text-soft: #2d363d;
-$color-text-muted: #69757f;
-$color-text-light: #a0a9af;
-$color-text-inverse: #fafafa;
+$color-accent-light: rgba($color-accent, 0.1);
 
-/* Primary Accent / Storm Blue */
-$color-accent: #3f667f;
-$color-accent-dark: #315167;
-$color-accent-deep: #223946;
-$color-accent-soft: #9fb7c4;
-$color-accent-light: #e8f0f4;
+$color-accent-2-soft: $color-text-muted;
+$color-accent-2-dark: $color-tech-blue;
 
-/* Secondary Accent / Pearl Gray */
-$color-accent-2: #c8d1d7;
-$color-accent-2-dark: #9caab3;
-$color-accent-2-deep: #65737c;
-$color-accent-2-soft: #e1e7eb;
-$color-accent-2-light: #f6f8f9;
+$color-accent-3: $color-accent;
+$color-accent-3-soft: color.adjust($color-accent, $lightness: 16%);
+$color-accent-3-light: rgba($color-accent, 0.08);
+$color-accent-3-dark: $color-accent;
+$color-accent-3-deep: $color-tech-blue;
 
-/* Tertiary Accent / Cayan */
-$color-accent-3: #2f9aa8;
-$color-accent-3-dark: #247782;
-$color-accent-3-deep: #18525a;
-$color-accent-3-soft: #8fcbd2;
-$color-accent-3-light: #e3f5f7;
+$color-champagne: $color-tech-blue;
+$color-champagne-soft: color.adjust($color-tech-blue, $lightness: 10%);
+$color-champagne-deep: color.adjust($color-tech-blue, $lightness: -18%);
 
-/* Champagne Variants */
-$color-champagne: #d2bd8f;
-$color-champagne-dark: #b89d63;
-$color-champagne-deep: #80683c;
-$color-champagne-soft: #e7d8b5;
-$color-champagne-light: #f8f1df;
-$color-champagne-pale: #fcf8ef;
+$color-border: rgba($color-text, 0.12);
+$color-border-dark: rgba($color-text-inverse, 0.15);
 
-$color-misty-green: #b9d3c5;
+//////////////////////////////////
+// Transparent glow colors
+//////////////////////////////////
 
-/* Borders */
-$color-border: rgba(18, 23, 28, 0.12);
-$color-border-dark: rgba(250, 250, 250, 0.15);
+$glow-accent-soft: rgba($color-accent, 0.28);
+$glow-accent-grid: rgba($color-accent, 0.11);
+$glow-blue-soft: rgba($color-tech-blue, 0.38);
+$glow-blue-ring: rgba($color-tech-blue, 0.22);
 
-/* Shadows */
-$shadow-soft: 0 1.6rem 3.2rem rgba(6, 9, 11, 0.08);
-$shadow-card: 0 2rem 4rem rgba(6, 9, 11, 0.12);
-$shadow-dark: 0 2.4rem 5rem rgba(0, 0, 0, 0.3);
+// Borders
+$border-subtle: rgba($color-text, 0.08);
+$border-accent-soft: rgba($color-accent, 0.25);
 
-/* Gradients */
+//////////////////////////////////
+// Shadows
+//////////////////////////////////
+
+$shadow-sm: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.18);
+$shadow-md: 0 1rem 3rem rgba(0, 0, 0, 0.28);
+$shadow-lg: 0 2rem 5rem rgba(0, 0, 0, 0.38);
+
+$shadow-surface: 0 1.6rem 4rem rgba(0, 0, 0, 0.32);
+
+$shadow-accent: 0 0 2rem rgba($color-accent, 0.25);
+$shadow-accent-strong: 0 0 3.5rem rgba($color-accent, 0.42);
+
+$shadow-blue: 0 0 2rem rgba($color-tech-blue, 0.25);
+$shadow-blue-strong: 0 0 3.5rem rgba($color-tech-blue, 0.42);
+
+$shadow-button: 0 1rem 2.4rem rgba($color-tech-blue, 0.28);
+$shadow-button-hover: 0 0.8rem 3rem rgba($color-tech-blue, 0.38);
+
+$shadow-card: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.35);
+$shadow-card-hover:
+  0 2.2rem 5.5rem rgba(0, 0, 0, 0.42),
+  0 0 2.5rem rgba($color-tech-blue, 0.16);
+$shadow-soft: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.18);
+
+//////////////////////////////////
+// Gradients
+//////////////////////////////////
+
+$gradient-primary: linear-gradient(
+  135deg,
+  $color-accent 0%,
+  $color-tech-blue 100%
+);
+
 $gradient-footer: linear-gradient(
   135deg,
-  #06090b 0%,
-  #0d1216 45%,
-  #11171d 100%
+  $color-ink 0%,
+  $color-background 46%,
+  #0b1826 100%
 );
 
-$gradient-card-dark: linear-gradient(
-  145deg,
-  #11171d 0%,
-  #1d2b34 55%,
-  #30434f 100%
-);
+$gradient-hero-bg:
+  radial-gradient(circle at 72% 48%, $glow-blue-soft, transparent 28rem),
+  radial-gradient(circle at 61% 62%, $glow-accent-soft, transparent 24rem),
+  linear-gradient(
+    90deg,
+    rgba($color-background, 0.96) 0%,
+    rgba($color-background, 0.82) 45%,
+    rgba($color-background, 0.38) 100%
+  ),
+  $color-background;
 
-$gradient-accent: linear-gradient(
+$gradient-grid-overlay:
+  linear-gradient(rgba($color-accent, 0.11) 1px, transparent 1px),
+  linear-gradient(90deg, rgba($color-accent, 0.11) 1px, transparent 1px);
+
+$gradient-orbit-rings:
+  radial-gradient(
+    circle,
+    transparent 52%,
+    rgba($color-tech-blue, 0.22) 53%,
+    transparent 54%
+  ),
+  radial-gradient(
+    circle,
+    transparent 70%,
+    rgba($color-accent, 0.15) 71%,
+    transparent 72%
+  );
+
+$gradient-button: linear-gradient(
   135deg,
-  #3f667f 0%,
-  #c8d1d7 55%,
-  #b76e79 100%
+  $color-accent 0%,
+  $color-tech-blue 100%
 );
 
-$gradient-accent-cool: linear-gradient(
+$gradient-button-hover: linear-gradient(
   135deg,
-  #223946 0%,
-  #3f667f 50%,
-  #9fb7c4 100%
+  color.adjust($color-accent, $lightness: 5%) 0%,
+  color.adjust($color-tech-blue, $lightness: 4%) 100%
 );
 
-$gradient-accent-luxury: linear-gradient(
-  135deg,
-  #11171d 0%,
-  #3f667f 55%,
-  #b76e79 100%
-);
+//////////////////////////////////
+// Button colors
+//////////////////////////////////
+
+$button-ghost-bg: transparent;
+$button-ghost-border: $color-accent;
+$button-ghost-text: $color-text;
+$button-ghost-hover-bg: rgba($color-tech-blue, 0.14);
+$button-ghost-hover-border: $color-tech-blue;
+$button-ghost-hover-text: $color-text;
 
 // Resume Background
 
-$resume-page-bg: #f4f5f7;
+$resume-page-bg: $color-background;
 
 /********************************/
 /* Letter Spacing Scale */

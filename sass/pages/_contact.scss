@@ -1,12 +1,11 @@
 @use "../abstracts/variables" as *;
 
 .contact {
-  background: linear-gradient(
-    135deg,
-    rgba($color-accent-light, 0.72) 0%,
-    rgba($color-background, 0.96) 52%,
-    rgba($color-section-alt-1, 0.86) 100%
-  );
+  padding-top: 12rem;
+  background:
+    radial-gradient(circle at 20% 14%, rgba($color-accent, 0.1), transparent 28rem),
+    radial-gradient(circle at 82% 28%, rgba($color-tech-blue, 0.08), transparent 32rem),
+    $color-background;
 }
 
 .contact-hero {

@@ -3,7 +3,10 @@
 /* Resume Header */
 
 .resume-page {
-  background-color: $resume-page-bg;
+  background:
+    radial-gradient(circle at 78% 12%, rgba($color-tech-blue, 0.16), transparent 34rem),
+    radial-gradient(circle at 18% 32%, rgba($color-accent, 0.12), transparent 30rem),
+    $resume-page-bg;
   min-height: 100vh;
 }
 
@@ -12,10 +15,16 @@
   max-width: 110rem;
   margin: 0 auto 12rem;
 
-  background-color: #fff;
-  box-shadow: 0 2.4rem 6rem rgba(15, 23, 42, 0.15);
+  background:
+    linear-gradient(145deg, rgba($color-surface, 0.96), rgba($color-background-soft, 0.96)),
+    $color-surface;
+  border: 1px solid rgba($color-accent, 0.16);
+  box-shadow:
+    $shadow-card,
+    0 0 4rem rgba($color-tech-blue, 0.08);
   border-radius: 1.2rem;
   overflow: hidden;
+  color: $color-text;
 }
 
 .resume-header {
@@ -61,23 +70,25 @@
 
     &:hover,
     &:active {
-      color: $color-accent-3;
+      color: $color-text;
       transform: translateY(-1px);
     }
   }
 
   &__nav-link.nav-cta:link,
   &__nav-link.nav-cta:visited {
-    padding: 1.2rem 2.4rem;
-    border-radius: 8px;
-    background-color: $color-accent-3-dark;
-    color: $color-text-inverse;
+    padding: 1.6rem 3.2rem;
+    border-radius: 0.8rem;
+    background-color: $button-ghost-bg;
+    border: 1.5px solid $button-ghost-border;
+    color: $button-ghost-text;
   }
 
   &__nav-link.nav-cta:hover,
   &__nav-link.nav-cta:active {
-    background-color: $color-accent-3-deep;
-    color: $color-text-inverse;
+    background-color: $button-ghost-hover-bg;
+    border-color: $button-ghost-hover-border;
+    color: $button-ghost-hover-text;
   }
 }
 
@@ -101,6 +112,7 @@
     font-family: "Inter", sans-serif;
     font-size: 1.8rem;
     letter-spacing: $tracking-wide;
+    color: $color-text-light;
   }
 
   &__name,
@@ -179,6 +191,7 @@
   &__title {
     margin-bottom: 0.6rem;
     font-size: 1.8rem;
+    color: $color-text;
   }
 
   &__title-separator {
@@ -194,6 +207,7 @@
     line-height: 1.7;
     max-width: 44rem;
     font-size: 1.6rem;
+    color: $color-text-muted;
   }
 }
 
@@ -210,6 +224,7 @@
 
   &__name {
     font-size: 1.8rem;
+    color: $color-text;
   }
 
   &__type {
@@ -221,6 +236,7 @@
   &__role {
     font-size: 1.6rem;
     margin: 0 0 0.8rem;
+    color: $color-text-light;
   }
 
   &__list {
@@ -229,6 +245,7 @@
     margin: 0;
     padding-left: 2rem;
     font-size: 1.6rem;
+    color: $color-text-muted;
   }
 }
 
@@ -246,12 +263,14 @@
   &__title {
     margin: 0 0 0.8rem;
     font-size: 1.6rem;
+    color: $color-tech-blue;
   }
 
   &__list {
     list-style: disc;
     padding-left: 2rem;
     margin: 0;
+    color: $color-text-muted;
 
     li {
       font-size: 1.6rem;
@@ -262,13 +281,16 @@
 .resume-certifications {
   font-size: 1.6rem;
   line-height: 1.7;
+  color: $color-text-muted;
 }
 
 .resume-sidebar__link {
   font-size: 1.6rem;
+  color: $color-accent;
+  text-decoration: none;
 
   &:hover {
-    color: $color-accent;
+    color: $color-tech-blue;
   }
 }
 
