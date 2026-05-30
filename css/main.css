@@ -2280,6 +2280,11 @@ ol {
   .container {
     grid-template-columns: 1fr;
   }
+  .case-preview-card__eyebrow,
+  .case-preview-card__heading,
+  .skill-card__heading {
+    min-height: 0;
+  }
   .case-preview-card__description {
     min-height: 6rem;
   }
