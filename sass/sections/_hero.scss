@@ -54,7 +54,7 @@
       sans-serif;
     margin-bottom: 1.6rem;
 
-    animation: slideDown 1.2s ease-in-out;
+    animation: slideDown 1.2s ease-in-out both;
   }
 
   &__heading {
@@ -76,7 +76,7 @@
 
   &__heading,
   &__subheading {
-    animation: moveInLeft 1.2s ease-in-out;
+    animation: moveInLeft 1.2s ease-in-out both;
   }
 
   &__media {
@@ -115,5 +115,5 @@
 }
 
 .hero-btn {
-  animation: slideUp 1.2s ease-in-out;
+  animation: slideUp 1.2s ease-in-out both;
 }
