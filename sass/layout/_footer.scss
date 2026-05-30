@@ -65,10 +65,11 @@
       transform 0.25s ease;
 
     &:hover {
-      color: $color-tech-blue;
+      color: $color-accent;
       background-color: rgba($color-accent-3, 0.22);
       border-color: $color-tech-blue;
       transform: translateY(-2px);
+      box-shadow: $shadow-button-hover;
     }
   }
 }

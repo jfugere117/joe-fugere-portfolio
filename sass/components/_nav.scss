@@ -99,7 +99,7 @@
 
   .desktop-nav__link.nav-cta:link,
   .desktop-nav__link.nav-cta:visited {
-    color: $button-ghost-text;
+    color: $color-accent;
   }
 }
 
@@ -113,14 +113,12 @@
   border-radius: 0.8rem;
   background-color: $button-ghost-bg;
   border: 1.5px solid $button-ghost-border;
-  color: $button-ghost-text;
+  color: $color-accent;
 }
 
 .nav-cta:hover,
 .nav-cta:active {
   background-color: $button-ghost-hover-bg;
-  border-color: $button-ghost-hover-border;
-  color: $button-ghost-hover-text;
   transform: translate(-2px, -2px);
   box-shadow: 0 1rem 3rem rgba($color-ink, 0.22);
 }

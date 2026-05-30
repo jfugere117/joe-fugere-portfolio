@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as *;
 
 .case-preview {
-  padding: 4rem;
+  padding: 9.6rem 4rem;
 }
 
 .case-preview,
@@ -10,7 +10,7 @@
 
   &__header {
     max-width: 74rem;
-    margin: 8.4rem auto 6.4rem;
+    margin: 0 auto 6.4rem;
     text-align: center;
     opacity: 0;
     transform: translateX(-10rem);
@@ -50,7 +50,7 @@
   }
 
   &__cta-box {
-    margin: 2.4rem 0 6rem 0;
+    margin-top: 3.2rem;
     text-align: center;
   }
 
@@ -94,7 +94,7 @@
     line-height: 1.4;
     font-weight: 700;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     min-height: 4.2rem;
     margin-bottom: 0.8rem;
     color: $color-accent-3-dark;
@@ -108,7 +108,7 @@
     display: flex;
     align-items: flex-end;
     min-height: 4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.3rem;
   }
 
   &__description {
@@ -126,6 +126,7 @@
     list-style: none;
     padding: 0;
     margin: 0 0 2.4rem;
+    color: $color-tech-blue-light;
   }
 
   &__skills li {
@@ -144,11 +145,14 @@
     font-size: 1.4rem;
     font-weight: 700;
     text-decoration: underline;
-    text-underline-offset: 0.6rem;
-    color: $color-accent-3-dark;
+    text-decoration-color: $color-accent;
+    text-underline-offset: 0.9rem;
+    color: $color-text;
+    transition: color 0.2s ease;
 
     &:hover {
-      transform: translate(-2px, -2px);
+      text-decoration-color: $color-tech-blue;
+      //color: $color-tech-blue;
     }
   }
 }

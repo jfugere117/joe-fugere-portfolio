@@ -23,11 +23,13 @@
     box-shadow 0.25s ease;
 }
 
-.btn-primary {
+.btn-primary:link,
+.btn-primary:visited {
   background: $gradient-button;
   border: 1.5px solid transparent;
 
-  &:hover {
+  &:hover,
+  &:active {
     background: $gradient-button-hover;
     border-color: transparent;
     transform: translate(-2px, -2px);
@@ -50,12 +52,16 @@
   }
 }
 
-.btn-outline {
+.btn-outline:link,
+.btn-outline:visited,
+.nav-cta:link,
+.nav-cta:visited {
   background-color: transparent;
   border: 1.5px solid $color-accent;
   color: $color-accent;
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: rgba($color-accent-3-soft, 0.14);
     border-color: $color-accent-2-dark;
     color: $color-accent-3-dark;
@@ -72,17 +78,14 @@
 
   width: 5.8rem;
   height: 5.8rem;
-  border: 1.5px solid $color-accent-3;
+  border: 1.5px solid $color-accent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: rgba($color-surface, 0.88);
-  color: $color-accent-3;
-  box-shadow:
-    0 1.2rem 2.8rem rgba($color-ink, 0.24),
-    0 0 0 0.2rem rgba($color-background, 0.84);
+  color: $color-accent;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -100,8 +103,7 @@
   }
 
   &:hover {
-    background-color: rgba($color-accent-3, 0.22);
-    color: $color-tech-blue;
+    background-color: rgba($color-accent, 0.22);
     border: 1.5px solid $color-tech-blue;
     transform: translateY(-2px);
     box-shadow: $shadow-button-hover;
