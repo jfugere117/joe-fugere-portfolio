@@ -11,6 +11,75 @@
 }
 
 /* ------------------------------
+  Desktop 1440px and up
+------------------------------ */
+
+@media (min-width: 1281px) {
+  .home-hero {
+    grid-template-columns: minmax(68rem, 1.08fr) minmax(0, 0.92fr);
+  }
+
+  .home-hero__content {
+    max-width: 78rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 132rem;
+  }
+
+  .container--xl {
+    max-width: 152rem;
+  }
+
+  .home-hero__content {
+    max-width: 78rem;
+  }
+
+  .home-hero__image {
+    width: clamp(68rem, 52vw, 72rem);
+  }
+}
+
+/* ------------------------------
+  MacBook / Laptop 1280px max-width
+------------------------------ */
+
+@media (min-width: 1101px) and (max-width: 1280px) {
+  .container,
+  .container--wide,
+  .container--xl {
+    max-width: 112rem;
+  }
+
+  .desktop-nav {
+    right: 3rem;
+  }
+
+  .desktop-nav__list {
+    gap: 3rem;
+    padding-right: 1rem;
+  }
+
+  .home-hero__content {
+    max-width: 78rem;
+  }
+
+  .home-hero__image {
+    width: clamp(68rem, 52vw, 72rem);
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skill-card {
+    padding: 3.2rem;
+  }
+}
+
+/* ------------------------------
   Media Queries 1100px max-width
 ------------------------------ */
 
@@ -422,6 +491,106 @@
 }
 
 /* ------------------------------
+  Tablet 900px max-width
+------------------------------ */
+
+@media (max-width: 900px) {
+  .container,
+  .container--narrow,
+  .container--wide,
+  .container--xl {
+    max-width: 72rem;
+    padding-inline: 2.4rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols,
+  .resume-grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero {
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .home-hero::after {
+    right: 50%;
+    bottom: 8%;
+    width: min(78vw, 46rem);
+    height: auto;
+    aspect-ratio: 1;
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  .home-hero__content {
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .home-hero__subheading {
+    margin: 0 auto 3rem;
+  }
+
+  .home-hero__media {
+    opacity: 0.32;
+  }
+
+  .home-hero__image {
+    right: auto;
+    left: 50%;
+    width: min(70vw, 68rem);
+    max-height: min(84vh, 62vw);
+    transform: translateX(-50%);
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+
+  .case-preview__header,
+  .case-page__header,
+  .about-preview__header,
+  .skills-preview__header,
+  .contact-preview-cta__header {
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+  }
+
+  .footer {
+    padding-inline: 2.4rem;
+  }
+
+  .footer-intro-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-intro,
+  .footer-socials {
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .footer-nav,
+  .footer-projects {
+    height: auto;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .footer-projects__list {
+    padding-bottom: 3.4rem;
+  }
+}
+
+/* ------------------------------
   Resume Intro 724px max-width
 ------------------------------ */
 
@@ -478,30 +647,60 @@
 ------------------------------ */
 
 @media (max-width: 600px) {
-  .home-hero__content {
-    justify-self: center;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
+  .container,
+  .container--narrow,
+  .container--wide,
+  .container--xl {
+    padding-inline: 2rem;
   }
 
-  .home-hero__heading {
-    position: relative;
-    left: 50%;
-    width: max-content;
-    max-width: calc(100vw - 4rem);
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    animation: moveInLeftCentered 1.2s ease-in-out;
+  .header {
+    &__logo-box {
+      top: 3.2rem;
+      left: 2rem;
+    }
+
+    &__logo {
+      height: 5.2rem;
+    }
   }
 
-  .home-hero__subheading {
-    font-size: 1.6rem;
+  .mobile-nav {
+    top: 3.2rem;
+    right: 2rem;
   }
 
-  .home-hero__image {
-    width: min(96vw, 42rem);
-    max-height: 64vh;
+  .home-hero {
+    &__content {
+      justify-self: center;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    &__heading {
+      width: 100vw;
+      max-width: none;
+      margin-right: calc(50% - 50vw);
+      margin-left: calc(50% - 50vw);
+      font-size: 2.5rem;
+      line-height: 1;
+      text-align: center;
+    }
+
+    &__subheading {
+      font-size: 1.6rem;
+    }
+
+    &__image {
+      width: min(96vw, 42rem);
+      max-height: 64vh;
+    }
+  }
+
+  .home-hero::after {
+    width: min(96vw, 40rem);
+    bottom: 9%;
   }
 
   .hero-btn {
@@ -510,11 +709,32 @@
     align-items: center;
     justify-content: center;
     gap: 1.4rem;
+
+    a {
+      width: min(100%, 28rem);
+      text-align: center;
+    }
   }
 
-  .hero-btn a {
-    width: min(100%, 28rem);
-    text-align: center;
+  .case-preview__heading,
+  .case-page__heading,
+  .about-preview__heading,
+  .skills-preview__heading,
+  .contact-preview-cta__heading {
+    font-size: 3.4rem;
+  }
+
+  .case-preview__description,
+  .case-page__description,
+  .about-preview__description,
+  .skills-preview__description,
+  .contact-preview-cta__description {
+    font-size: 1.6rem;
+  }
+
+  .skill-card,
+  .case-preview-card__content {
+    padding: 2.4rem;
   }
 
   /* ------------------------------
@@ -642,6 +862,11 @@
     width: 100%;
     text-align: center;
   }
+
+  .scroll-top {
+    right: 2rem;
+    bottom: 2rem;
+  }
 }
 
 /* ------------------------------
@@ -722,7 +947,7 @@
 @media (max-width: 350px) {
   .home-hero__heading {
     font-size: 1.6rem;
-    white-space: wrap;
+    white-space: normal;
   }
 
   .home-hero__subheading {
@@ -737,262 +962,5 @@
 }
 
 /* ------------------------------
-  Desktop 1440px and up
------------------------------- */
-
-@media (min-width: 1281px) {
-  .home-hero {
-    grid-template-columns: minmax(68rem, 1.08fr) minmax(0, 0.92fr);
-  }
-
-  .home-hero__content {
-    max-width: 78rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 132rem;
-  }
-
-  .container--xl {
-    max-width: 152rem;
-  }
-
-  .home-hero__content {
-    max-width: 78rem;
-  }
-
-  .home-hero__image {
-    width: clamp(68rem, 52vw, 72rem);
-  }
-}
-
-/* ------------------------------
-  MacBook / Laptop 1280px max-width
------------------------------- */
-
-@media (min-width: 1101px) and (max-width: 1280px) {
-  .container,
-  .container--wide,
-  .container--xl {
-    max-width: 112rem;
-  }
-
-  .desktop-nav {
-    right: 3rem;
-  }
-
-  .desktop-nav__list {
-    gap: 3rem;
-    padding-right: 1rem;
-  }
-
-  .home-hero__content {
-    max-width: 78rem;
-  }
-
-  .home-hero__image {
-    width: clamp(68rem, 52vw, 72rem);
-  }
-
-  .grid--4-cols {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .skill-card {
-    padding: 3.2rem;
-  }
-}
-
-/* ------------------------------
-  Tablet 900px max-width
------------------------------- */
-
-@media (max-width: 900px) {
-  .container,
-  .container--narrow,
-  .container--wide,
-  .container--xl {
-    max-width: 72rem;
-    padding-inline: 2.4rem;
-  }
-
-  .grid--2-cols,
-  .grid--3-cols,
-  .grid--4-cols,
-  .resume-grid--2-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .home-hero {
-    min-height: 100vh;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .home-hero::after {
-    right: 50%;
-    bottom: 8%;
-    width: min(78vw, 46rem);
-    height: auto;
-    aspect-ratio: 1;
-    opacity: 0;
-    transform: translateX(50%);
-  }
-
-  .home-hero__content {
-    max-width: 76rem;
-    margin-inline: auto;
-    padding-top: 0;
-    text-align: center;
-  }
-
-  .home-hero__subheading {
-    margin: 0 auto 3rem;
-  }
-
-  .home-hero__media {
-    opacity: 0.32;
-  }
-
-  .home-hero__image {
-    right: auto;
-    left: 50%;
-    width: min(70vw, 68rem);
-    max-height: min(84vh, 62vw);
-    transform: translateX(-50%);
-  }
-
-  .hero-btn {
-    justify-content: center;
-  }
-
-  .case-preview__header,
-  .case-page__header,
-  .about-preview__header,
-  .skills-preview__header,
-  .contact-preview-cta__header {
-    margin-inline: auto;
-    padding-inline: 2.4rem;
-  }
-
-  .footer {
-    padding-inline: 2.4rem;
-  }
-
-  .footer-intro-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-intro,
-  .footer-socials {
-    justify-content: center;
-    margin-inline: auto;
-  }
-
-  .footer-nav,
-  .footer-projects {
-    height: auto;
-    padding-left: 0;
-    border-left: none;
-  }
-}
-
-/* ------------------------------
   Mobile 600px max-width
 ------------------------------ */
-
-@media (max-width: 600px) {
-  .container,
-  .container--narrow,
-  .container--wide,
-  .container--xl {
-    padding-inline: 2rem;
-  }
-
-  .header__logo-box {
-    top: 3.2rem;
-    left: 2rem;
-  }
-
-  .header__logo {
-    height: 5.2rem;
-  }
-
-  .mobile-nav {
-    top: 3.2rem;
-    right: 2rem;
-  }
-
-  .home-hero::after {
-    width: min(96vw, 40rem);
-    bottom: 9%;
-  }
-
-  .home-hero__content {
-    justify-self: center;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .home-hero__heading {
-    position: relative;
-    left: 50%;
-    width: max-content;
-    max-width: calc(100vw - 4rem);
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    line-height: 1;
-    animation: moveInLeftCentered 1.2s ease-in-out;
-  }
-
-  .home-hero__subheading {
-    font-size: 1.6rem;
-  }
-
-  .home-hero__image {
-    width: min(96vw, 42rem);
-    max-height: 64vh;
-  }
-
-  .hero-btn {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.4rem;
-  }
-
-  .hero-btn a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .case-preview__heading,
-  .case-page__heading,
-  .about-preview__heading,
-  .skills-preview__heading,
-  .contact-preview-cta__heading {
-    font-size: 3.4rem;
-  }
-
-  .case-preview__description,
-  .case-page__description,
-  .about-preview__description,
-  .skills-preview__description,
-  .contact-preview-cta__description {
-    font-size: 1.6rem;
-  }
-
-  .skill-card,
-  .case-preview-card__content {
-    padding: 2.4rem;
-  }
-
-  .scroll-top {
-    right: 2rem;
-    bottom: 2rem;
-  }
-}
