@@ -797,8 +797,12 @@
   }
 
   &__image {
-    max-width: min(120rem, 92vw);
-    max-height: 88vh;
+    max-width: min(120rem, calc(100vw - 8rem));
+    max-height: calc(100vh - 12rem);
+    padding: clamp(1.2rem, 2vw, 2.4rem);
+    border: 1px solid rgba($color-accent, 0.2);
+    border-radius: 0.8rem;
+    background-color: $color-surface;
     object-fit: contain;
     box-shadow: 0 1.6rem 5rem rgba(0, 0, 0, 0.45);
   }
