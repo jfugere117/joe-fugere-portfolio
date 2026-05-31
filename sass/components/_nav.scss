@@ -47,10 +47,6 @@
     display: none;
   }
 
-  &__link.nav-cta[aria-current="page"]::after {
-    display: block;
-  }
-
   &__link:hover,
   &__link:active {
     color: $color-text;

@@ -312,9 +312,6 @@ ol {
 .desktop-nav__link.nav-cta::after {
   display: none;
 }
-.desktop-nav__link.nav-cta[aria-current=page]::after {
-  display: block;
-}
 .desktop-nav__link:hover, .desktop-nav__link:active {
   color: #f5f7fa;
   transform: translateY(-1px);
