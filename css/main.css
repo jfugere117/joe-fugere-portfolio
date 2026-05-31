@@ -658,10 +658,6 @@ ol {
   height: 6.4rem;
 }
 
-.resume-page .header {
-  padding: 6rem 4rem 6rem 0;
-}
-
 .home-hero {
   position: relative;
   isolation: isolate;
@@ -2551,7 +2547,7 @@ ol {
   box-shadow: 0 0.8rem 3rem rgba(88, 140, 255, 0.38);
 }
 
-.jfcandleco-case-study {
+.jfcandleco-project {
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -2643,7 +2639,7 @@ ol {
 .resume-header {
   display: flex;
   align-items: center;
-  padding: 4rem 10rem 6rem;
+  padding: 4rem 6rem;
   /*&__logo {
     display: flex;
     place-content: center;
@@ -2907,12 +2903,6 @@ ol {
   .container--wide,
   .container--xl {
     max-width: 112rem;
-  }
-  .desktop-nav {
-    right: 3rem;
-  }
-  .desktop-nav__list {
-    padding-right: 1rem;
   }
   .home-hero__content {
     max-width: 78rem;
