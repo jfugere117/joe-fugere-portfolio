@@ -48,6 +48,10 @@
     display: none;
   }
 
+  &__link.nav-cta[aria-current="page"]::after {
+    display: block;
+  }
+
   &__link:hover,
   &__link:active {
     color: $color-text;
@@ -55,6 +59,10 @@
   }
 
   &__link:hover::after {
+    transform: scaleX(1);
+  }
+
+  &__link[aria-current="page"]::after {
     transform: scaleX(1);
   }
 }

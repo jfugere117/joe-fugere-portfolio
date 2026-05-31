@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 /* Resume Header */
 
@@ -8,6 +9,34 @@
     radial-gradient(circle at 18% 32%, rgba($color-accent, 0.12), transparent 30rem),
     $resume-page-bg;
   min-height: 100vh;
+}
+
+.resume-page-intro {
+  padding: 8rem 4rem 7.2rem;
+
+  &__content {
+    max-width: 86rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    @include section-eyebrow;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    @include section-heading;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    @include section-description;
+  }
+
+  @media (max-width: 600px) {
+    padding: 6.4rem 2rem 5.6rem;
+  }
 }
 
 .resume {

@@ -310,11 +310,17 @@ ol {
 .desktop-nav__link.nav-cta::after {
   display: none;
 }
+.desktop-nav__link.nav-cta[aria-current=page]::after {
+  display: block;
+}
 .desktop-nav__link:hover, .desktop-nav__link:active {
   color: #f5f7fa;
   transform: translateY(-1px);
 }
 .desktop-nav__link:hover::after {
+  transform: scaleX(1);
+}
+.desktop-nav__link[aria-current=page]::after {
   transform: scaleX(1);
 }
 
@@ -2583,6 +2589,44 @@ ol {
 .resume-page {
   background: radial-gradient(circle at 78% 12%, rgba(88, 140, 255, 0.16), transparent 34rem), radial-gradient(circle at 18% 32%, rgba(46, 196, 182, 0.12), transparent 30rem), #071018;
   min-height: 100vh;
+}
+
+.resume-page-intro {
+  padding: 8rem 4rem 7.2rem;
+}
+.resume-page-intro__content {
+  max-width: 86rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.resume-page-intro__eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2ec4b6;
+  margin-bottom: 2rem;
+}
+.resume-page-intro__heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #f5f7fa;
+  margin-bottom: 2rem;
+}
+.resume-page-intro__description {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #9fb0c0;
+}
+@media (max-width: 600px) {
+  .resume-page-intro {
+    padding: 6.4rem 2rem 5.6rem;
+  }
 }
 
 .resume {
