@@ -170,3 +170,40 @@ if (imagePreview && imagePreviewClose) {
     }
   });
 }
+
+/////////////////////////
+// Contact Form
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const originalText = submitButton.textContent;
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+      });
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message);
+      }
+
+      alert("Success! Your message has been sent.");
+      contactForm.reset();
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+    }
+  });
+}

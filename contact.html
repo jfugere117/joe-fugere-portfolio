@@ -42,7 +42,7 @@
 
     <!-- My Javascript-->
 
-    <script defer src="js/script.js?v=1.5"></script>
+    <script defer src="js/script.js?v=1.6"></script>
 
     <title>Joe Fugere | Web Designer &amp; Front-End Developer</title>
   </head>
@@ -157,11 +157,22 @@
         </div>
 
         <form
+          id="contact-form"
           class="contact-form"
-          action="mailto:contact@joefugere.com"
+          action="https://api.web3forms.com/submit"
           method="post"
-          enctype="text/plain"
         >
+          <input
+            type="hidden"
+            name="access_key"
+            value="85a80796-8ec2-4e3b-a554-28d9ad22b7ef"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New portfolio contact form submission"
+          />
+
           <div class="contact-form__row">
             <div class="contact-form__field">
               <label for="name">Name</label>
