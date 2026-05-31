@@ -804,7 +804,9 @@
     border-radius: 0.8rem;
     background-color: $color-surface;
     object-fit: contain;
-    box-shadow: 0 1.6rem 5rem rgba(0, 0, 0, 0.45);
+    box-shadow:
+      0 1.6rem 5rem rgba(0, 0, 0, 0.45),
+      0 0 3.2rem rgba($color-tech-blue, 0.42);
   }
 
   &__close {

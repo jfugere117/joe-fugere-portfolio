@@ -2524,7 +2524,7 @@ ol {
   border-radius: 0.8rem;
   background-color: #0e1722;
   object-fit: contain;
-  box-shadow: 0 1.6rem 5rem rgba(0, 0, 0, 0.45);
+  box-shadow: 0 1.6rem 5rem rgba(0, 0, 0, 0.45), 0 0 3.2rem rgba(88, 140, 255, 0.42);
 }
 .image-preview__close {
   position: absolute;
