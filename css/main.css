@@ -186,19 +186,22 @@ ol {
   transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.btn-primary:link,
-.btn-primary:visited {
+.btn-primary {
   background: linear-gradient(135deg, #2ec4b6 0%, #588cff 100%);
   border: 1.5px solid transparent;
 }
-.btn-primary:link:hover, .btn-primary:link:active,
-.btn-primary:visited:hover,
-.btn-primary:visited:active {
+.btn-primary:hover, .btn-primary:active {
   background: linear-gradient(135deg, rgb(58.5950413223, 208.9049586777, 194.8760330579) 0%, rgb(108.4, 154.0479041916, 255) 100%);
   border-color: transparent;
   transform: translate(-2px, -2px);
   /*box-shadow: 0 1rem 2rem rgba($color-ink, 0.22);*/
   box-shadow: 0 0.8rem 3rem rgba(88, 140, 255, 0.38);
+}
+.btn-primary:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -2550,7 +2553,7 @@ ol {
   box-shadow: 0 0.8rem 3rem rgba(88, 140, 255, 0.38);
 }
 
-.jfcandleco-project {
+.jfcandleco-case-study {
   min-height: 80vh;
   display: flex;
   justify-content: center;

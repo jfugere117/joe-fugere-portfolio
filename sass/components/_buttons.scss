@@ -23,8 +23,7 @@
     box-shadow 0.25s ease;
 }
 
-.btn-primary:link,
-.btn-primary:visited {
+.btn-primary {
   background: $gradient-button;
   border: 1.5px solid transparent;
 
@@ -35,6 +34,13 @@
     transform: translate(-2px, -2px);
     /*box-shadow: 0 1rem 2rem rgba($color-ink, 0.22);*/
     box-shadow: $shadow-button-hover;
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.72;
+    transform: none;
+    box-shadow: none;
   }
 }
 
