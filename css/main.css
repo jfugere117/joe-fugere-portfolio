@@ -276,7 +276,7 @@ ol {
 .desktop-nav {
   position: absolute;
   top: 4rem;
-  right: 4rem;
+  right: 6rem;
   z-index: 9999;
 }
 .desktop-nav__list {
@@ -284,7 +284,6 @@ ol {
   display: flex;
   align-items: center;
   gap: 4rem;
-  padding-right: 2rem;
 }
 .desktop-nav__link:link, .desktop-nav__link:visited {
   position: relative;

@@ -7,7 +7,7 @@
 .desktop-nav {
   position: absolute;
   top: 4rem;
-  right: 4rem;
+  right: 6rem;
   z-index: 9999;
 
   &__list {
@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     gap: 4rem;
-    padding-right: 2rem;
   }
 
   &__link:link,
