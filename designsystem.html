@@ -3,7 +3,545 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Stardos+Stencil:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="icon" href="images/icons/favicon-jf.png" type="image/svg+xml" />
+
+    <!-- Google analytics tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2JSJD5N3GS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2JSJD5N3GS");
+    </script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/main.css?v=5.2" />
+
+    <!-- My Javascript-->
+
+    <script defer src="js/script.js?v=1.6"></script>
+
+    <title>Joe Fugere | Web Designer & Front-End Developer</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <img
+          src="images/joe-fugere-cursive-logo-transparent.png"
+          alt="Hero logo for Joe Fugere Portfolio"
+          class="header__logo"
+        />
+      </div>
+
+      <!---------- NAV ----------->
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="desktop-nav__list desktop-links">
+          <li class="desktop-nav-item">
+            <a href="index.html" class="desktop-nav__link">Home</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="projects.html" class="desktop-nav__link">Projects</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="about.html" class="desktop-nav__link">About</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="resume.html" class="desktop-nav__link">Resume</a>
+          </li>
+
+          <li class="desktop-nav-item">
+            <a href="contact.html" class="desktop-nav__link nav-cta">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="desktop-nav__list mobile-nav__links">
+          <li><a href="index.html" class="desktop-nav__link">Home</a></li>
+          <li>
+            <a href="projects.html" class="desktop-nav__link">Projects</a>
+          </li>
+          <li><a href="about.html" class="desktop-nav__link">About</a></li>
+          <li><a href="resume.html" class="desktop-nav__link">Resume</a></li>
+          <li>
+            <a href="contact.html" class="desktop-nav__link nav-cta">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--------------- Mobile Nav ----------------->
+
+      <button class="mobile-nav">
+        <i
+          class="fa-solid fa-bars mobile-nav__icon mobile-nav-menu-icon"
+          name="mobile-nav-menu-icon"
+        ></i>
+        <i
+          class="fa-solid fa-xmark mobile-nav__icon"
+          name="mobile-nav-close-icon"
+        ></i>
+      </button>
+    </header>
+
+    <main class="design-system main-content">
+      <section class="design-system-intro">
+        <div class="design-system-intro__content">
+          <p class="design-system-intro__eyebrow">
+            Design System / Figma UI Foundations
+          </p>
+
+          <h1 class="design-system-intro__heading">Modern UI Design System</h1>
+
+          <p class="design-system-intro__description">
+            A clean, responsive design system designed in Figma to organize
+            typography, colors, spacing, buttons, cards, forms, navigation, and
+            reusable UI components for consistent modern web layouts.
+          </p>
+        </div>
+      </section>
+
+      <!------------- Typography Section --------------->
+
+      <section class="grid grid--2-cols design-system-typography">
+        <div class="design-system-typography__images">
+          <button
+            class="design-system-preview-button design-system-typography__image-button design-system-typography__image-button--back"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="image-preview"
+          >
+            <img
+              class="design-system-preview-image design-system-typography__image"
+              src="images/responsive-type-scale-guide.png"
+              alt="Responsive type scale guide"
+            />
+          </button>
+
+          <button
+            class="design-system-preview-button design-system-typography__image-button design-system-typography__image-button--front"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="image-preview"
+          >
+            <img
+              class="design-system-preview-image design-system-typography__image"
+              src="images/typography-system-design.png"
+              alt="Typography system design"
+            />
+          </button>
+        </div>
+
+        <div class="design-system-typography__content">
+          <p class="design-system-typography__eyebrow">Typography</p>
+          <h2 class="design-system-typography__heading">
+            Typography Built for Clarity
+          </h2>
+          <p class="design-system-typography__description">
+            A responsive typography system designed in Figma using Playfair
+            Display and Inter to create a modern luxury feel with clear
+            hierarchy, strong readability, and visual consistency across every
+            screen. Each type style is intentionally scaled with defined font
+            sizes, weights, line heights, and letter spacing to keep content
+            clear, structured, and cohesive.
+          </p>
+        </div>
+      </section>
+
+      <!------------- Colors Section --------------->
+
+      <section class="grid grid--2-cols design-system-colors">
+        <div class="design-system-colors__content">
+          <p class="design-system-colors__eyebrow">Color System</p>
+          <h2 class="design-system-colors__heading">A Palette with Purpose</h2>
+          <p class="design-system-colors__description">
+            A thoughtfully balanced color system creates hierarchy, reinforces
+            the brand, and keeps every interface consistent. Each shade is
+            selected to support contrast, clarity, and a polished visual
+            experience.
+          </p>
+        </div>
+
+        <div class="design-system-colors__images">
+          <button
+            class="design-system-colors__image-button design-system-colors__image-button--back"
+            type="button"
+            aria-label="Color system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-colors__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-colors__image-button design-system-colors__image-button--front"
+            type="button"
+            aria-label="Color system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-colors__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </section>
+
+      <!------------- Spacing Section --------------->
+
+      <section class="grid grid--2-cols design-system-spacing">
+        <div class="design-system-spacing__images">
+          <button
+            class="design-system-spacing__image-button design-system-spacing__image-button--back"
+            type="button"
+            aria-label="Spacing system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-spacing__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-spacing__image-button design-system-spacing__image-button--front"
+            type="button"
+            aria-label="Spacing system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-spacing__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+
+        <div class="design-system-spacing__content">
+          <p class="design-system-spacing__eyebrow">Spacing System</p>
+          <h2 class="design-system-spacing__heading">
+            Rhythm That Creates Balance
+          </h2>
+          <p class="design-system-spacing__description">
+            A consistent spacing scale brings structure to every layout.
+            Intentional gaps, padding, and alignment create a clear visual
+            rhythm that keeps interfaces balanced and easy to navigate.
+          </p>
+        </div>
+      </section>
+
+      <!------------- Buttons Section --------------->
+
+      <section class="grid grid--2-cols design-system-buttons">
+        <div class="design-system-buttons__content">
+          <p class="design-system-buttons__eyebrow">Button System</p>
+          <h2 class="design-system-buttons__heading">
+            Actions Designed with Intention
+          </h2>
+          <p class="design-system-buttons__description">
+            A flexible button system makes every interaction feel clear and
+            consistent. Primary, secondary, and supporting actions are designed
+            to guide attention while maintaining a polished visual language.
+          </p>
+        </div>
+
+        <div class="design-system-buttons__images">
+          <button
+            class="design-system-buttons__image-button design-system-buttons__image-button--back"
+            type="button"
+            aria-label="Button system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-buttons__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-buttons__image-button design-system-buttons__image-button--front"
+            type="button"
+            aria-label="Button system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-buttons__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </section>
+
+      <!------------- Cards Section --------------->
+
+      <section class="grid grid--2-cols design-system-cards">
+        <div class="design-system-cards__images">
+          <button
+            class="design-system-cards__image-button design-system-cards__image-button--back"
+            type="button"
+            aria-label="Card system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-cards__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-cards__image-button design-system-cards__image-button--front"
+            type="button"
+            aria-label="Card system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-cards__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+
+        <div class="design-system-cards__content">
+          <p class="design-system-cards__eyebrow">Card System</p>
+          <h2 class="design-system-cards__heading">
+            Flexible Containers for Every Story
+          </h2>
+          <p class="design-system-cards__description">
+            A modular card system organizes information into clear, reusable
+            patterns. Consistent spacing, hierarchy, and visual treatments keep
+            content easy to scan while allowing each message to stand out.
+          </p>
+        </div>
+      </section>
+
+      <!------------- Forms Section --------------->
+
+      <section class="grid grid--2-cols design-system-forms">
+        <div class="design-system-forms__content">
+          <p class="design-system-forms__eyebrow">Form System</p>
+          <h2 class="design-system-forms__heading">
+            Thoughtful Inputs for Clear Interactions
+          </h2>
+          <p class="design-system-forms__description">
+            A consistent form system makes every interaction feel simple and
+            intuitive. Clear labels, purposeful spacing, and accessible states
+            help users move through each step with confidence.
+          </p>
+        </div>
+
+        <div class="design-system-forms__images">
+          <button
+            class="design-system-forms__image-button design-system-forms__image-button--back"
+            type="button"
+            aria-label="Form system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-forms__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-forms__image-button design-system-forms__image-button--front"
+            type="button"
+            aria-label="Form system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-forms__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </section>
+
+      <!------------- Navigation Section --------------->
+
+      <section class="grid grid--2-cols design-system-navigation">
+        <div class="design-system-navigation__images">
+          <button
+            class="design-system-navigation__image-button design-system-navigation__image-button--back"
+            type="button"
+            aria-label="Navigation system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-navigation__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-navigation__image-button design-system-navigation__image-button--front"
+            type="button"
+            aria-label="Navigation system image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-navigation__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+
+        <div class="design-system-navigation__content">
+          <p class="design-system-navigation__eyebrow">Navigation System</p>
+          <h2 class="design-system-navigation__heading">
+            Clear Paths Through Every Experience
+          </h2>
+          <p class="design-system-navigation__description">
+            A consistent navigation system helps users move with confidence.
+            Clear hierarchy, familiar patterns, and responsive behavior keep
+            every destination easy to find across screens.
+          </p>
+        </div>
+      </section>
+
+      <!------------- Reusable Components Section --------------->
+
+      <section class="grid grid--2-cols design-system-components">
+        <div class="design-system-components__content">
+          <p class="design-system-components__eyebrow">
+            Reusable UI Components
+          </p>
+          <h2 class="design-system-components__heading">
+            A Flexible Foundation for Every Interface
+          </h2>
+          <p class="design-system-components__description">
+            Reusable UI components bring the system together into a practical
+            toolkit. Each pattern is designed to remain consistent, adaptable,
+            and easy to combine as new layouts and experiences take shape.
+          </p>
+        </div>
+
+        <div class="design-system-components__images">
+          <button
+            class="design-system-components__image-button design-system-components__image-button--back"
+            type="button"
+            aria-label="Reusable UI components image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-components__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <button
+            class="design-system-components__image-button design-system-components__image-button--front"
+            type="button"
+            aria-label="Reusable UI components image placeholder"
+            disabled
+          >
+            <i
+              class="fa-regular fa-image design-system-components__image-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="image-preview"
+      class="image-preview"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+      hidden
+    >
+      <button
+        class="image-preview__close"
+        type="button"
+        aria-label="Close image preview"
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <img class="image-preview__image" alt="" />
+    </div>
+
+    <footer class="footer">
+      <div class="footer-intro-container">
+        <div class="footer-intro">
+          <img
+            src="images/joe-fugere-cursive-logo-transparent.png"
+            class="footer-intro__logo"
+            alt="Footer logo for Joe Fugere Portfolio"
+          />
+
+          <p class="footer-intro__description">
+            Web Designer & Front-End Developer focused on clean layouts,
+            responsive websites, and thoughtful digital experiences.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" class="footer-socials__link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h3 class="footer-nav__title">Navigation</h3>
+
+          <ul class="footer-nav__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-projects">
+          <h3 class="footer-projects__title">Projects</h3>
+
+          <ul class="footer-projects__list">
+            <li><a href="#">J | F Candle Co.</a></li>
+            <li><a href="#">Ritual Supply Co.</a></li>
+            <li><a href="#">Portfolio Website</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-separator"></div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Joe Fugere. All rights reserved.
+        <span>Designed &amp; Developed by Joe Fugere.</span>
+      </p>
+    </footer>
+  </body>
 </html>

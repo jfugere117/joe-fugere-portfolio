@@ -4,7 +4,7 @@ A personal web design and front-end development portfolio built with HTML, CSS, 
 
 ## About
 
-This portfolio showcases selected web design projects, case studies, responsive layouts, and front-end development work.
+This portfolio showcases selected web design projects, responsive layouts, and front-end development work.
 
 ## Built With
 

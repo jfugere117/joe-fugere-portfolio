@@ -61,7 +61,7 @@ scrollTopBtn.addEventListener("click", function () {
 
 // Animate section headers when they enter the viewport
 const animatedHeaderEls = document.querySelectorAll(
-  ".case-preview__header, .case-page__header, .about-preview__header, .skills-preview__header, .contact-preview-cta__header",
+  ".project-preview__header, .projects-page__header, .about-preview__header, .skills-preview__header, .contact-preview-cta__header",
 );
 
 function revealHashTargetHeader() {
@@ -73,7 +73,7 @@ function revealHashTargetHeader() {
   if (!targetSection) return;
 
   const targetHeader = targetSection.querySelector(
-    ".case-preview__header, .case-page__header, .about-preview__header",
+    ".project-preview__header, .projects-page__header, .about-preview__header",
   );
 
   if (targetHeader) {
@@ -116,3 +116,57 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchorEl) {
   });
 });
 queueRevealHashTargetHeader();
+
+/////////////////////////
+// Design System Page
+
+const imageButtons = document.querySelectorAll(
+  ".design-system-preview-button",
+);
+const imagePreview = document.querySelector(".image-preview");
+const imagePreviewImage = document.querySelector(".image-preview__image");
+const imagePreviewClose = document.querySelector(".image-preview__close");
+let previewTrigger = null;
+
+imageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const image = button.querySelector(".design-system-preview-image");
+    if (!imagePreview || !imagePreviewImage || !imagePreviewClose || !image) {
+      return;
+    }
+
+    previewTrigger = button;
+    imagePreviewImage.src = image.src;
+    imagePreviewImage.alt = image.alt;
+    imagePreview.hidden = false;
+    document.body.style.overflow = "hidden";
+    imagePreviewClose.focus();
+  });
+});
+
+function closeImagePreview() {
+  if (!imagePreview || imagePreview.hidden) return;
+
+  imagePreview.hidden = true;
+  document.body.style.overflow = "";
+
+  if (previewTrigger) {
+    previewTrigger.focus();
+  }
+}
+
+if (imagePreview && imagePreviewClose) {
+  imagePreviewClose.addEventListener("click", closeImagePreview);
+
+  imagePreview.addEventListener("click", (event) => {
+    if (event.target === imagePreview) {
+      closeImagePreview();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeImagePreview();
+    }
+  });
+}

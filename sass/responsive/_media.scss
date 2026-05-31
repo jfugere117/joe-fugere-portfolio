@@ -133,7 +133,7 @@
     visibility: hidden;
   }
 
-  .case-studies-page .desktop-nav,
+  .projects-page .desktop-nav,
   .resume-page .desktop-nav,
   .contact-page .desktop-nav,
   .jfcandleco-page .desktop-nav {
@@ -157,7 +157,7 @@
     color: $color-text;
   }
 
-  .case-studies-page .mobile-nav-menu-icon,
+  .projects-page .mobile-nav-menu-icon,
   .resume-page .mobile-nav-menu-icon,
   .contact-page .mobile-nav-menu-icon,
   .jfcandleco-page .mobile-nav-menu-icon {
@@ -200,7 +200,7 @@
     }
   }
 
-  .case-studies-page .header,
+  .projects-page .header,
   .resume-page .resume-header,
   .resume-page .header,
   .contact-page .header,
@@ -329,13 +329,13 @@
     grid-template-columns: 1fr;
   }
 
-  .case-preview-card__eyebrow,
-  .case-preview-card__heading,
+  .project-preview-card__eyebrow,
+  .project-preview-card__heading,
   .skill-card__heading {
     min-height: 0;
   }
 
-  .case-preview-card__description {
+  .project-preview-card__description {
     min-height: 6rem;
   }
 
@@ -554,8 +554,8 @@
     justify-content: center;
   }
 
-  .case-preview__header,
-  .case-page__header,
+  .project-preview__header,
+  .projects-page__header,
   .about-preview__header,
   .skills-preview__header,
   .contact-preview-cta__header {
@@ -716,16 +716,16 @@
     }
   }
 
-  .case-preview__heading,
-  .case-page__heading,
+  .project-preview__heading,
+  .projects-page__heading,
   .about-preview__heading,
   .skills-preview__heading,
   .contact-preview-cta__heading {
     font-size: 3.4rem;
   }
 
-  .case-preview__description,
-  .case-page__description,
+  .project-preview__description,
+  .projects-page__description,
   .about-preview__description,
   .skills-preview__description,
   .contact-preview-cta__description {
@@ -733,7 +733,7 @@
   }
 
   .skill-card,
-  .case-preview-card__content {
+  .project-preview-card__content {
     padding: 2.4rem;
   }
 

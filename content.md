@@ -23,7 +23,7 @@ Joe Fugere
 ### Navigation Links
 
 - Home
-- Case Studies
+- Projects
 - About
 - Contact
 
@@ -102,11 +102,11 @@ I use HTML, CSS, and Sass to build structured, responsive layouts with clean sty
 
 ---
 
-## 5. Featured Case Studies Section
+## 5. Featured Projects Section
 
 ### Eyebrow
 
-Featured Case Studies
+Featured Projects
 
 ### Heading
 
@@ -114,7 +114,7 @@ A closer look at selected projects.
 
 ### Description
 
-These featured case studies highlight my approach to web design, front-end structure, responsive layout, and brand-focused digital experiences.
+These featured projects highlight my approach to web design, front-end structure, responsive layout, and brand-focused digital experiences.
 
 ---
 
@@ -226,7 +226,7 @@ A personal design system documenting the typography, spacing, color, layout, and
 
 #### Section Button
 
-View All Case Studies
+View All Projects
 
 ---
 
@@ -275,7 +275,7 @@ Web designer and front-end developer creating clean, responsive websites with st
 ### Footer Navigation
 
 - Home
-- Case Studies
+- Projects
 - About
 - Contact
 
@@ -295,13 +295,13 @@ Designed & Developed by Joe Fugere
 
 ---
 
-# Case Studies Page
+# Projects Page
 
 ## Page Hero
 
 ### Eyebrow
 
-Case Studies
+Projects
 
 ### Heading
 
@@ -313,7 +313,7 @@ A collection of web design, front-end development, branding, UI, and design syst
 
 ---
 
-## Case Study 1: J | F Candle Co.
+## Project 1: J | F Candle Co.
 
 ### Category
 
@@ -358,7 +358,7 @@ View Case Study
 
 ---
 
-## Case Study 2: Ritual Supply Co.
+## Project 2: Ritual Supply Co.
 
 ### Category
 
@@ -403,7 +403,7 @@ View Case Study
 
 ---
 
-## Case Study 3: App Design Concept
+## Project 3: App Design Concept
 
 ### Category
 
@@ -445,7 +445,7 @@ Coming Soon
 
 ---
 
-## Case Study 4: Portfolio Design System
+## Project 4: Portfolio Design System
 
 ### Category
 
@@ -457,7 +457,7 @@ Joe Fugere Portfolio
 
 ### Short Description
 
-A personal portfolio case study showcasing the design direction, development process, and visual details behind a responsive website built to present my work with clarity and personality.
+A personal portfolio project showcasing the design direction, development process, and visual details behind a responsive website built to present my work with clarity and personality.
 
 ### Full Description
 

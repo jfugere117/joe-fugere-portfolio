@@ -1,11 +1,11 @@
 @use "../abstracts/variables" as *;
 
-.case-preview {
+.project-preview {
   padding: 9.6rem 4rem;
 }
 
-.case-preview,
-.case-page {
+.project-preview,
+.projects-page {
   //padding: 9.6rem 3rem;
 
   &__header {
@@ -58,15 +58,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .case-preview__header,
-  .case-page__header {
+  .project-preview__header,
+  .projects-page__header {
     opacity: 1;
     transform: none;
     transition: none;
   }
 }
 
-.case-preview-card {
+.project-preview-card {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -157,23 +157,30 @@
   }
 }
 
-.case-card-links {
+.project-card-links {
   display: flex;
   align-items: center;
   gap: 3rem;
   margin-top: auto;
 }
 
-.case-card-link,
+.project-card-link,
 .live-site-link {
   text-decoration: none;
 
   &__text {
     text-decoration: underline;
+    text-decoration-color: $color-accent;
+    text-underline-offset: 0.9rem;
+    transition: text-decoration-color 0.2s ease;
   }
 
   &__arrow {
     display: inline-block;
     text-decoration: none;
   }
+}
+
+.live-site-link:hover .project-card-link__text {
+  text-decoration-color: $color-tech-blue;
 }

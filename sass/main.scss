@@ -25,7 +25,7 @@
 
 // Sections
 @use "sections/hero";
-@use "sections/case-preview";
+@use "sections/project-preview";
 @use "sections/about-preview";
 @use "sections/skills-preview";
 @use "sections/cta-section";
@@ -33,7 +33,7 @@
 // Pages
 
 @use "pages/about";
-@use "pages/case";
+@use "pages/projects";
 @use "pages/home";
 @use "pages/contact";
 @use "pages/appdesign";
