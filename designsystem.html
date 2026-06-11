@@ -42,14 +42,18 @@
 
     <!-- My Javascript-->
 
-    <script defer src="js/script.js?v=1.6"></script>
+    <script defer src="js/script.js?v=1.7"></script>
 
     <title>Joe Fugere | Web Designer &amp; Front-End Developer</title>
   </head>
   <body>
     <header class="header">
       <div class="header__logo-box">
-        <a href="index.html" class="header__logo-link" aria-label="Go to home page">
+        <a
+          href="index.html"
+          class="header__logo-link"
+          aria-label="Go to home page"
+        >
           <img
             src="images/joe-fugere-cursive-logo-transparent.png"
             alt="Joe Fugere Portfolio home"
@@ -262,48 +266,6 @@
         </div>
       </section>
 
-      <!------------- Buttons Section --------------->
-
-      <section class="grid grid--2-cols design-system-buttons">
-        <div class="design-system-buttons__content">
-          <p class="design-system-buttons__eyebrow">Button System</p>
-          <h2 class="design-system-buttons__heading">
-            Actions Designed with Intention
-          </h2>
-          <p class="design-system-buttons__description">
-            A flexible button system makes every interaction feel clear and
-            consistent. Primary, secondary, and supporting actions are designed
-            to guide attention while maintaining a polished visual language.
-          </p>
-        </div>
-
-        <div class="design-system-buttons__images">
-          <button
-            class="design-system-buttons__image-button design-system-buttons__image-button--back"
-            type="button"
-            aria-label="Button system image placeholder"
-            disabled
-          >
-            <i
-              class="fa-regular fa-image design-system-buttons__image-icon"
-              aria-hidden="true"
-            ></i>
-          </button>
-
-          <button
-            class="design-system-buttons__image-button design-system-buttons__image-button--front"
-            type="button"
-            aria-label="Button system image placeholder"
-            disabled
-          >
-            <i
-              class="fa-regular fa-image design-system-buttons__image-icon"
-              aria-hidden="true"
-            ></i>
-          </button>
-        </div>
-      </section>
-
       <!------------- Cards Section --------------->
 
       <section class="grid grid--2-cols design-system-cards">
@@ -449,25 +411,13 @@
 
         <div class="design-system-components__images">
           <button
-            class="design-system-components__image-button design-system-components__image-button--back"
+            class="design-system-components__image-button"
             type="button"
-            aria-label="Reusable UI components image placeholder"
+            aria-label="Reusable UI components video placeholder"
             disabled
           >
             <i
-              class="fa-regular fa-image design-system-components__image-icon"
-              aria-hidden="true"
-            ></i>
-          </button>
-
-          <button
-            class="design-system-components__image-button design-system-components__image-button--front"
-            type="button"
-            aria-label="Reusable UI components image placeholder"
-            disabled
-          >
-            <i
-              class="fa-regular fa-image design-system-components__image-icon"
+              class="fa-solid fa-play design-system-components__image-icon"
               aria-hidden="true"
             ></i>
           </button>
@@ -491,7 +441,27 @@
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
 
-      <img class="image-preview__image" alt="" />
+      <div class="image-preview__panel">
+        <img class="image-preview__image" alt="" />
+
+        <div class="image-preview__controls">
+          <button
+            class="image-preview__arrow image-preview__arrow--previous"
+            type="button"
+            aria-label="Show previous image"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+
+          <button
+            class="image-preview__arrow image-preview__arrow--next"
+            type="button"
+            aria-label="Show next image"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
 
     <footer class="footer">
@@ -509,15 +479,31 @@
           </p>
 
           <div class="footer-socials">
-            <a href="https://github.com/jfugere117" class="footer-socials__link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/jfugere117"
+              class="footer-socials__link"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/joe-fugere" class="footer-socials__link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/joe-fugere"
+              class="footer-socials__link"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
-            <a href="mailto:contact@joefugere.com" class="footer-socials__link" aria-label="Email">
+            <a
+              href="mailto:contact@joefugere.com"
+              class="footer-socials__link"
+              aria-label="Email"
+            >
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
@@ -538,7 +524,7 @@
 
           <ul class="footer-projects__list">
             <li><a href="jfcandleco.html">J | F Candle Co.</a></li>
-            <li><a href="#">Ritual Supply Co.</a></li>
+            <li><span>Ritual Supply Co.</span></li>
             <li><a href="index.html">Portfolio Website</a></li>
           </ul>
         </div>

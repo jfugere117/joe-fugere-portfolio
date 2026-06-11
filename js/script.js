@@ -126,18 +126,39 @@ const imageButtons = document.querySelectorAll(
 const imagePreview = document.querySelector(".image-preview");
 const imagePreviewImage = document.querySelector(".image-preview__image");
 const imagePreviewClose = document.querySelector(".image-preview__close");
+const imagePreviewPrevious = document.querySelector(
+  ".image-preview__arrow--previous",
+);
+const imagePreviewNext = document.querySelector(".image-preview__arrow--next");
 let previewTrigger = null;
+let previewIndex = 0;
 
-imageButtons.forEach((button) => {
+function showPreviewImage(index) {
+  const button = imageButtons[index];
+  const image = button?.querySelector(".design-system-preview-image");
+  if (!imagePreviewImage || !image) return;
+
+  previewIndex = index;
+  previewTrigger = button;
+  imagePreviewImage.src = image.src;
+  imagePreviewImage.alt = image.alt;
+}
+
+function changePreviewImage(direction) {
+  if (!imageButtons.length) return;
+
+  const nextIndex =
+    (previewIndex + direction + imageButtons.length) % imageButtons.length;
+  showPreviewImage(nextIndex);
+}
+
+imageButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
-    const image = button.querySelector(".design-system-preview-image");
-    if (!imagePreview || !imagePreviewImage || !imagePreviewClose || !image) {
+    if (!imagePreview || !imagePreviewImage || !imagePreviewClose) {
       return;
     }
 
-    previewTrigger = button;
-    imagePreviewImage.src = image.src;
-    imagePreviewImage.alt = image.alt;
+    showPreviewImage(index);
     imagePreview.hidden = false;
     document.body.style.overflow = "hidden";
     imagePreviewClose.focus();
@@ -157,6 +178,12 @@ function closeImagePreview() {
 
 if (imagePreview && imagePreviewClose) {
   imagePreviewClose.addEventListener("click", closeImagePreview);
+  imagePreviewPrevious?.addEventListener("click", function () {
+    changePreviewImage(-1);
+  });
+  imagePreviewNext?.addEventListener("click", function () {
+    changePreviewImage(1);
+  });
 
   imagePreview.addEventListener("click", (event) => {
     if (event.target === imagePreview) {
@@ -167,6 +194,14 @@ if (imagePreview && imagePreviewClose) {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       closeImagePreview();
+    }
+
+    if (!imagePreview.hidden && event.key === "ArrowLeft") {
+      changePreviewImage(-1);
+    }
+
+    if (!imagePreview.hidden && event.key === "ArrowRight") {
+      changePreviewImage(1);
     }
   });
 }

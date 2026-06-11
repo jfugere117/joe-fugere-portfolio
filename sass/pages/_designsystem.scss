@@ -338,7 +338,7 @@
   }
 }
 
-.design-system-buttons {
+.design-system-cards {
   position: relative;
   isolation: isolate;
   width: min(100%, 140rem);
@@ -358,31 +358,12 @@
     background-color: rgba($color-background, 0.54);
   }
 
-  &__content {
-    width: 100%;
-    max-width: 68rem;
-    text-align: center;
-  }
-
-  &__eyebrow {
-    @include section-eyebrow;
-    margin-bottom: 2rem;
-  }
-
-  &__heading {
-    @include section-heading;
-    margin-bottom: 2rem;
-  }
-
-  &__description {
-    @include section-description;
-  }
-
   &__images {
     position: relative;
     width: min(100%, 56rem);
     min-height: 48rem;
     justify-self: end;
+    order: 2;
   }
 
   &__image-button {
@@ -418,79 +399,11 @@
     font-size: 7rem;
   }
 
-  @media (max-width: 900px) {
-    padding-inline: 2.4rem;
-
-    &__images {
-      justify-self: center;
-    }
-  }
-}
-
-.design-system-cards {
-  position: relative;
-  isolation: isolate;
-  width: min(100%, 140rem);
-  margin: 0 auto;
-  padding: 8rem clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  justify-items: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: 50%;
-    z-index: -1;
-    width: 100vw;
-    transform: translateX(-50%);
-    background-color: rgba($color-surface, 0.72);
-  }
-
-  &__images {
-    position: relative;
-    width: min(100%, 56rem);
-    min-height: 48rem;
-    justify-self: start;
-  }
-
-  &__image-button {
-    @extend .design-system-typography__image-button;
-    display: grid;
-    place-items: center;
-    aspect-ratio: 4 / 3;
-    background-color: rgba($color-background, 0.96);
-    cursor: default;
-    opacity: 1;
-
-    &:disabled:hover {
-      z-index: auto;
-      transform: translateY(-50%);
-      box-shadow: none;
-    }
-
-    &--back {
-      top: calc(50% - 2.5rem);
-      left: 0;
-      z-index: 1;
-    }
-
-    &--front {
-      top: calc(50% + 2.5rem);
-      left: 5rem;
-      z-index: 2;
-    }
-  }
-
-  &__image-icon {
-    color: rgba($color-accent, 0.72);
-    font-size: 7rem;
-  }
-
   &__content {
     width: 100%;
     max-width: 68rem;
     text-align: center;
+    order: 1;
   }
 
   &__eyebrow {
@@ -522,7 +435,7 @@
   width: min(100%, 140rem);
   margin: 0 auto;
   padding: 8rem clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   justify-items: center;
 
   &::before {
@@ -533,13 +446,14 @@
     z-index: -1;
     width: 100vw;
     transform: translateX(-50%);
-    background-color: rgba($color-background, 0.54);
+    background-color: rgba($color-surface, 0.72);
   }
 
   &__content {
     width: 100%;
     max-width: 68rem;
     text-align: center;
+    order: 2;
   }
 
   &__eyebrow {
@@ -560,76 +474,8 @@
     position: relative;
     width: min(100%, 56rem);
     min-height: 48rem;
-    justify-self: end;
-  }
-
-  &__image-button {
-    @extend .design-system-typography__image-button;
-    display: grid;
-    place-items: center;
-    aspect-ratio: 4 / 3;
-    background-color: rgba($color-surface, 0.96);
-    cursor: default;
-    opacity: 1;
-
-    &:disabled:hover {
-      z-index: auto;
-      transform: translateY(-50%);
-      box-shadow: none;
-    }
-
-    &--back {
-      top: calc(50% - 2.5rem);
-      right: 5rem;
-      z-index: 1;
-    }
-
-    &--front {
-      top: calc(50% + 2.5rem);
-      right: 0;
-      z-index: 2;
-    }
-  }
-
-  &__image-icon {
-    color: rgba($color-accent, 0.72);
-    font-size: 7rem;
-  }
-
-  @media (max-width: 900px) {
-    padding-inline: 2.4rem;
-
-    &__images {
-      justify-self: center;
-    }
-  }
-}
-
-.design-system-navigation {
-  position: relative;
-  isolation: isolate;
-  width: min(100%, 140rem);
-  margin: 0 auto;
-  padding: 8rem clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  justify-items: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: 50%;
-    z-index: -1;
-    width: 100vw;
-    transform: translateX(-50%);
-    background-color: rgba($color-surface, 0.72);
-  }
-
-  &__images {
-    position: relative;
-    width: min(100%, 56rem);
-    min-height: 48rem;
     justify-self: start;
+    order: 1;
   }
 
   &__image-button {
@@ -665,26 +511,6 @@
     font-size: 7rem;
   }
 
-  &__content {
-    width: 100%;
-    max-width: 68rem;
-    text-align: center;
-  }
-
-  &__eyebrow {
-    @include section-eyebrow;
-    margin-bottom: 2rem;
-  }
-
-  &__heading {
-    @include section-heading;
-    margin-bottom: 2rem;
-  }
-
-  &__description {
-    @include section-description;
-  }
-
   @media (max-width: 900px) {
     padding-inline: 2.4rem;
 
@@ -694,7 +520,7 @@
   }
 }
 
-.design-system-components {
+.design-system-navigation {
   position: relative;
   isolation: isolate;
   width: min(100%, 140rem);
@@ -714,31 +540,12 @@
     background-color: rgba($color-background, 0.54);
   }
 
-  &__content {
-    width: 100%;
-    max-width: 68rem;
-    text-align: center;
-  }
-
-  &__eyebrow {
-    @include section-eyebrow;
-    margin-bottom: 2rem;
-  }
-
-  &__heading {
-    @include section-heading;
-    margin-bottom: 2rem;
-  }
-
-  &__description {
-    @include section-description;
-  }
-
   &__images {
     position: relative;
     width: min(100%, 56rem);
     min-height: 48rem;
     justify-self: end;
+    order: 2;
   }
 
   &__image-button {
@@ -774,6 +581,109 @@
     font-size: 7rem;
   }
 
+  &__content {
+    width: 100%;
+    max-width: 68rem;
+    text-align: center;
+    order: 1;
+  }
+
+  &__eyebrow {
+    @include section-eyebrow;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    @include section-heading;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    @include section-description;
+  }
+
+  @media (max-width: 900px) {
+    padding-inline: 2.4rem;
+
+    &__images {
+      justify-self: center;
+    }
+  }
+}
+
+.design-system-components {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 140rem);
+  margin: 0 auto;
+  padding: 8rem clamp(2.4rem, 4vw, 6rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  justify-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 50%;
+    z-index: -1;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: rgba($color-surface, 0.72);
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 68rem;
+    text-align: center;
+    order: 2;
+  }
+
+  &__eyebrow {
+    @include section-eyebrow;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    @include section-heading;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    @include section-description;
+  }
+
+  &__images {
+    position: relative;
+    width: min(100%, 56rem);
+    min-height: 48rem;
+    justify-self: start;
+    order: 1;
+  }
+
+  &__image-button {
+    @extend .design-system-typography__image-button;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: 0;
+    aspect-ratio: 4 / 3;
+    background-color: rgba($color-background, 0.96);
+    cursor: default;
+    opacity: 1;
+
+    &:disabled:hover {
+      z-index: auto;
+      transform: translateY(-50%);
+      box-shadow: none;
+    }
+
+  }
+
+  &__image-icon {
+    color: rgba($color-accent, 0.72);
+    font-size: 7rem;
+  }
+
   @media (max-width: 900px) {
     padding-inline: 2.4rem;
 
@@ -789,16 +699,20 @@
   z-index: 10001;
   display: grid;
   place-items: center;
-  padding: 6rem 4rem;
+  padding: 9rem 7rem 4rem;
   background-color: rgba(7, 16, 24, 0.92);
 
   &[hidden] {
     display: none;
   }
 
+  &__panel {
+    position: relative;
+  }
+
   &__image {
-    max-width: min(120rem, calc(100vw - 8rem));
-    max-height: calc(100vh - 12rem);
+    max-width: min(120rem, calc(100vw - 14rem));
+    max-height: calc(100vh - 13rem);
     padding: clamp(1.2rem, 2vw, 2.4rem);
     border: 1px solid rgba($color-accent, 0.2);
     border-radius: 0.8rem;
@@ -823,13 +737,71 @@
     font-size: 2.4rem;
     transition:
       background-color 250ms ease,
+      border-color 250ms ease,
       transform 250ms ease;
 
     &:hover,
     &:focus-visible {
       background-color: rgba(46, 196, 182, 0.22);
+      border-color: $color-tech-blue;
       transform: translateY(-2px);
       box-shadow: 0 0.8rem 3rem rgba($color-tech-blue, 0.38);
     }
+  }
+
+  &__controls {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: 1.5px solid $color-accent;
+    border-radius: 50%;
+    background-color: rgba(14, 23, 34, 0.88);
+    color: $color-accent;
+    cursor: pointer;
+    font-size: 2rem;
+    pointer-events: auto;
+    transform: translateY(-50%);
+    transition:
+      background-color 250ms ease,
+      box-shadow 250ms ease,
+      color 250ms ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: rgba(46, 196, 182, 0.22);
+      color: $color-tech-blue;
+      box-shadow: 0 0.8rem 3rem rgba($color-tech-blue, 0.38);
+    }
+
+    &--previous {
+      left: -6rem;
+    }
+
+    &--next {
+      right: -6rem;
+    }
+  }
+
+  @media (max-width: 950px) {
+    &__image {
+      max-width: calc(100vw - 14rem);
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 8rem 6rem 3rem;
+
+    &__image {
+      max-width: calc(100vw - 12rem);
+      max-height: calc(100vh - 11rem);
+    }
+
   }
 }
