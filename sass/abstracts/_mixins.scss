@@ -24,3 +24,11 @@
   font-weight: 400;
   color: $color-text-muted;
 }
+
+@mixin section-list {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $color-text-muted;
+}
