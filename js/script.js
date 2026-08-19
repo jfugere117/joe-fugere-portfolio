@@ -118,10 +118,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchorEl) {
 queueRevealHashTargetHeader();
 
 /////////////////////////
-// Design System Page
+// Image Preview
 
 const imageButtons = document.querySelectorAll(
-  ".design-system-preview-button",
+  ".design-system-preview-button, .granite-peak-outfitters-preview-button",
 );
 const imagePreview = document.querySelector(".image-preview");
 const imagePreviewImage = document.querySelector(".image-preview__image");
@@ -135,7 +135,9 @@ let previewIndex = 0;
 
 function showPreviewImage(index) {
   const button = imageButtons[index];
-  const image = button?.querySelector(".design-system-preview-image");
+  const image = button?.querySelector(
+    ".design-system-preview-image, .granite-peak-outfitters-preview-image",
+  );
   if (!imagePreviewImage || !image) return;
 
   previewIndex = index;
