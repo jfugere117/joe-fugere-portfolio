@@ -2720,7 +2720,7 @@ ol {
 }
 
 .resume-container {
-  padding: 3rem 12rem 10rem;
+  padding: 3rem 12rem 16rem;
 }
 
 .resume-section {
@@ -2806,6 +2806,10 @@ ol {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #9fb0c0;
+}
+.resume-certifications__list {
+  list-style: disc;
+  padding-left: 2rem;
 }
 
 .resume-sidebar__link {

@@ -5,8 +5,16 @@
 
 .resume-page {
   background:
-    radial-gradient(circle at 78% 12%, rgba($color-tech-blue, 0.16), transparent 34rem),
-    radial-gradient(circle at 18% 32%, rgba($color-accent, 0.12), transparent 30rem),
+    radial-gradient(
+      circle at 78% 12%,
+      rgba($color-tech-blue, 0.16),
+      transparent 34rem
+    ),
+    radial-gradient(
+      circle at 18% 32%,
+      rgba($color-accent, 0.12),
+      transparent 30rem
+    ),
     $resume-page-bg;
   min-height: 100vh;
 }
@@ -45,7 +53,11 @@
   margin: 0 auto 12rem;
 
   background:
-    linear-gradient(145deg, rgba($color-surface, 0.96), rgba($color-background-soft, 0.96)),
+    linear-gradient(
+      145deg,
+      rgba($color-surface, 0.96),
+      rgba($color-background-soft, 0.96)
+    ),
     $color-surface;
   border: 1px solid rgba($color-accent, 0.16);
   box-shadow:
@@ -210,7 +222,7 @@
 }
 
 .resume-container {
-  padding: 3rem 12rem 10rem;
+  padding: 3rem 12rem 16rem;
 }
 
 .resume-section {
@@ -311,6 +323,11 @@
   font-size: 1.6rem;
   line-height: 1.7;
   color: $color-text-muted;
+
+  &__list {
+    list-style: disc;
+    padding-left: 2rem;
+  }
 }
 
 .resume-sidebar__link {
