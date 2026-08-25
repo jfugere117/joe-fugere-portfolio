@@ -2864,35 +2864,112 @@ ol {
   font-weight: 400;
   color: #9fb0c0;
 }
+.granite-peak-outfitters-intro__meta {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 0;
+  margin: 3.2rem 0;
+}
+.granite-peak-outfitters-intro__meta-item {
+  padding-right: 2rem;
+}
+.granite-peak-outfitters-intro__meta-item:not(:first-child) {
+  padding-left: 2rem;
+  border-left: 1px solid rgba(245, 247, 250, 0.22);
+}
+.granite-peak-outfitters-intro__meta-item:nth-child(odd) {
+  padding-left: 2rem;
+  border-left: 1px solid rgba(245, 247, 250, 0.22);
+}
+.granite-peak-outfitters-intro__meta-item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.granite-peak-outfitters-intro__meta-item dt {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+  color: #9fb0c0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.granite-peak-outfitters-intro__meta-item dt i {
+  color: #2ec4b6;
+  font-size: 1.4rem;
+}
+.granite-peak-outfitters-intro__meta-item dd {
+  min-height: 2.8rem;
+  margin: 0;
+  color: #f5f7fa;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.granite-peak-outfitters-intro__prototype-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 5.4rem;
+  padding: 0 2.6rem;
+  border: 1px solid rgba(46, 196, 182, 0.42);
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #2ec4b6 0%, #588cff 100%);
+  color: #071018;
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 1rem 2.4rem rgba(88, 140, 255, 0.28);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.granite-peak-outfitters-intro__prototype-link:hover, .granite-peak-outfitters-intro__prototype-link:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 0.8rem 3rem rgba(88, 140, 255, 0.38);
+}
 .granite-peak-outfitters-intro__image {
   width: 100%;
 }
+@media (max-width: 1120px) {
+  .granite-peak-outfitters-intro__meta {
+    grid-template-columns: repeat(2, max-content);
+    row-gap: 2rem;
+  }
+  .granite-peak-outfitters-intro__meta-item:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+@media (max-width: 620px) {
+  .granite-peak-outfitters-intro__meta {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .granite-peak-outfitters-intro__meta-item {
+    padding-right: 0;
+  }
+  .granite-peak-outfitters-intro__meta-item:not(:first-child) {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
 
 .granite-peak-outfitters-project-overview {
+  display: grid;
+  grid-template-columns: minmax(24rem, 0.8fr) repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 3rem;
   background-color: rgba(7, 16, 24, 0.54);
-  padding: 10rem;
-  /*position: relative;
-  isolation: isolate;
-  width: min(100%, 140rem);
-  margin: 0 auto;
-  padding-inline: clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  justify-items: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: 50%;
-    z-index: -1;
-    width: 100vw;
-    transform: translateX(-50%);
-    background-color: rgba($color-surface, 0.72);
-  }*/
+  padding: 6.4rem clamp(2.4rem, 4vw, 6rem);
 }
 .granite-peak-outfitters-project-overview__content {
   max-width: 100%;
-  text-align: center;
+  text-align: left;
 }
 .granite-peak-outfitters-project-overview__title {
   font-family: "Playfair Display", Georgia, serif;
@@ -2900,7 +2977,8 @@ ol {
   line-height: 1.1;
   font-weight: 500;
   color: #f5f7fa;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
+  font-size: 3.8rem;
 }
 .granite-peak-outfitters-project-overview__description {
   font-family: "Inter", sans-serif;
@@ -2908,42 +2986,387 @@ ol {
   line-height: 1.6;
   font-weight: 400;
   color: #9fb0c0;
+  font-size: 1.75rem;
+  line-height: 1.75;
 }
-
-.granite-peak-outfitters-project-overview__role-tools {
+.granite-peak-outfitters-project-overview__card {
+  padding: clamp(2.8rem, 4vw, 4.4rem);
+  border: 1px solid rgba(46, 196, 182, 0.12);
+  border-radius: 0.8rem;
+  background-color: rgba(14, 23, 34, 0.74);
+  box-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.18);
+}
+.granite-peak-outfitters-project-overview__card-header {
   display: flex;
-  justify-content: center;
-  gap: 10rem;
+  align-items: center;
+  gap: 2.2rem;
+  margin-bottom: 3.4rem;
+}
+.granite-peak-outfitters-project-overview__card-header h3 {
+  margin: 0;
+  color: #f5f7fa;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.granite-peak-outfitters-project-overview__card-icon {
+  color: #2ec4b6;
+  font-size: 4.2rem;
+  line-height: 1;
+}
+.granite-peak-outfitters-project-overview__card p {
+  margin: 0;
+  color: #9fb0c0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.75;
+}
+@media (max-width: 1000px) {
+  .granite-peak-outfitters-project-overview {
+    grid-template-columns: 1fr;
+  }
+  .granite-peak-outfitters-project-overview__card-header {
+    margin-bottom: 2.4rem;
+  }
 }
 
-.granite-peak-outfitters-project-overview__role--title,
-.granite-peak-outfitters-project-overview__tools--title {
-  margin-bottom: 2rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #2ec4b6;
+.granite-peak-outfitters-design-process {
+  padding: 5.6rem clamp(2.4rem, 4vw, 6rem) 6.4rem;
+  border-top: 1px solid rgba(245, 247, 250, 0.1);
+  background-color: rgba(14, 23, 34, 0.52);
+  text-align: center;
 }
-.granite-peak-outfitters-project-overview__role--listname,
-.granite-peak-outfitters-project-overview__tools--listname {
+.granite-peak-outfitters-design-process__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #f5f7fa;
+  margin-bottom: 3.8rem;
+  font-size: 3.8rem;
+}
+.granite-peak-outfitters-design-process__steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(9rem, 1fr));
+  gap: 3.6rem;
+  width: min(100%, 112rem);
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+.granite-peak-outfitters-design-process__steps li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 1.6rem;
+  color: #f5f7fa;
   font-family: "Inter", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.granite-peak-outfitters-design-process__steps li:not(:last-child)::after {
+  content: "\f061";
+  position: absolute;
+  top: 4rem;
+  right: -2.4rem;
+  color: #2ec4b6;
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.82;
+}
+.granite-peak-outfitters-design-process__icon {
+  display: grid;
+  place-items: center;
+  width: 8.6rem;
+  height: 8.6rem;
+  border: 1px solid rgba(46, 196, 182, 0.22);
+  border-radius: 50%;
+  background-color: rgba(46, 196, 182, 0.05);
+  color: #588cff;
+  font-size: 2.8rem;
+  box-shadow: 0 1.4rem 3.4rem rgba(0, 0, 0, 0.18);
+}
+@media (max-width: 1000px) {
+  .granite-peak-outfitters-design-process__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .granite-peak-outfitters-design-process__steps li::after {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .granite-peak-outfitters-design-process__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.8rem 2rem;
+  }
+}
+
+.granite-peak-outfitters-users {
+  display: grid;
+  grid-template-columns: minmax(24rem, 0.78fr) repeat(2, minmax(0, 0.86fr)) minmax(28rem, 0.82fr);
+  column-gap: 4.8rem;
+  row-gap: 3rem;
+  padding: 6.4rem clamp(2.4rem, 4vw, 6rem);
+  border-top: 1px solid rgba(245, 247, 250, 0.1);
+  background-color: rgba(7, 16, 24, 0.36);
+}
+.granite-peak-outfitters-users__content {
+  text-align: left;
+}
+.granite-peak-outfitters-users__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #f5f7fa;
+  margin-bottom: 2.4rem;
+  font-size: 3.8rem;
+}
+.granite-peak-outfitters-users__description {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
   line-height: 1.6;
   font-weight: 400;
   color: #9fb0c0;
-  list-style-type: disc;
+  font-size: 1.75rem;
+  line-height: 1.75;
+}
+.granite-peak-outfitters-users__persona, .granite-peak-outfitters-users__pain-points {
+  overflow: hidden;
+  border: 1px solid rgba(46, 196, 182, 0.12);
+  border-radius: 0.8rem;
+  background-color: rgba(14, 23, 34, 0.74);
+  box-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.18);
+}
+.granite-peak-outfitters-users__persona {
+  display: grid;
+  grid-template-rows: 29rem auto;
+  min-height: 24rem;
+}
+.granite-peak-outfitters-users__persona-visual {
+  min-height: 29rem;
+  background-color: rgba(7, 16, 24, 0.7);
+}
+.granite-peak-outfitters-users__persona-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 29rem;
+  object-fit: cover;
+  object-position: center top;
+}
+.granite-peak-outfitters-users__persona-content {
+  padding: 2.4rem;
+}
+.granite-peak-outfitters-users__persona-content h3 {
+  margin-bottom: 0.5rem;
+  color: #f5f7fa;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.granite-peak-outfitters-users__persona-content p {
+  margin: 0 0 2.2rem;
+  color: #9fb0c0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.45rem;
+  line-height: 1.75;
+}
+.granite-peak-outfitters-users__persona-role {
+  margin-bottom: 2.4rem !important;
+  color: #f5f7fa !important;
+  font-weight: 700;
+}
+.granite-peak-outfitters-users__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.granite-peak-outfitters-users__tags span {
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(46, 196, 182, 0.42);
+  border-radius: 0.5rem;
+  color: #588cff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.granite-peak-outfitters-users__pain-points {
+  padding: 2.6rem;
+}
+.granite-peak-outfitters-users__pain-points h3 {
+  margin-bottom: 2.6rem;
+  color: #f5f7fa;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.granite-peak-outfitters-users__pain-points ul {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.granite-peak-outfitters-users__pain-points li {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+.granite-peak-outfitters-users__pain-points i {
+  color: #2ec4b6;
+  font-size: 2.1rem;
+  line-height: 1.2;
+}
+.granite-peak-outfitters-users__pain-points strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #f5f7fa;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+.granite-peak-outfitters-users__pain-points span {
+  display: block;
+  color: #9fb0c0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
+@media (max-width: 1250px) {
+  .granite-peak-outfitters-users {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .granite-peak-outfitters-users__content, .granite-peak-outfitters-users__pain-points {
+    grid-column: 1/-1;
+  }
+  .granite-peak-outfitters-users__persona {
+    grid-template-rows: 42rem auto;
+  }
+  .granite-peak-outfitters-users__persona-visual {
+    min-height: 42rem;
+  }
+  .granite-peak-outfitters-users__persona-visual img {
+    min-height: 42rem;
+    object-position: center top;
+  }
+}
+@media (max-width: 760px) {
+  .granite-peak-outfitters-users {
+    grid-template-columns: 1fr;
+  }
+  .granite-peak-outfitters-users__persona {
+    grid-template-rows: 28rem auto;
+  }
+  .granite-peak-outfitters-users__persona-visual {
+    min-height: 28rem;
+  }
+}
+
+.granite-peak-outfitters-user-flow {
+  display: grid;
+  grid-template-columns: minmax(22rem, 0.7fr) minmax(0, 3.3fr);
+  align-items: center;
+  gap: 3rem;
+  padding: 4.8rem clamp(2.4rem, 4vw, 6rem) 6.4rem;
+  border-top: 1px solid rgba(245, 247, 250, 0.1);
+  background-color: rgba(7, 16, 24, 0.36);
+}
+.granite-peak-outfitters-user-flow__title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #f5f7fa;
+  margin-bottom: 1.6rem;
+  font-size: 3.8rem;
+}
+.granite-peak-outfitters-user-flow__description {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #9fb0c0;
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+.granite-peak-outfitters-user-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(8rem, 1fr));
+  align-items: center;
+  gap: 2.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.granite-peak-outfitters-user-flow__steps li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 1.4rem;
+  color: #f5f7fa;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.granite-peak-outfitters-user-flow__steps li:not(:last-child)::after {
+  content: "\f061";
+  position: absolute;
+  top: 2.9rem;
+  right: -1.8rem;
+  color: #2ec4b6;
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.granite-peak-outfitters-user-flow__steps i {
+  display: grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid rgba(46, 196, 182, 0.22);
+  border-radius: 50%;
+  background-color: rgba(46, 196, 182, 0.05);
+  color: #588cff;
+  font-size: 2.6rem;
+}
+@media (max-width: 1000px) {
+  .granite-peak-outfitters-user-flow {
+    grid-template-columns: 1fr;
+  }
+  .granite-peak-outfitters-user-flow__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .granite-peak-outfitters-user-flow__steps li::after {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .granite-peak-outfitters-user-flow__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .granite-peak-outfitters-lofi-desktop {
+  display: grid;
   position: relative;
   isolation: isolate;
   width: min(100%, 140rem);
   margin: 0 auto;
-  padding-inline: clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  justify-items: center;
+  padding: 6.4rem clamp(2.4rem, 4vw, 6rem);
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: stretch;
 }
 .granite-peak-outfitters-lofi-desktop::before {
   content: "";
@@ -2961,7 +3384,7 @@ ol {
   min-height: 58rem;
   justify-self: start;
 }
-.granite-peak-outfitters-lofi-desktop__image-button, .design-system-components__image-button, .design-system-navigation__image-button, .design-system-forms__image-button, .design-system-cards__image-button, .design-system-spacing__image-button, .design-system-colors__image-button {
+.granite-peak-outfitters-lofi-desktop__image-button, .design-system-components__image-button, .design-system-navigation__image-button, .design-system-forms__image-button, .design-system-cards__image-button, .design-system-spacing__image-button {
   position: absolute;
   width: min(82%, 48rem);
   padding: 0;
@@ -2973,7 +3396,7 @@ ol {
   transform: translateY(-50%);
   transition: transform 400ms ease, box-shadow 400ms ease;
 }
-.granite-peak-outfitters-lofi-desktop__image-button:hover, .design-system-components__image-button:hover, .design-system-navigation__image-button:hover, .design-system-forms__image-button:hover, .design-system-cards__image-button:hover, .design-system-spacing__image-button:hover, .design-system-colors__image-button:hover, .granite-peak-outfitters-lofi-desktop__image-button:focus-visible, .design-system-components__image-button:focus-visible, .design-system-navigation__image-button:focus-visible, .design-system-forms__image-button:focus-visible, .design-system-cards__image-button:focus-visible, .design-system-spacing__image-button:focus-visible, .design-system-colors__image-button:focus-visible {
+.granite-peak-outfitters-lofi-desktop__image-button:hover, .design-system-components__image-button:hover, .design-system-navigation__image-button:hover, .design-system-forms__image-button:hover, .design-system-cards__image-button:hover, .design-system-spacing__image-button:hover, .granite-peak-outfitters-lofi-desktop__image-button:focus-visible, .design-system-components__image-button:focus-visible, .design-system-navigation__image-button:focus-visible, .design-system-forms__image-button:focus-visible, .design-system-cards__image-button:focus-visible, .design-system-spacing__image-button:focus-visible {
   z-index: 3;
   transform: translateY(calc(-50% - 1rem));
   box-shadow: 0 2.8rem 5.6rem rgba(0, 0, 0, 0.58), 0 0 0 2px rgba(88, 140, 255, 0.85), 0 0 4.8rem rgba(88, 140, 255, 0.68);
@@ -2996,7 +3419,8 @@ ol {
 }
 .granite-peak-outfitters-lofi-desktop__content {
   width: 100%;
-  max-width: 68rem;
+  max-width: 76rem;
+  margin: 0 auto;
   text-align: center;
 }
 .granite-peak-outfitters-lofi-desktop__eyebrow {
@@ -3006,7 +3430,7 @@ ol {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #2ec4b6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 .granite-peak-outfitters-lofi-desktop__heading {
   font-family: "Playfair Display", Georgia, serif;
@@ -3015,6 +3439,7 @@ ol {
   font-weight: 500;
   color: #f5f7fa;
   margin-bottom: 2rem;
+  font-size: 3.4rem;
 }
 .granite-peak-outfitters-lofi-desktop__description {
   font-family: "Inter", sans-serif;
@@ -3022,27 +3447,129 @@ ol {
   line-height: 1.6;
   font-weight: 400;
   color: #9fb0c0;
+  font-size: 1.65rem;
+  line-height: 1.7;
+}
+.granite-peak-outfitters-lofi-desktop__link, .granite-peak-outfitters-lofi-mobile__link, .granite-peak-outfitters-lofi-desktop__prototype-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  color: #2ec4b6;
+  font-family: "Inter", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+.granite-peak-outfitters-lofi-desktop__link:hover, .granite-peak-outfitters-lofi-mobile__link:hover, .granite-peak-outfitters-lofi-desktop__link:focus-visible, .granite-peak-outfitters-lofi-mobile__link:focus-visible, .granite-peak-outfitters-lofi-desktop__prototype-card a:hover, .granite-peak-outfitters-lofi-desktop__prototype-card a:focus-visible {
+  color: #588cff;
+}
+.granite-peak-outfitters-lofi-desktop__frames {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10rem, 1fr) 1.6rem) minmax(10rem, 1fr);
+  column-gap: 0.9rem;
+  row-gap: 2rem;
+  align-items: center;
+}
+.granite-peak-outfitters-lofi-desktop__flow-arrow {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 12.4rem;
+  color: #2ec4b6;
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+.granite-peak-outfitters-lofi-desktop__frame {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f5f7fa;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  transition: transform 250ms ease, filter 250ms ease;
+}
+.granite-peak-outfitters-lofi-desktop__frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border: 1px solid rgba(46, 196, 182, 0.16);
+  border-radius: 0.8rem;
+  background-color: #f5f7fa;
+  object-fit: cover;
+  object-position: top center;
+  box-shadow: 0 1.6rem 3.4rem rgba(0, 0, 0, 0.24);
+}
+.granite-peak-outfitters-lofi-desktop__frame:hover, .granite-peak-outfitters-lofi-desktop__frame:focus-visible {
+  transform: translateY(-0.4rem);
+  filter: drop-shadow(0 0 2.4rem rgba(88, 140, 255, 0.28));
+}
+.granite-peak-outfitters-lofi-desktop__prototype-card {
+  width: min(100%, 42rem);
+  justify-self: center;
+  padding: 3rem;
+  border: 1px solid rgba(46, 196, 182, 0.12);
+  border-radius: 0.8rem;
+  background-color: rgba(14, 23, 34, 0.74);
+  box-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.18);
+}
+.granite-peak-outfitters-lofi-desktop__prototype-card > i {
+  margin-bottom: 2.8rem;
+  color: #2ec4b6;
+  font-size: 4rem;
+}
+.granite-peak-outfitters-lofi-desktop__prototype-card h3 {
+  margin-bottom: 1.8rem;
+  color: #f5f7fa;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.7rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.granite-peak-outfitters-lofi-desktop__prototype-card p {
+  margin: 0;
+  color: #9fb0c0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
 @media (max-width: 900px) {
   .granite-peak-outfitters-lofi-desktop {
     padding-inline: 2.4rem;
   }
-  .granite-peak-outfitters-lofi-desktop__images {
-    justify-self: center;
+  .granite-peak-outfitters-lofi-desktop__content {
+    max-width: 68rem;
+  }
+  .granite-peak-outfitters-lofi-desktop__frames {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .granite-peak-outfitters-lofi-desktop__flow-arrow {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .granite-peak-outfitters-lofi-desktop__frames {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 /*********** Mobile Wireframe ***********/
-.design-system-colors {
+.granite-peak-outfitters-lofi-mobile {
   position: relative;
   isolation: isolate;
   width: min(100%, 140rem);
   margin: 0 auto;
-  padding: 8rem clamp(2.4rem, 4vw, 6rem);
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  justify-items: center;
+  padding: 7.2rem clamp(2.4rem, 4vw, 6rem);
 }
-.design-system-colors::before {
+.granite-peak-outfitters-lofi-mobile::before {
   content: "";
   position: absolute;
   inset-block: 0;
@@ -3052,12 +3579,13 @@ ol {
   transform: translateX(-50%);
   background-color: rgba(7, 16, 24, 0.54);
 }
-.design-system-colors__content {
+.granite-peak-outfitters-lofi-mobile__content {
   width: 100%;
-  max-width: 68rem;
+  max-width: 78rem;
+  margin: 0 auto 4rem;
   text-align: center;
 }
-.design-system-colors__eyebrow {
+.granite-peak-outfitters-lofi-mobile__eyebrow {
   font-family: "Inter", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
@@ -3066,7 +3594,7 @@ ol {
   color: #2ec4b6;
   margin-bottom: 2rem;
 }
-.design-system-colors__heading {
+.granite-peak-outfitters-lofi-mobile__heading {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 4.2rem;
   line-height: 1.1;
@@ -3074,52 +3602,71 @@ ol {
   color: #f5f7fa;
   margin-bottom: 2rem;
 }
-.design-system-colors__description {
+.granite-peak-outfitters-lofi-mobile__description {
   font-family: "Inter", sans-serif;
   font-size: 2rem;
   line-height: 1.6;
   font-weight: 400;
   color: #9fb0c0;
 }
-.design-system-colors__images {
-  position: relative;
-  width: min(100%, 56rem);
-  min-height: 48rem;
-  justify-self: end;
-}
-.design-system-colors__image-button {
+.granite-peak-outfitters-lofi-mobile__frames {
   display: grid;
-  place-items: center;
-  aspect-ratio: 4/3;
-  background-color: rgba(14, 23, 34, 0.96);
-  cursor: default;
-  opacity: 1;
+  grid-template-columns: repeat(4, minmax(8rem, 1fr) 1.6rem) minmax(8rem, 1fr);
+  column-gap: 0.9rem;
+  row-gap: 2rem;
+  align-items: center;
 }
-.design-system-colors__image-button:disabled:hover {
-  z-index: auto;
-  transform: translateY(-50%);
-  box-shadow: none;
+.granite-peak-outfitters-lofi-mobile__flow-arrow {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 16rem;
+  color: #2ec4b6;
+  font-size: 1.4rem;
+  pointer-events: none;
 }
-.design-system-colors__image-button--back {
-  top: calc(50% - 2.5rem);
-  right: 5rem;
-  z-index: 1;
+.granite-peak-outfitters-lofi-mobile__frame {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f5f7fa;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  transition: transform 250ms ease, filter 250ms ease;
 }
-.design-system-colors__image-button--front {
-  top: calc(50% + 2.5rem);
-  right: 0;
-  z-index: 2;
+.granite-peak-outfitters-lofi-mobile__frame:hover, .granite-peak-outfitters-lofi-mobile__frame:focus-visible {
+  transform: translateY(-0.4rem);
+  filter: drop-shadow(0 0 2.4rem rgba(88, 140, 255, 0.28));
+  outline: none;
 }
-.design-system-colors__image-icon {
-  color: rgba(46, 196, 182, 0.72);
-  font-size: 7rem;
+.granite-peak-outfitters-lofi-mobile__frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9/19;
+  border: 1px solid rgba(46, 196, 182, 0.16);
+  border-radius: 0.8rem;
+  object-fit: cover;
+  object-position: top center;
+  background-color: #f5f7fa;
+  box-shadow: 0 1.6rem 3.4rem rgba(0, 0, 0, 0.24);
 }
 @media (max-width: 900px) {
-  .design-system-colors {
-    padding-inline: 2.4rem;
+  .granite-peak-outfitters-lofi-mobile__frames {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .design-system-colors__images {
-    justify-self: center;
+  .granite-peak-outfitters-lofi-mobile__flow-arrow {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .granite-peak-outfitters-lofi-mobile__frames {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

@@ -132,9 +132,10 @@ const imagePreviewPrevious = document.querySelector(
 const imagePreviewNext = document.querySelector(".image-preview__arrow--next");
 let previewTrigger = null;
 let previewIndex = 0;
+let activeImageButtons = Array.from(imageButtons);
 
 function showPreviewImage(index) {
-  const button = imageButtons[index];
+  const button = activeImageButtons[index];
   const image = button?.querySelector(
     ".design-system-preview-image, .granite-peak-outfitters-preview-image",
   );
@@ -147,10 +148,11 @@ function showPreviewImage(index) {
 }
 
 function changePreviewImage(direction) {
-  if (!imageButtons.length) return;
+  if (!activeImageButtons.length) return;
 
   const nextIndex =
-    (previewIndex + direction + imageButtons.length) % imageButtons.length;
+    (previewIndex + direction + activeImageButtons.length) %
+    activeImageButtons.length;
   showPreviewImage(nextIndex);
 }
 
@@ -160,7 +162,19 @@ imageButtons.forEach((button, index) => {
       return;
     }
 
-    showPreviewImage(index);
+    const wireframeGallery = button.closest(
+      ".granite-peak-outfitters-lofi-desktop__frames, .granite-peak-outfitters-lofi-mobile__frames",
+    );
+
+    activeImageButtons = wireframeGallery
+      ? Array.from(
+          wireframeGallery.querySelectorAll(
+            ".granite-peak-outfitters-preview-button",
+          ),
+        )
+      : Array.from(imageButtons);
+
+    showPreviewImage(activeImageButtons.indexOf(button));
     imagePreview.hidden = false;
     document.body.style.overflow = "hidden";
     imagePreviewClose.focus();
