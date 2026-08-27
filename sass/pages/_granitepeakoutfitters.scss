@@ -309,18 +309,27 @@
 
   @media (max-width: 1000px) {
     &__steps {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-columns: 11rem;
+      grid-auto-flow: column;
+      grid-template-columns: none;
+      justify-content: start;
+      gap: 3.6rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 1rem;
+      scroll-padding-inline: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
-    &__steps li::after {
-      display: none;
+    &__steps li {
+      scroll-snap-align: start;
     }
   }
 
   @media (max-width: 620px) {
     &__steps {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 2.8rem 2rem;
+      width: 100%;
     }
   }
 }
@@ -562,43 +571,55 @@
     &:not(:last-child)::after {
       content: "\f061";
       position: absolute;
-      top: 2.9rem;
-      right: -1.8rem;
+      top: 4rem;
+      right: -2.4rem;
       color: $color-accent;
       font-family: "Font Awesome 6 Free";
       font-size: 1.4rem;
       font-weight: 900;
       line-height: 1;
+      opacity: 0.82;
     }
   }
 
   &__steps i {
     display: grid;
     place-items: center;
-    width: 7rem;
-    height: 7rem;
+    width: 8.6rem;
+    height: 8.6rem;
     border: 1px solid rgba($color-accent, 0.22);
     border-radius: 50%;
     background-color: rgba($color-accent, 0.05);
     color: $color-tech-blue;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
+    box-shadow: 0 1.4rem 3.4rem rgba(0, 0, 0, 0.18);
   }
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
 
     &__steps {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-columns: 11rem;
+      grid-auto-flow: column;
+      grid-template-columns: none;
+      justify-content: start;
+      gap: 3.6rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 1rem;
+      scroll-padding-inline: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
-    &__steps li::after {
-      display: none;
+    &__steps li {
+      scroll-snap-align: start;
     }
   }
 
   @media (max-width: 620px) {
     &__steps {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
     }
   }
 }
