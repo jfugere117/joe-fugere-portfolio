@@ -3264,10 +3264,15 @@ ol {
     grid-template-columns: 1fr;
   }
   .granite-peak-outfitters-users__persona {
-    grid-template-rows: 28rem auto;
+    grid-template-rows: auto auto;
   }
   .granite-peak-outfitters-users__persona-visual {
-    min-height: 28rem;
+    min-height: 0;
+  }
+  .granite-peak-outfitters-users__persona-visual img {
+    height: auto;
+    min-height: 0;
+    object-fit: cover;
   }
 }
 
