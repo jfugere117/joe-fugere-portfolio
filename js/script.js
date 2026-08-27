@@ -223,6 +223,43 @@ if (imagePreview && imagePreviewClose) {
 }
 
 /////////////////////////
+// Case Study Swipe Indicators
+
+const caseStudySwipeRows = document.querySelectorAll(
+  ".granite-peak-outfitters-design-process__steps, .granite-peak-outfitters-user-flow__steps, .granite-peak-outfitters-lofi-desktop__frames, .granite-peak-outfitters-lofi-mobile__frames",
+);
+
+caseStudySwipeRows.forEach((row) => {
+  const indicator = document.createElement("div");
+  indicator.className = "granite-peak-outfitters-scroll-indicator";
+  indicator.setAttribute("aria-hidden", "true");
+
+  const thumb = document.createElement("span");
+  indicator.appendChild(thumb);
+  row.insertAdjacentElement("afterend", indicator);
+
+  function updateIndicator() {
+    const maxScroll = row.scrollWidth - row.clientWidth;
+    indicator.hidden = maxScroll <= 1;
+
+    if (indicator.hidden) return;
+
+    const trackWidth = indicator.clientWidth;
+    const thumbWidth = Math.max(24, trackWidth * 0.3);
+    const progress = row.scrollLeft / maxScroll;
+    const thumbOffset = progress * (trackWidth - thumbWidth);
+
+    thumb.style.width = `${thumbWidth}px`;
+    thumb.style.transform = `translateX(${thumbOffset}px)`;
+  }
+
+  row.addEventListener("scroll", updateIndicator, { passive: true });
+  window.addEventListener("resize", updateIndicator);
+  window.addEventListener("load", updateIndicator);
+  updateIndicator();
+});
+
+/////////////////////////
 // Contact Form
 
 const contactForm = document.querySelector("#contact-form");

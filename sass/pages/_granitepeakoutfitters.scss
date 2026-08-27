@@ -309,27 +309,30 @@
 
   @media (max-width: 1000px) {
     &__steps {
-      grid-auto-columns: 11rem;
-      grid-auto-flow: column;
+      display: flex;
       grid-template-columns: none;
+      align-items: center;
       justify-content: start;
       gap: 3.6rem;
+      width: calc(100% + 4.8rem);
+      margin-inline: -2.4rem;
       overflow-x: auto;
       overflow-y: hidden;
-      padding-bottom: 1rem;
-      scroll-padding-inline: 1rem;
+      padding: 0 2.4rem 2rem;
+      scroll-padding-inline: 2.4rem;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
 
     &__steps li {
+      flex: 0 0 11rem;
       scroll-snap-align: start;
     }
   }
 
   @media (max-width: 620px) {
     &__steps {
-      width: 100%;
+      width: calc(100% + 4.8rem);
     }
   }
 }
@@ -599,27 +602,30 @@
     grid-template-columns: 1fr;
 
     &__steps {
-      grid-auto-columns: 11rem;
-      grid-auto-flow: column;
+      display: flex;
       grid-template-columns: none;
+      align-items: center;
       justify-content: start;
       gap: 3.6rem;
+      width: calc(100% + 4.8rem);
+      margin-inline: -2.4rem;
       overflow-x: auto;
       overflow-y: hidden;
-      padding-bottom: 1rem;
-      scroll-padding-inline: 1rem;
+      padding: 0 2.4rem 2rem;
+      scroll-padding-inline: 2.4rem;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
     }
 
     &__steps li {
+      flex: 0 0 11rem;
       scroll-snap-align: start;
     }
   }
 
   @media (max-width: 620px) {
     &__steps {
-      width: 100%;
+      width: calc(100% + 4.8rem);
     }
   }
 }
@@ -839,17 +845,34 @@
     }
 
     &__frames {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      grid-template-columns: none;
+      align-items: center;
+      justify-content: start;
+      gap: 1rem;
+      width: calc(100% + 4.8rem);
+      margin-inline: -2.4rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0 2.4rem 2rem;
+      scroll-padding-inline: 2.4rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &__frame {
+      flex: 0 0 18rem;
+      scroll-snap-align: start;
     }
 
     &__flow-arrow {
-      display: none;
+      flex: 0 0 1.4rem;
     }
   }
 
   @media (max-width: 620px) {
     &__frames {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: calc(100% + 4.8rem);
     }
   }
 }
@@ -956,17 +979,34 @@
 
   @media (max-width: 900px) {
     &__frames {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      grid-template-columns: none;
+      align-items: center;
+      justify-content: start;
+      gap: 1rem;
+      width: calc(100% + 4.8rem);
+      margin-inline: -2.4rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0 2.4rem 2rem;
+      scroll-padding-inline: 2.4rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &__frame {
+      flex: 0 0 12rem;
+      scroll-snap-align: start;
     }
 
     &__flow-arrow {
-      display: none;
+      flex: 0 0 1.4rem;
     }
   }
 
   @media (max-width: 700px) {
     &__frames {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: calc(100% + 4.8rem);
     }
   }
 }
@@ -1411,6 +1451,40 @@
     &__images {
       justify-self: center;
     }
+  }
+}
+
+.granite-peak-outfitters-design-process__steps,
+.granite-peak-outfitters-user-flow__steps,
+.granite-peak-outfitters-lofi-desktop__frames,
+.granite-peak-outfitters-lofi-mobile__frames {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.granite-peak-outfitters-scroll-indicator {
+  width: min(14rem, 34%);
+  height: 0.35rem;
+  margin: 0.6rem auto 0;
+  overflow: hidden;
+  border-radius: 999rem;
+  background-color: rgba($color-accent, 0.12);
+
+  span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba($color-accent, 0.62);
+    transform: translateX(0);
+    transition: transform 120ms ease;
+    will-change: transform;
+  }
+
+  &[hidden] {
+    display: none;
   }
 }
 

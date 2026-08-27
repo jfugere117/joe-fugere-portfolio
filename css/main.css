@@ -3093,25 +3093,28 @@ ol {
 }
 @media (max-width: 1000px) {
   .granite-peak-outfitters-design-process__steps {
-    grid-auto-columns: 11rem;
-    grid-auto-flow: column;
+    display: flex;
     grid-template-columns: none;
+    align-items: center;
     justify-content: start;
     gap: 3.6rem;
+    width: calc(100% + 4.8rem);
+    margin-inline: -2.4rem;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 1rem;
-    scroll-padding-inline: 1rem;
+    padding: 0 2.4rem 2rem;
+    scroll-padding-inline: 2.4rem;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
   .granite-peak-outfitters-design-process__steps li {
+    flex: 0 0 11rem;
     scroll-snap-align: start;
   }
 }
 @media (max-width: 620px) {
   .granite-peak-outfitters-design-process__steps {
-    width: 100%;
+    width: calc(100% + 4.8rem);
   }
 }
 
@@ -3362,25 +3365,28 @@ ol {
     grid-template-columns: 1fr;
   }
   .granite-peak-outfitters-user-flow__steps {
-    grid-auto-columns: 11rem;
-    grid-auto-flow: column;
+    display: flex;
     grid-template-columns: none;
+    align-items: center;
     justify-content: start;
     gap: 3.6rem;
+    width: calc(100% + 4.8rem);
+    margin-inline: -2.4rem;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 1rem;
-    scroll-padding-inline: 1rem;
+    padding: 0 2.4rem 2rem;
+    scroll-padding-inline: 2.4rem;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
   .granite-peak-outfitters-user-flow__steps li {
+    flex: 0 0 11rem;
     scroll-snap-align: start;
   }
 }
 @media (max-width: 620px) {
   .granite-peak-outfitters-user-flow__steps {
-    width: 100%;
+    width: calc(100% + 4.8rem);
   }
 }
 
@@ -3576,15 +3582,31 @@ ol {
     max-width: 68rem;
   }
   .granite-peak-outfitters-lofi-desktop__frames {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    grid-template-columns: none;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    width: calc(100% + 4.8rem);
+    margin-inline: -2.4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 2.4rem 2rem;
+    scroll-padding-inline: 2.4rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .granite-peak-outfitters-lofi-desktop__frame {
+    flex: 0 0 18rem;
+    scroll-snap-align: start;
   }
   .granite-peak-outfitters-lofi-desktop__flow-arrow {
-    display: none;
+    flex: 0 0 1.4rem;
   }
 }
 @media (max-width: 620px) {
   .granite-peak-outfitters-lofi-desktop__frames {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% + 4.8rem);
   }
 }
 
@@ -3685,15 +3707,31 @@ ol {
 }
 @media (max-width: 900px) {
   .granite-peak-outfitters-lofi-mobile__frames {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: flex;
+    grid-template-columns: none;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    width: calc(100% + 4.8rem);
+    margin-inline: -2.4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 2.4rem 2rem;
+    scroll-padding-inline: 2.4rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .granite-peak-outfitters-lofi-mobile__frame {
+    flex: 0 0 12rem;
+    scroll-snap-align: start;
   }
   .granite-peak-outfitters-lofi-mobile__flow-arrow {
-    display: none;
+    flex: 0 0 1.4rem;
   }
 }
 @media (max-width: 700px) {
   .granite-peak-outfitters-lofi-mobile__frames {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% + 4.8rem);
   }
 }
 
@@ -4145,6 +4183,40 @@ ol {
   .design-system-components__images {
     justify-self: center;
   }
+}
+
+.granite-peak-outfitters-design-process__steps,
+.granite-peak-outfitters-user-flow__steps,
+.granite-peak-outfitters-lofi-desktop__frames,
+.granite-peak-outfitters-lofi-mobile__frames {
+  scrollbar-width: none;
+}
+.granite-peak-outfitters-design-process__steps::-webkit-scrollbar,
+.granite-peak-outfitters-user-flow__steps::-webkit-scrollbar,
+.granite-peak-outfitters-lofi-desktop__frames::-webkit-scrollbar,
+.granite-peak-outfitters-lofi-mobile__frames::-webkit-scrollbar {
+  display: none;
+}
+
+.granite-peak-outfitters-scroll-indicator {
+  width: min(14rem, 34%);
+  height: 0.35rem;
+  margin: 0.6rem auto 0;
+  overflow: hidden;
+  border-radius: 999rem;
+  background-color: rgba(46, 196, 182, 0.12);
+}
+.granite-peak-outfitters-scroll-indicator span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background-color: rgba(46, 196, 182, 0.62);
+  transform: translateX(0);
+  transition: transform 120ms ease;
+  will-change: transform;
+}
+.granite-peak-outfitters-scroll-indicator[hidden] {
+  display: none;
 }
 
 .image-preview {
