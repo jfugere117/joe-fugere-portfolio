@@ -455,12 +455,21 @@
     width: 92%;
     margin: auto auto 0;
     align-self: center;
-    font-family: "Inter", sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: $color-accent-3-dark;
-    text-decoration: none;
   }
+}
+
+.about-certificate a,
+.about-project-link {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-accent-3-dark;
+  text-decoration: none;
+}
+
+.about-project-link {
+  display: inline-block;
+  padding-top: 2rem;
 }
 
 /* ------------------------------

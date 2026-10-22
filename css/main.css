@@ -1507,11 +1507,20 @@ ol {
   width: 92%;
   margin: auto auto 0;
   align-self: center;
+}
+
+.about-certificate a,
+.about-project-link {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #2ec4b6;
   text-decoration: none;
+}
+
+.about-project-link {
+  display: inline-block;
+  padding-top: 2rem;
 }
 
 /* ------------------------------
