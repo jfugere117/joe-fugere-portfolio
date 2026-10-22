@@ -1470,9 +1470,13 @@ ol {
   display: block;
   aspect-ratio: 4.5/3;
   object-fit: cover;
+  background-color: #fff;
   border-radius: 0.8rem;
   box-shadow: 0.6rem 1.4rem 3.2rem rgba(16, 20, 24, 0.16);
   margin: 0 auto 3rem;
+}
+.about-certificate__image--google {
+  object-fit: contain;
 }
 .about-certificate__heading {
   min-height: 6.4rem;

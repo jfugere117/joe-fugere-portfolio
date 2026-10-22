@@ -43,8 +43,16 @@
     width: min(68vw, 68rem);
     height: 100%;
     background:
-      radial-gradient(circle at 42% 52%, rgba($color-tech-blue, 0.52), transparent 28rem),
-      radial-gradient(circle at 34% 68%, rgba($color-accent, 0.42), transparent 24rem);
+      radial-gradient(
+        circle at 42% 52%,
+        rgba($color-tech-blue, 0.52),
+        transparent 28rem
+      ),
+      radial-gradient(
+        circle at 34% 68%,
+        rgba($color-accent, 0.42),
+        transparent 24rem
+      );
   }
 
   &__img {
@@ -404,9 +412,15 @@
     display: block;
     aspect-ratio: 4.5 / 3;
     object-fit: cover;
+    background-color: #fff;
     border-radius: 0.8rem;
     box-shadow: 0.6rem 1.4rem 3.2rem rgba(16, 20, 24, 0.16);
     margin: 0 auto 3rem;
+
+    // Keep the shared image area for row alignment, but show the full certificate.
+    &--google {
+      object-fit: contain;
+    }
   }
 
   &__heading {
