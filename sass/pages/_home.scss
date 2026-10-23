@@ -1,0 +1,9 @@
+// Contain entrance animations without creating a horizontal scroll area.
+.home-page {
+  .project-preview,
+  .about-preview,
+  .skills-preview,
+  .contact-preview-cta {
+    overflow-x: clip;
+  }
+}

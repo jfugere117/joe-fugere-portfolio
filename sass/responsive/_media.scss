@@ -4,11 +4,6 @@
  No Break Point Media
 ------------------------------ */
 
-@media (prefers-reduced-motion: reduce) {
-  .skill-card--learning .skill-card__label {
-    animation: none;
-  }
-}
 
 /* ------------------------------
   Desktop 1440px and up
@@ -65,9 +60,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .skill-card {
-    padding: 3.2rem;
-  }
 }
 
 /* ------------------------------
@@ -321,8 +313,7 @@
   }
 
   .project-preview-card__eyebrow,
-  .project-preview-card__heading,
-  .skill-card__heading {
+  .project-preview-card__heading {
     min-height: 0;
   }
 
@@ -662,6 +653,8 @@
   }
 
   .home-hero {
+    padding-inline: 2.4rem;
+
     &__content {
       justify-self: center;
       width: 100%;
@@ -670,12 +663,11 @@
     }
 
     &__heading {
-      width: 100vw;
-      max-width: none;
-      margin-right: calc(50% - 50vw);
-      margin-left: calc(50% - 50vw);
-      font-size: 2.5rem;
-      line-height: 1;
+      width: 100%;
+      max-width: 100%;
+      font-size: clamp(2.8rem, 7vw, 4.2rem);
+      line-height: 1.1;
+      white-space: normal;
       text-align: center;
     }
 
@@ -723,7 +715,6 @@
     font-size: 1.6rem;
   }
 
-  .skill-card,
   .project-preview-card__content {
     padding: 2.4rem;
   }
@@ -869,9 +860,6 @@
     min-height: 100vh;
   }
 
-  .home-hero__heading {
-    font-size: clamp(1.6rem, 5.1vw, 2.8rem);
-  }
 
   .hero-btn a {
     width: min(100%, 26rem);
@@ -936,10 +924,6 @@
 ------------------------------ */
 
 @media (max-width: 350px) {
-  .home-hero__heading {
-    font-size: 1.6rem;
-    white-space: normal;
-  }
 
   .home-hero__subheading {
     font-size: 1.4rem;

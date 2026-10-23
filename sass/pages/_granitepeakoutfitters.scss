@@ -248,6 +248,8 @@
 }
 
 .granite-peak-outfitters-design-process {
+  --process-gap: clamp(1.6rem, 3vw, 3.6rem);
+
   padding: 5.6rem clamp(2.4rem, 4vw, 6rem) 6.4rem;
   border-top: 1px solid rgba($color-text, 0.1);
   background-color: rgba($color-surface, 0.52);
@@ -261,8 +263,8 @@
 
   &__steps {
     display: grid;
-    grid-template-columns: repeat(6, minmax(9rem, 1fr));
-    gap: 3.6rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--process-gap);
     width: min(100%, 112rem);
     padding: 0;
     margin: 0 auto;
@@ -271,7 +273,11 @@
 
   &__steps li {
     position: relative;
+    min-width: 0;
+    overflow-wrap: anywhere;
     display: grid;
+    grid-template-rows: auto auto 1fr;
+    align-items: start;
     justify-items: center;
     gap: 1.6rem;
     color: $color-text;
@@ -279,26 +285,24 @@
     font-size: 1.55rem;
     font-weight: 800;
     line-height: 1.2;
+  }
 
-    &:not(:last-child)::after {
-      content: "\f061";
-      position: absolute;
-      top: 4rem;
-      right: -2.4rem;
-      color: $color-accent;
-      font-family: "Font Awesome 6 Free";
-      font-size: 1.4rem;
-      font-weight: 900;
-      line-height: 1;
-      opacity: 0.82;
-    }
+  &__arrow {
+    position: absolute;
+    top: 3.6rem;
+    right: calc(var(--process-gap) / -2);
+    transform: translateX(50%);
+    color: $color-accent;
+    font-size: 1.4rem;
+    line-height: 1;
+    opacity: 0.82;
   }
 
   &__icon {
     display: grid;
     place-items: center;
-    width: 8.6rem;
-    height: 8.6rem;
+    width: min(8.6rem, 100%);
+    aspect-ratio: 1;
     border: 1px solid rgba($color-accent, 0.22);
     border-radius: 50%;
     background-color: rgba($color-accent, 0.05);
@@ -307,35 +311,50 @@
     box-shadow: 0 1.4rem 3.4rem rgba(0, 0, 0, 0.18);
   }
 
-  @media (max-width: 1000px) {
+  &__step-description {
+    max-width: 18rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-text-muted;
+  }
+
+  @media (max-width: 1199px) {
     &__steps {
-      display: flex;
-      grid-template-columns: none;
-      align-items: center;
-      justify-content: start;
-      gap: 3.6rem;
-      width: calc(100% + 4.8rem);
-      margin-inline: -2.4rem;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 0 2.4rem 2rem;
-      scroll-padding-inline: 2.4rem;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3.2rem 2.4rem;
+      max-width: 68rem;
     }
 
-    &__steps li {
-      flex: 0 0 11rem;
-      scroll-snap-align: start;
+    &__arrow {
+      display: none;
     }
   }
 
-  @media (max-width: 620px) {
+  @media (max-width: 767px) {
     &__steps {
-      width: calc(100% + 4.8rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 40rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__steps {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 }
+
+.granite-peak-outfitters-design-process__statement {
+  max-width: 70rem;
+  margin: 3.2rem auto 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-text-muted;
+}
+
 
 .granite-peak-outfitters-users {
   display: grid;
@@ -362,6 +381,18 @@
     @include section-description;
     font-size: 1.75rem;
     line-height: 1.75;
+
+    & + & {
+      margin-top: 1.6rem;
+    }
+  }
+
+  &__methodology {
+    @include section-description;
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.7;
   }
 
   &__persona,
@@ -488,6 +519,17 @@
     }
   }
 
+  @media (min-width: 1251px) {
+    &__methodology {
+      grid-column: 2 / 4;
+    }
+
+    &__pain-points {
+      grid-column: 4;
+      grid-row: 1;
+    }
+  }
+
   @media (max-width: 1250px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -530,6 +572,8 @@
 }
 
 .granite-peak-outfitters-user-flow {
+  --flow-gap: clamp(1.2rem, 2vw, 2.4rem);
+
   display: grid;
   grid-template-columns: minmax(22rem, 0.7fr) minmax(0, 3.3fr);
   align-items: center;
@@ -552,9 +596,9 @@
 
   &__steps {
     display: grid;
-    grid-template-columns: repeat(6, minmax(8rem, 1fr));
-    align-items: center;
-    gap: 2.4rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--flow-gap);
     padding: 0;
     margin: 0;
     list-style: none;
@@ -562,8 +606,12 @@
 
   &__steps li {
     position: relative;
+    min-width: 0;
+    text-align: center;
+    overflow-wrap: anywhere;
     display: grid;
     justify-items: center;
+    grid-template-rows: auto auto 1fr;
     gap: 1.4rem;
     color: $color-text;
     font-family: "Inter", sans-serif;
@@ -571,25 +619,32 @@
     font-weight: 800;
     line-height: 1.2;
 
-    &:not(:last-child)::after {
-      content: "\f061";
+    .granite-peak-outfitters-user-flow__arrow {
       position: absolute;
-      top: 4rem;
-      right: -2.4rem;
+      top: 3.6rem;
+      right: calc(var(--flow-gap) / -2);
+      transform: translateX(50%);
       color: $color-accent;
-      font-family: "Font Awesome 6 Free";
       font-size: 1.4rem;
-      font-weight: 900;
       line-height: 1;
       opacity: 0.82;
     }
   }
 
-  &__steps i {
+  &__step-description {
+    margin: 0;
+    max-width: 18rem;
+    color: $color-text-muted;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  &__steps > li > i {
     display: grid;
     place-items: center;
-    width: 8.6rem;
-    height: 8.6rem;
+    width: min(8.6rem, 100%);
+    aspect-ratio: 1;
     border: 1px solid rgba($color-accent, 0.22);
     border-radius: 50%;
     background-color: rgba($color-accent, 0.05);
@@ -599,33 +654,27 @@
   }
 
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
 
     &__steps {
-      display: flex;
-      grid-template-columns: none;
-      align-items: center;
-      justify-content: start;
-      gap: 3.6rem;
-      width: calc(100% + 4.8rem);
-      margin-inline: -2.4rem;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 0 2.4rem 2rem;
-      scroll-padding-inline: 2.4rem;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3.2rem 2.4rem;
     }
 
-    &__steps li {
-      flex: 0 0 11rem;
-      scroll-snap-align: start;
+    &__arrow {
+      display: none;
     }
   }
 
   @media (max-width: 620px) {
     &__steps {
-      width: calc(100% + 4.8rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__steps {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 }
@@ -1454,8 +1503,6 @@
   }
 }
 
-.granite-peak-outfitters-design-process__steps,
-.granite-peak-outfitters-user-flow__steps,
 .granite-peak-outfitters-lofi-desktop__frames,
 .granite-peak-outfitters-lofi-mobile__frames {
   scrollbar-width: none;

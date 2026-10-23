@@ -226,7 +226,7 @@ if (imagePreview && imagePreviewClose) {
 // Case Study Swipe Indicators
 
 const caseStudySwipeRows = document.querySelectorAll(
-  ".granite-peak-outfitters-design-process__steps, .granite-peak-outfitters-user-flow__steps, .granite-peak-outfitters-lofi-desktop__frames, .granite-peak-outfitters-lofi-mobile__frames",
+  ".granite-peak-outfitters-lofi-desktop__frames, .granite-peak-outfitters-lofi-mobile__frames",
 );
 
 caseStudySwipeRows.forEach((row) => {
